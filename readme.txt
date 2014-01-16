@@ -73,6 +73,8 @@ Most important to least important.
 
 - Incorporate CC header and footer.
 
+- Incorporate CC licenses for resources.
+
 - Incorporate Bootstrap CSS.
 
 - Create static pages for frequently called pages.
