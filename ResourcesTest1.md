@@ -1,5 +1,5 @@
 ---
-title: Six licenses for sharing your work
+title: Resources Test 1
 published: true
 layout: resource
 weight: 1
@@ -8,11 +8,11 @@ author: Creative Commons
 license: CC0
 image-full: /images/sixlicenses-500.gif
 image-thumb: /images/sixlicenses-200.gif
-topic: licenses
-language: ar ja ko lg mn ro tl en
+topic: toolkits
+language: es
 medium: print
 permalink: /six-licenses-for-sharing-your-work/
-blurb: A short pamphlet that explains how Creative Commons licenses work.
+blurb: A short pamphlet that tests the Resources Site.
 repourl: https://layervault.com/creative-commons/Six%20Licenses%20guide
 downloadurl: http://wiki.creativecommons.org/images/6/6d/6licenses-flat.pdf
 embed: <iframe src="https://archive.org/embed/2-brian-wannaworktogether" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
@@ -97,4 +97,4 @@ If the resource is embeddable (for example, a video or slides), paste in the ifr
 
 
 
-*Last updated April 25, 2014*
+*Last updated June 4, 2014*
