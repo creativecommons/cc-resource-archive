@@ -1,0 +1,16 @@
+- name: CC BY
+  deed: http://creativecommons.org/licenses/by/
+
+- name: CC BY-SA 4.0
+  deed: http://creativecommons.org/licenses/by/4.0/
+
+- name: CC BY-ND 4.0
+  deed: http://creativecommons.org/licenses/by/4.0/
+
+- name: CC BY-NC 4.0
+
+- name: CC BY-NC-SA 4.0
+
+- name: CC BY-NC-ND 4.0
+
+

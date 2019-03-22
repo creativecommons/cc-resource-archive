@@ -1,0 +1,17 @@
+- name: Print
+  string: print
+
+- name: Video
+  string: video
+
+- name: Infographic
+  string: infographic
+
+- name: Website
+  string: website
+
+- name: Course
+  string: course
+
+- name: Slides
+  string: slides
