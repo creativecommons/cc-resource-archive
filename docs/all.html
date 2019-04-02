@@ -1,0 +1,50 @@
+---
+layout: listing
+permalink: /all/
+title: All
+---
+
+<div id="resourcenavbar">
+
+<div class="resourcenav resourcenavtopicknown">
+<h2>Topic</h2>
+<p><script>document.write(topic);</script> [<a onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+</div>
+
+<div class="resourcenav resourcenavtopicunknown">
+<h2>Topic</h2>
+<ul>
+	{% for topic in site.data.topics %}
+		<li><a onclick="window.location.search += '&topic={{ topic.string }}';" href="#">{{ topic.name }}</a></li>
+	{% endfor %}
+</ul>
+</div>
+
+<div class="resourcenav resourcenavmediumknown">
+<h2>Medium</h2>
+<p><script>document.write(medium);</script> [<a onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+<p></p>
+</div>
+
+<div class="resourcenav resourcenavmediumunknown">
+<h2>Medium</h2>
+<ul>
+	{% for medium in site.data.media %}
+		<li><a onclick="window.location.search += '&medium={{ medium.string }}';" href="#">{{ medium.name }}</a></li>
+	{% endfor %}
+</ul>
+</div>
+
+<div class="resourcenav resourcenavlanguageknown">
+<h2>Language</h2>
+<p><script>document.write(language);</script> [<a onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+</div>
+
+<div class="resourcenav resourcenavlanguageunknown">
+<h2>Language</h2>
+<p>
+	{% for language in site.data.languages %}
+		<a onclick="window.location.search += '&language={{ language.string }}';" href="#">{{ language.string | upcase }}</a> 
+	{% endfor %}
+</div>
+</div>

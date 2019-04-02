@@ -1,0 +1,125 @@
+body {
+font-family: sans-serif; 
+}
+
+a {
+color: #40ae49;
+cursor:pointer;
+}
+
+h1 {
+text-align: center;
+}
+
+#thumbnaillist {
+max-width: 900px;
+min-width: 250px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#preview {
+width: 500px;
+height: 375px;
+margin-left: auto;
+margin-right: auto;
+background-image: url(/images/placeholder-500.gif);
+border-radius: 25px;
+}
+
+#downloadbuttonholder {
+height: 100px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+#longdescription {
+max-width: 500px;
+margin-left: auto;
+margin-right: auto;
+border: 2px solid #C0C0C0;
+border-radius: 25px;
+padding: 10px;
+}
+
+.thumbnailbox {
+width: 200px;
+float: left;
+display: block;
+border-radius: 25px;
+border: 2px solid #C0C0C0;
+margin: 5px;
+}
+
+.thumbnailtitle {
+text-align: center;
+height: 75px;
+}
+
+.thumbnailblurb {
+height: 100px;
+padding: 5px;
+}
+
+.thumbnail {
+width: 200px;
+height: 150px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.downloadbutton {
+width: 200px;
+height: 100px;
+float: left;
+border-radius: 12px;
+background-color: #40ae49;
+float: left;
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+display: table-cell;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+.downloadbutton p {
+margin: 0;
+font-size: 200%;
+line-height: 100px;
+color: white;
+}
+
+#resourcenavbar {
+width: 600px;
+height: 150px;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 100px;
+}
+
+.resourcenav {
+width: 200px;
+height: 150px;
+float: left;
+display: none;
+}
+
+.resourcenav.resourcenavstatic {
+display: block;
+}
+
+#greenbanner {
+width: 100%;
+height: 40px;
+background-color: #627d0f;
+}
+
+#bannercc {
+width: 210px;
+height: 50px;
+background-image: url(/images/cc-green-210.gif);
+margin-left: 100px;
+}

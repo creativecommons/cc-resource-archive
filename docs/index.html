@@ -1,0 +1,37 @@
+---
+layout: listing
+title: Home
+---
+
+<div id="resourcenavbar">
+
+<div class="resourcenav resourcenavstatic">
+<h2>Topic</h2>
+<ul>
+	{% for topic in site.data.topics %}
+		<li><a href="/all?&topic={{ topic.string }}">{{ topic.name }}</a></li>
+	{% endfor %}
+</ul>
+</div>
+
+<div class="resourcenav resourcenavstatic">
+<h2>Medium</h2>
+<ul>
+	{% for medium in site.data.media %}
+		<li><a href="/all?&medium={{ medium.string }}">{{ medium.name }}</a></li>
+	{% endfor %}
+</ul>
+</div>
+
+<div class="resourcenav resourcenavstatic">
+<h2>Language</h2>
+<p>
+	{% for language in site.data.languages %}
+		<a href="/all?&language={{ language.string }}">{{ language.string | upcase }}</a>
+	{% endfor %}
+</div>
+
+</div>
+
+<h2 style="text-align: center; "><a href="/all">See all</a></h2>
+<p style="text-align: center; "><a href="/submit/">Submit a resource</a></p>

@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>{{ page.title }} | Creative Commons</title>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2010376-29', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="/style.css" />
+	{% if page.downloadurl %}
+		{% if page.repourl %}
+			<style>#downloadbuttonholder { width: 440px; }</style>
+		{% else %}
+			<style>#downloadbuttonholder { width: 220px; }</style>
+		{% endif %}
+	{% elsif page.repourl %}
+		<style>#downloadbuttonholder { width: 220px; }</style>
+	{% endif %}
+
+	{% if page.repourl contains 'layervault.com' %}
+		<style>.downloadbutton.repository {background-image: url("/images/layervault.png")}</style>
+	{% endif %}
+	
+	{% if page.repourl contains 'github.com' %}
+		<style>.downloadbutton.repository {background-image: url("/images/github.png")}</style>
+	{% endif %}
+
+</head>
+<body>
+
+{% include header.html %}
+
+<h1><a href="/">Creative Commons Resource Archive</a></h1>
+
+<h2 style="text-align: center; ">{{ page.title }}</a></h3>
+
+	{% if page.embed %}
+	<div align="center">{{ page.embed }}</div>
+	{% else %}
+	{% if page.downloadurl %}
+		<a href="{{ page.downloadurl }}" target="_blank">
+	{% endif %}
+
+	{% if page.image-full %}
+		<div id="preview" style="background-image: url({{page.image-full}})"></div>
+	{% else %}
+		<div id="preview"></div>
+	{% endif %}
+
+	{% if page.downloadurl %}
+		</a>
+	{% endif %}
+	{% endif %}
+	{% if page.downloadurl or page.repourl %}
+<div id="downloadbuttonholder">
+	{% endif %}
+
+	{% if page.downloadurl %}
+		<a href="{{ page.downloadurl }}" target="_blank">
+		<div class="downloadbutton">
+		{% if page.medium == "website" or page.medium == "course" %} 
+			<p>Visit</p>
+		{% else %}
+			<p>Download</p>
+		{% endif %}
+		</div>
+		</a>
+	{% endif %}
+
+	{% if page.repourl %}
+		<a href="{{ page.repourl }}" target="_blank">
+		<div class="downloadbutton repository">
+		<p>Repository</p>
+		</div>
+		</a>
+	{% endif %}
+
+	{% if page.downloadurl or page.repourl %}
+		</div>
+	{% endif %}
+
+<div style="clear: both;"></div>	
+
+<div id="longdescription">
+{{content}}
+</div>
+
+
+	{% if page.license %}
+	
+	
+		{% if page.license == 'CC0' %}
+			<p align="center"><a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" /></a>
+  <br />
+  To the extent possible under law, <span property="dct:publisher">{{ page.author }}</span> has waived all copyright and related or neighboring rights to <a href="{{ page.downloadurl}} property="dct:title">{{ page.title }}</a>.</p>
+		
+		{% else %}
+			
+		<p align="center"><a rel="license" href="http://creativecommons.org/licenses/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/88x31.png" /></a><br />
+
+{% if page.downloadurl %}<a href="{{ page.downloadurl }}" rel="cc:attributionURL">{% endif %}<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ page.title }}</span>{% if page.downloadurl %}</a>{% endif %}{% if page.author %} by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName" >{{ page.author }}</span>{% endif %} is licensed under <a rel="license" href="http://creativecommons.org/licenses/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/">{{ page.license }}</a>.</p>
+
+		{% endif %}
+	{% endif %}
+
+
+</body>
+</html>
