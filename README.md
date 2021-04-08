@@ -4,11 +4,11 @@ How it works
 ===================
 
 The website is built using [Jekyll](http://jekyllrb.com/docs/home/
-), a simple templating system that's built into Github. All of the site pages are in the gh-pages branch. This readme file and the resource template are in the master branch.
+), a simple templating system that's built into Github. All of the site pages are in the `docs/` directory. This readme file and the resource template are in the main branch.
 
 You don't need to install Jekyll on your machine in order to submit a resource to the archive, but the benefit of installing is that you'll be able to see exactly what your submission will look like on the live site and correct any bugs.
 
-To submit a resource, make a copy of [**resourcetemplate.md**](https://github.com/creativecommons/cc-resource-archive/blob/master/resourcetemplate.md) and change the values for each field accordingly. The space below the front matter is freeform, for providing additional information or links. The resource template also includes explanations of each of the fields.
+To submit a resource, make a copy of [**resourcetemplate.md**](https://github.com/creativecommons/cc-resource-archive/blob/main/resourcetemplate.md) and change the values for each field accordingly. The space below the front matter is freeform, for providing additional information or links. The resource template also includes explanations of each of the fields.
 
 You can create a resource page in html, markdown, or textile, using the extensions ".html," ".md," or ".textile." For consistency and understandability use entire title as the filename and permalink, i.e.:
 
