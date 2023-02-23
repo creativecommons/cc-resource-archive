@@ -1,0 +1,2663 @@
+<html>
+<head>
+<title>All | Creative Commons Resource Archive</title>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+
+
+	
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2010376-29', 'auto');
+  ga('send', 'pageview');
+
+//updated get query string function
+	function getUrlVars() {
+		const vars = {};
+		const queryString = window.location.search.substring(1);
+		const params = new URLSearchParams(queryString);
+
+		for (const [key, value] of params) {
+			vars[key] = value;
+		}
+
+		return vars;
+	}
+
+//updated query string function
+	function updateQueryString(key, value, url = window.location.href) {
+		const urlObj = new URL(url);
+		const params = new URLSearchParams(urlObj.search);
+
+		if (params.has(key)) {
+			if (value != null) {
+				params.set(key, value);
+			} else {
+				params.delete(key);
+			}
+		} else if (value != null) {
+			params.append(key, value);
+		}
+
+		urlObj.search = params.toString();
+		return urlObj.toString();
+	}
+
+
+document.write("<style>.thumbnailbox { display: none; }</style>");
+
+function RemoveQueryString(param1) {
+	var quer = param1
+	location.href=location.href.replace(/&?quer=([^&]$|[^&]*)/i, "");
+	}
+
+var topic = getUrlVars()["topic"];
+var language = getUrlVars()["language"];
+var medium = getUrlVars()["medium"];
+
+if (topic === undefined && medium === undefined && language === undefined) {
+document.write("<style>.thumbnailbox { display: block; }</style>");
+}
+else {
+	document.write("<style>");
+	if (topic != undefined) {document.write("."+topic)};
+	if (medium != undefined) {document.write("."+medium)};
+	if (language != undefined) {document.write("."+language)};
+	document.write(" { display: block; }</style>");
+	};
+
+document.write("<style>");
+ if (topic != undefined) {document.write(" .resourcenavtopicknown");}
+	else {document.write(" .resourcenavtopicunknown");};
+ if (medium != undefined) {document.write(", .resourcenavmediumknown");}
+	else {document.write(", .resourcenavmediumunknown");};
+ if (language != undefined) {document.write(", .resourcenavlanguageknown");}
+	else {document.write(", .resourcenavlanguageunknown");};
+ document.write(" { display: block; }</style>");
+</script>
+
+	
+
+</head>
+
+
+<body>
+
+	<a href="//creativecommons.org/"><div id="bannercc"></div></a>
+
+<h1>
+	
+		<a href="/">
+	
+Creative Commons Resource Archive
+	
+		</a>
+	
+</h1>
+
+<div id="resourcenavbar">
+
+<div class="resourcenav resourcenavtopicknown">
+<h2>Topic</h2>
+<p><script>document.write(topic);</script> [<a onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+</div>
+
+<div class="resourcenav resourcenavtopicunknown">
+<h2>Topic</h2>
+<ul>
+	
+		<li><a onclick="window.location.search += '&topic=licenses';" href="#">Licenses</a></li>
+	
+		<li><a onclick="window.location.search += '&topic=publicdomain';" href="#">Public Domain</a></li>
+	
+		<li><a onclick="window.location.search += '&topic=oer';" href="#">Open Educational Resources</a></li>
+	
+		<li><a onclick="window.location.search += '&topic=oa';" href="#">Open Access</a></li>
+	
+		<li><a onclick="window.location.search += '&topic=openscience';" href="#">Open Science</a></li>
+	
+		<li><a onclick="window.location.search += '&topic=openpolicy';" href="#">Open Policy</a></li>
+	
+		<li><a onclick="window.location.search += '&topic=opendata';" href="#">Open Data</a></li>
+	
+</ul>
+</div>
+
+<div class="resourcenav resourcenavmediumknown">
+<h2>Medium</h2>
+<p><script>document.write(medium);</script> [<a onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+<p></p>
+</div>
+
+<div class="resourcenav resourcenavmediumunknown">
+<h2>Medium</h2>
+<ul>
+	
+		<li><a onclick="window.location.search += '&medium=print';" href="#">Print</a></li>
+	
+		<li><a onclick="window.location.search += '&medium=video';" href="#">Video</a></li>
+	
+		<li><a onclick="window.location.search += '&medium=infographic';" href="#">Infographic</a></li>
+	
+		<li><a onclick="window.location.search += '&medium=website';" href="#">Website</a></li>
+	
+		<li><a onclick="window.location.search += '&medium=course';" href="#">Course</a></li>
+	
+		<li><a onclick="window.location.search += '&medium=slides';" href="#">Slides</a></li>
+	
+</ul>
+</div>
+
+<div class="resourcenav resourcenavlanguageknown">
+<h2>Language</h2>
+<p><script>document.write(language);</script> [<a onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+</div>
+
+<div class="resourcenav resourcenavlanguageunknown">
+<h2>Language</h2>
+<p>
+	
+		<a onclick="window.location.search += '&language=ar';" href="#">AR</a> 
+	
+		<a onclick="window.location.search += '&language=cmn';" href="#">CMN</a> 
+	
+		<a onclick="window.location.search += '&language=de';" href="#">DE</a> 
+	
+		<a onclick="window.location.search += '&language=en';" href="#">EN</a> 
+	
+		<a onclick="window.location.search += '&language=es';" href="#">ES</a> 
+	
+		<a onclick="window.location.search += '&language=fr';" href="#">FR</a> 
+	
+		<a onclick="window.location.search += '&language=hi';" href="#">HI</a> 
+	
+		<a onclick="window.location.search += '&language=hy';" href="#">HY</a> 
+	
+		<a onclick="window.location.search += '&language=it';" href="#">IT</a> 
+	
+		<a onclick="window.location.search += '&language=ja';" href="#">JA</a> 
+	
+		<a onclick="window.location.search += '&language=ko';" href="#">KO</a> 
+	
+		<a onclick="window.location.search += '&language=lg';" href="#">LG</a> 
+	
+		<a onclick="window.location.search += '&language=mn';" href="#">MN</a> 
+	
+		<a onclick="window.location.search += '&language=pl';" href="#">PL</a> 
+	
+		<a onclick="window.location.search += '&language=ro';" href="#">RO</a> 
+	
+		<a onclick="window.location.search += '&language=ru';" href="#">RU</a> 
+	
+		<a onclick="window.location.search += '&language=sv';" href="#">SV</a> 
+	
+		<a onclick="window.location.search += '&language=tl';" href="#">TL</a> 
+	
+		<a onclick="window.location.search += '&language=ur';" href="#">UR</a> 
+	
+</div>
+</div>
+
+
+
+
+<div id="thumbnaillist">
+
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses print ar ja ko lg mn ro tl en">
+						<a href="/six-licenses-for-sharing-your-work/">
+						<div class="thumbnailtitle"><h3>Six licenses for sharing your work</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/sixlicenses-200.gif'); "></div>
+						</a>
+						<div class="thumbnailblurb">A short pamphlet that explains how Creative Commons licenses work.</div>
+						</div>
+					
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox publicdomain print ar ja ko lg mn ro tl en">
+						<a href="/guide-to-using-public-domain-tools/">
+						<div class="thumbnailtitle"><h3>Guide to using public domain tools</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/publicdomaintools-200.gif'); "></div>
+						</a>
+						<div class="thumbnailblurb">A short pamphlet that explains how public domain tools work.</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses video en ru hy it">
+						<a href="/wanna-work-together/">
+						<div class="thumbnailtitle"><h3>Wanna Work Together?</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/wanna-work-together-200.gif'); "></div>
+						</a>
+						<div class="thumbnailblurb">Quick video explaining how CC licenses work.</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses video en">
+						<a href="/creative-commons-kiwi/">
+						<div class="thumbnailtitle"><h3>Creative Commons Kiwi</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/creative-commons-kiwi-200.jpg'); "></div>
+						</a>
+						<div class="thumbnailblurb">A quick video on the basics of Creative Commons.</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses course en">
+						<a href="/get-cc-savvy/">
+						<div class="thumbnailtitle"><h3>Get CC Savvy</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/getccsavvy-200.jpg'); "></div>
+						</a>
+						<div class="thumbnailblurb">A perfect place to start. a course explaining the basics of Creative Commons.</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses video en">
+						<a href="/a-shared-culture/">
+						<div class="thumbnailtitle"><h3>A Shared Culture</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/a-shared-culture-200.png'); "></div>
+						</a>
+						<div class="thumbnailblurb">A short video explaining what Creative Commons is.</div>
+						</div>
+					
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox creativity video en">
+						<a href="/build-on-the-past/">
+						<div class="thumbnailtitle"><h3>Building on the Past</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/buildingonthepast-200.png'); "></div>
+						</a>
+						<div class="thumbnailblurb">Video explaining how creativity always builds on the past</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses print sv">
+						<a href="/cc-sweden-poster/">
+						<div class="thumbnailtitle"><h3>CC Sweden poster</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/ccsweden-200.gif'); "></div>
+						</a>
+						<div class="thumbnailblurb">A poster explaining how to choose a Creative Commons license.</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses print pl en">
+						<a href="/cc-licenses-poster/">
+						<div class="thumbnailtitle"><h3>CC Licenses Poster</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/ccpoland-200.gif'); "></div>
+						</a>
+						<div class="thumbnailblurb">Poster outlining what each CC license allows users to do.</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox oer print en">
+						<a href="/oer-whats-in-it-for-me/">
+						<div class="thumbnailtitle"><h3>Open Educational Resources: What's In It For Me?
+</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/oer-whats-in-it-for-me-200.png'); "></div>
+						</a>
+						<div class="thumbnailblurb">Poster with reasons to support Open Educational Resources</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox oer video en">
+						<a href="/why-open-education-matters/">
+						<div class="thumbnailtitle"><h3>Why Open Education Matters</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/why-open-education-matters-200.gif'); "></div>
+						</a>
+						<div class="thumbnailblurb">Animated introduction to open educational resources.</div>
+						</div>
+					
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+					
+					
+						<div class="thumbnailbox licenses oer nonprofit video en">
+						<a href="/creative-commons-licenses-for-nonprofit-organizations/">
+						<div class="thumbnailtitle"><h3>Creative Commons licenses for nonprofits</h3></div>
+						<div class="thumbnail" style="background-image: url('/images/creative-commons-for-nonprofit-organizations-200.jpg'); "></div>
+						</a>
+						<div class="thumbnailblurb">A video for nonprofits and educators that outlines the basics of open resources.</div>
+						</div>
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+
+
+	
+		
+			
+				
+					
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses video fr">
+							<a href="/les-licenses-creative-commons/">
+							<div class="thumbnailtitle"><h3>Les Licenses Creative Commons</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/les-licences-creative-commons-200.png'); "></div>
+							</a>
+							<div class="thumbnailblurb">A short video that explains how Creative Commons licenses work.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses attribution photography infographic en">
+							<a href="/how-to-attribute-creative-commons-photos/">
+							<div class="thumbnailtitle"><h3>How to Attribute Creative Commons Photos</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/how-to-attribute-foter-200.gif'); "></div>
+							</a>
+							<div class="thumbnailblurb">This infographic outlines how CC licenses work and best practices for attribution</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses infographic ar">
+							<a href="/learn-creative-commons-in-3-minutes/">
+							<div class="thumbnailtitle"><h3>Learn Creative Commons in 3 minutes</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/learn-creative-commons-in-3-minutes-200.gif'); "></div>
+							</a>
+							<div class="thumbnailblurb">An Arabic infographic outlining how the six CC licenses work.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses video en">
+							<a href="/big-buck-bunny-loves-creative-commons/">
+							<div class="thumbnailtitle"><h3>Big Buck Bunny loves Creative Commons</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/bigbuckbunny-200.jpg'); "></div>
+							</a>
+							<div class="thumbnailblurb">A fun video explaining how to use CC.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox oer licenses slides en">
+							<a href="/cc-version-40-for-education/">
+							<div class="thumbnailtitle"><h3>CC Version 4.0 for Education</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/cc-version-40-for-education-200.png'); "></div>
+							</a>
+							<div class="thumbnailblurb">Slideshow for educators, outlining what's new in Version 4.0.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox opendata publicdomain print en">
+							<a href="/open-data-handbook/">
+							<div class="thumbnailtitle"><h3>Open data handbook</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/opendatahandbook-200.gif'); "></div>
+							</a>
+							<div class="thumbnailblurb">A primer on the best practices for open data.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox science course en">
+							<a href="/open-science-an-introduction/">
+							<div class="thumbnailtitle"><h3>Open science&#58; an introduction</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/openscience-200.jpg'); "></div>
+							</a>
+							<div class="thumbnailblurb">A course outlining open practice and publishing in science.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses infographic de en">
+							<a href="/what-does-creative-commons-mean/">
+							<div class="thumbnailtitle"><h3>What does Creative Commons mean?</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/what-does-creative-commons-mean-200.gif'); "></div>
+							</a>
+							<div class="thumbnailblurb">A fun infographic explaining the conditions on CC licenses.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+					
+				
+			
+		
+	
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses music website en">
+							<a href="/cash-music-creative-commons-portal/">
+							<div class="thumbnailtitle"><h3>CASH Music Creative Commons portal</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/cashmusic-200.gif'); "></div>
+							</a>
+							<div class="thumbnailblurb">A website explaining how CC works for musicians.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses oer course en">
+							<a href="/copyright-4-educators/">
+							<div class="thumbnailtitle"><h3>Copyright 4 Educators</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/copyright4educators-200.jpg'); "></div>
+							</a>
+							<div class="thumbnailblurb">A course explaining the basics of copyright and Creative Commons for educators.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox licenses, oer course en">
+							<a href="/open-content-licensing-for-educators/">
+							<div class="thumbnailtitle"><h3>Open Content Licensing for Educators</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/opencontentforeducators-300.png'); "></div>
+							</a>
+							<div class="thumbnailblurb">A course designed for educators, outlining the basics of open licensing.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+					
+						
+					
+					
+					
+							<div class="thumbnailbox openpolicy oa website en">
+							<a href="/open-policy-network/">
+							<div class="thumbnailtitle"><h3>Open Policy Network website</h3></div>
+							<div class="thumbnail" style="background-image: url('/images/openpolicynetwork-200.png'); "></div>
+							</a>
+							<div class="thumbnailblurb">A website for open policy education and advocacy.</div>
+							</div>
+					
+						
+					
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+			
+				
+			
+		
+	
+
+
+</div>
+
+
+
+</body>
+</html>
