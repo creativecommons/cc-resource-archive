@@ -17,7 +17,8 @@
   ga('send', 'pageview');
 
 //updated get query string function
-	function getUrlVars() {
+	
+function getUrlVars() {
 		const vars = {};
 		const queryString = window.location.search.substring(1);
 		const params = new URLSearchParams(queryString);
@@ -28,7 +29,6 @@
 
 		return vars;
 	}
-
 //updated query string function
 	function updateQueryString(key, value, url = window.location.href) {
 		const urlObj = new URL(url);
@@ -51,10 +51,12 @@
 
 document.write("<style>.thumbnailbox { display: none; }</style>");
 
-function RemoveQueryString(param1) {
-	var quer = param1
-	location.href=location.href.replace(/&?quer=([^&]$|[^&]*)/i, "");
+	function removeQueryString() {
+		var url = window.location.href;
+		var updatedUrl = url.replace(/(\?|&)quer=([^&]*)/, '');
+		window.location.href = updatedUrl;
 	}
+
 
 var topic = getUrlVars()["topic"];
 var language = getUrlVars()["language"];
@@ -86,7 +88,7 @@ document.write("<style>");
 </head>
 
 
-<body>
+
 
 	<a href="//creativecommons.org/"><div id="bannercc"></div></a>
 
@@ -2020,639 +2022,664 @@ Creative Commons Resource Archive
 	
 
 
-	
-		
-			
-				
-					
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses video fr">
-							<a href="/les-licenses-creative-commons/">
-							<div class="thumbnailtitle"><h3>Les Licenses Creative Commons</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/les-licences-creative-commons-200.png'); "></div>
-							</a>
-							<div class="thumbnailblurb">A short video that explains how Creative Commons licenses work.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-	
-		
-			
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses attribution photography infographic en">
-							<a href="/how-to-attribute-creative-commons-photos/">
-							<div class="thumbnailtitle"><h3>How to Attribute Creative Commons Photos</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/how-to-attribute-foter-200.gif'); "></div>
-							</a>
-							<div class="thumbnailblurb">This infographic outlines how CC licenses work and best practices for attribution</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses infographic ar">
-							<a href="/learn-creative-commons-in-3-minutes/">
-							<div class="thumbnailtitle"><h3>Learn Creative Commons in 3 minutes</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/learn-creative-commons-in-3-minutes-200.gif'); "></div>
-							</a>
-							<div class="thumbnailblurb">An Arabic infographic outlining how the six CC licenses work.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-	
-		
-			
-				
-			
-		
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses video en">
-							<a href="/big-buck-bunny-loves-creative-commons/">
-							<div class="thumbnailtitle"><h3>Big Buck Bunny loves Creative Commons</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/bigbuckbunny-200.jpg'); "></div>
-							</a>
-							<div class="thumbnailblurb">A fun video explaining how to use CC.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox oer licenses slides en">
-							<a href="/cc-version-40-for-education/">
-							<div class="thumbnailtitle"><h3>CC Version 4.0 for Education</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/cc-version-40-for-education-200.png'); "></div>
-							</a>
-							<div class="thumbnailblurb">Slideshow for educators, outlining what's new in Version 4.0.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox opendata publicdomain print en">
-							<a href="/open-data-handbook/">
-							<div class="thumbnailtitle"><h3>Open data handbook</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/opendatahandbook-200.gif'); "></div>
-							</a>
-							<div class="thumbnailblurb">A primer on the best practices for open data.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox science course en">
-							<a href="/open-science-an-introduction/">
-							<div class="thumbnailtitle"><h3>Open science&#58; an introduction</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/openscience-200.jpg'); "></div>
-							</a>
-							<div class="thumbnailblurb">A course outlining open practice and publishing in science.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses infographic de en">
-							<a href="/what-does-creative-commons-mean/">
-							<div class="thumbnailtitle"><h3>What does Creative Commons mean?</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/what-does-creative-commons-mean-200.gif'); "></div>
-							</a>
-							<div class="thumbnailblurb">A fun infographic explaining the conditions on CC licenses.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-					
-				
-			
-		
-	
-		
-			
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses music website en">
-							<a href="/cash-music-creative-commons-portal/">
-							<div class="thumbnailtitle"><h3>CASH Music Creative Commons portal</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/cashmusic-200.gif'); "></div>
-							</a>
-							<div class="thumbnailblurb">A website explaining how CC works for musicians.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses oer course en">
-							<a href="/copyright-4-educators/">
-							<div class="thumbnailtitle"><h3>Copyright 4 Educators</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/copyright4educators-200.jpg'); "></div>
-							</a>
-							<div class="thumbnailblurb">A course explaining the basics of copyright and Creative Commons for educators.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox licenses, oer course en">
-							<a href="/open-content-licensing-for-educators/">
-							<div class="thumbnailtitle"><h3>Open Content Licensing for Educators</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/opencontentforeducators-300.png'); "></div>
-							</a>
-							<div class="thumbnailblurb">A course designed for educators, outlining the basics of open licensing.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-					
-						
-					
-					
-					
-							<div class="thumbnailbox openpolicy oa website en">
-							<a href="/open-policy-network/">
-							<div class="thumbnailtitle"><h3>Open Policy Network website</h3></div>
-							<div class="thumbnail" style="background-image: url('/images/openpolicynetwork-200.png'); "></div>
-							</a>
-							<div class="thumbnailblurb">A website for open policy education and advocacy.</div>
-							</div>
-					
-						
-					
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-			
-				
-			
-		
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses video fr">
+	<a href="/les-licenses-creative-commons/">
+		<div class="thumbnailtitle">
+			<h3>Les Licenses Creative Commons</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/les-licences-creative-commons-200.png'); "></div>
+	</a>
+	<div class="thumbnailblurb">A short video that explains how Creative Commons licenses work.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses attribution photography infographic en">
+	<a href="/how-to-attribute-creative-commons-photos/">
+		<div class="thumbnailtitle">
+			<h3>How to Attribute Creative Commons Photos</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/how-to-attribute-foter-200.gif'); "></div>
+	</a>
+	<div class="thumbnailblurb">This infographic outlines how CC licenses work and best practices for attribution</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses infographic ar">
+	<a href="/learn-creative-commons-in-3-minutes/">
+		<div class="thumbnailtitle">
+			<h3>Learn Creative Commons in 3 minutes</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/learn-creative-commons-in-3-minutes-200.gif'); "></div>
+	</a>
+	<div class="thumbnailblurb">An Arabic infographic outlining how the six CC licenses work.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses video en">
+	<a href="/big-buck-bunny-loves-creative-commons/">
+		<div class="thumbnailtitle">
+			<h3>Big Buck Bunny loves Creative Commons</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/bigbuckbunny-200.jpg'); "></div>
+	</a>
+	<div class="thumbnailblurb">A fun video explaining how to use CC.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox oer licenses slides en">
+	<a href="/cc-version-40-for-education/">
+		<div class="thumbnailtitle">
+			<h3>CC Version 4.0 for Education</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/cc-version-40-for-education-200.png'); "></div>
+	</a>
+	<div class="thumbnailblurb">Slideshow for educators, outlining what's new in Version 4.0.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox opendata publicdomain print en">
+	<a href="/open-data-handbook/">
+		<div class="thumbnailtitle">
+			<h3>Open data handbook</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/opendatahandbook-200.gif'); "></div>
+	</a>
+	<div class="thumbnailblurb">A primer on the best practices for open data.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox science course en">
+	<a href="/open-science-an-introduction/">
+		<div class="thumbnailtitle">
+			<h3>Open science&#58; an introduction</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/openscience-200.jpg'); "></div>
+	</a>
+	<div class="thumbnailblurb">A course outlining open practice and publishing in science.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses infographic de en">
+	<a href="/what-does-creative-commons-mean/">
+		<div class="thumbnailtitle">
+			<h3>What does Creative Commons mean?</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/what-does-creative-commons-mean-200.gif'); "></div>
+	</a>
+	<div class="thumbnailblurb">A fun infographic explaining the conditions on CC licenses.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses music website en">
+	<a href="/cash-music-creative-commons-portal/">
+		<div class="thumbnailtitle">
+			<h3>CASH Music Creative Commons portal</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/cashmusic-200.gif'); "></div>
+	</a>
+	<div class="thumbnailblurb">A website explaining how CC works for musicians.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses oer course en">
+	<a href="/copyright-4-educators/">
+		<div class="thumbnailtitle">
+			<h3>Copyright 4 Educators</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/copyright4educators-200.jpg'); "></div>
+	</a>
+	<div class="thumbnailblurb">A course explaining the basics of copyright and Creative Commons for educators.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox licenses, oer course en">
+	<a href="/open-content-licensing-for-educators/">
+		<div class="thumbnailtitle">
+			<h3>Open Content Licensing for Educators</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/opencontentforeducators-300.png'); "></div>
+	</a>
+	<div class="thumbnailblurb">A course designed for educators, outlining the basics of open licensing.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="thumbnailbox openpolicy oa website en">
+	<a href="/open-policy-network/">
+		<div class="thumbnailtitle">
+			<h3>Open Policy Network website</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('/images/openpolicynetwork-200.png'); "></div>
+	</a>
+	<div class="thumbnailblurb">A website for open policy education and advocacy.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
@@ -2660,4 +2687,5 @@ Creative Commons Resource Archive
 
 
 </body>
+
 </html>

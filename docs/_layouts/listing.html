@@ -17,7 +17,8 @@
   ga('send', 'pageview');
 
 //updated get query string function
-	function getUrlVars() {
+	
+function getUrlVars() {
 		const vars = {};
 		const queryString = window.location.search.substring(1);
 		const params = new URLSearchParams(queryString);
@@ -28,7 +29,6 @@
 
 		return vars;
 	}
-
 //updated query string function
 	function updateQueryString(key, value, url = window.location.href) {
 		const urlObj = new URL(url);
@@ -51,10 +51,12 @@
 
 document.write("<style>.thumbnailbox { display: none; }</style>");
 
-function RemoveQueryString(param1) {
-	var quer = param1
-	location.href=location.href.replace(/&?quer=([^&]$|[^&]*)/i, "");
+	function removeQueryString() {
+		var url = window.location.href;
+		var updatedUrl = url.replace(/(\?|&)quer=([^&]*)/, '');
+		window.location.href = updatedUrl;
 	}
+
 
 var topic = getUrlVars()["topic"];
 var language = getUrlVars()["language"];
@@ -86,7 +88,7 @@ document.write("<style>");
 </head>
 
 
-<body>
+
 
 	{% include header.html %}
 
@@ -126,30 +128,33 @@ Creative Commons Resource Archive
 		{% endfor %}
 	{% endfor %}
 
+
 {% unless page.title == 'Home' %}
-	{% for i in (1..4) %}
-		{% for page in site.pages %}
-			{% if page.layout == 'resource' %}
-				{% if page.weight == i %}
-					{% unless page.featured %}
-						{% if page.{{paramfilter}} == page.{{paramvalue %}
-					{% if page.topic contains topicfilter or topicfilter == null %}
-					{% if page.medium contains mediumfilter or mediumfilter == null %}
-					{% if page.language contains languagefilter or languagefilter == null %}
-							<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-							<a href="{{ page.permalink }}">
-							<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-							<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-							</a>
-							<div class="thumbnailblurb">{{ page.blurb }}</div>
-							</div>
-					{% endif %}{% endif %}{% endif %}
-						{% endif %}
-					{% endunless %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-	{% endfor %}
+{% for i in (1..4) %}
+{% for page in site.pages %}
+{% if page.layout == 'resource' %}
+{% if page.weight == i %}
+{% unless page.featured %}
+{% if page.{{paramfilter}} == page.{{paramvalue %}
+{% if page.topic contains topicfilter or topicfilter == null %}
+{% if page.medium contains mediumfilter or mediumfilter == null %}
+{% if page.language contains languagefilter or languagefilter == null %}
+<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+	<a href="{{ page.permalink }}">
+		<div class="thumbnailtitle">
+			<h3>{{ page.title }}</h3>
+		</div>
+		<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+	</a>
+	<div class="thumbnailblurb">{{ page.blurb }}</div>
+</div>
+{% endif %}{% endif %}{% endif %}
+{% endif %}
+{% endunless %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endfor %}
 {% endunless %}
 
 </div>
@@ -157,4 +162,5 @@ Creative Commons Resource Archive
 
 
 </body>
+
 </html>
