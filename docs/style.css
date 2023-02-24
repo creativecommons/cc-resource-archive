@@ -117,9 +117,22 @@ height: 40px;
 background-color: #627d0f;
 }
 
+#bannercccontainer {
+background-image: linear-gradient(to right, #ff5914, #ff7900, #ff5914);
+height: 144px;
+display: block;
+}
+
 #bannercc {
 width: 210px;
 height: 50px;
-background-image: url(/images/cc-green-210.gif);
-margin-left: 100px;
+background-image: url('./svg/logomark.svg');
+margin-left: 126px;
+margin-top: 58px;
+padding: 28px;
+display: inline-block;
+-webkit-mask-image: url('./svg/logomark.svg');
+mask-image: url('./svg/logomark.svg');
+-webkit-mask-repeat: no-repeat;
+mask-repeat: no-repeat;
 }
