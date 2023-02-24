@@ -12,8 +12,10 @@ text-align: center;
 }
 
 #thumbnaillist {
-max-width: 900px;
-min-width: 250px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+width: 100vw;
 margin-left: auto;
 margin-right: auto;
 }
@@ -45,12 +47,17 @@ padding: 10px;
 }
 
 .thumbnailbox {
-width: 200px;
-float: left;
+width: 20vw;
 display: block;
 border-radius: 25px;
 border: 2px solid #C0C0C0;
-margin: 5px;
+margin:15px;
+}
+
+
+
+.thumbnailbox > a{
+  text-decoration: none;
 }
 
 .thumbnailtitle {
@@ -59,8 +66,8 @@ height: 75px;
 }
 
 .thumbnailblurb {
-height: 100px;
-padding: 5px;
+text-align: center;
+padding: 4vh 2vw;
 }
 
 .thumbnail {
@@ -123,3 +130,16 @@ height: 50px;
 background-image: url(/images/cc-green-210.gif);
 margin-left: 100px;
 }
+
+@media  screen and (max-width: 1100px) {
+  .thumbnailbox{
+    width: 40vw;
+  }
+}
+
+@media  screen and (max-width: 600px) {
+  .thumbnailbox {
+    width: 60vw;
+  }
+}
+
