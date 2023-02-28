@@ -88,3 +88,52 @@ The reason for setting it up this way is that the "string" value is what's used
 in the URLs and CSS classes. It's also what you use in the resource page itself
 to identify the category. So these should be relatively short, but still
 sensical.
+
+
+## Local Development
+
+Local development can be previewed by installing Jekyll or by using Docker. We
+think the latter experience is easier to setup with more consistent behavior.
+
+
+### Docker Compose setup
+
+1. [Install Docker Engine](https://docs.docker.com/engine/install/)
+2. In your terminal, change directory to where you have cloned this repository
+   (or a fork of it)
+3. **Run the container:**
+   ```shell
+   docker compose up
+   ```
+   - This should result in the container being built if it's the first time
+   - Once running successfully, you can access the site in your browser at
+     [localhost:4000](http://localhost:4000/)
+6. **Stop the container:** To stop the app from running, simply open an another
+   instance of terminal and type
+   ```shell
+   docker compose down
+   ```
+   or you can simply revisit the existing terminal which is running the
+   container and type `CTRL + C`
+
+
+## License
+
+
+### Code
+
+[`LICENSE`](LICENSE): the code within this repository is licensed under the
+Expat/[MIT][mit] license.
+
+[mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
+
+
+### Content/Text
+
+[![CC BY 4.0 license button][cc-by-png]][cc-by]
+
+All the content within this repository is licensed under a [Creative Commons
+Attribution 4.0 International License][cc-by] unless otherwise specified.
+
+[cc-by-png]: https://licensebuttons.net/l/by/4.0/88x31.png#floatleft "CC BY 4.0 license button"
+[cc-by]: https://creativecommons.org/licenses/by/4.0/ "Creative Commons Attribution 4.0 International License"
