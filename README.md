@@ -106,6 +106,12 @@ think the latter experience is easier to setup with more consistent behavior.
    docker compose up
    ```
    - This should result in the container being built if it's the first time
+   - The docker container may be slow :hourglass_flowing_sand::persevere: When
+     it is ready you should see:
+     ```
+     jekyll-cc-resource-archive  |     Server address: http://0.0.0.0:4000
+     jekyll-cc-resource-archive  |   Server running... press ctrl-c to stop.
+     ```
    - Once running successfully, you can access the site in your browser at
      [localhost:4000](http://localhost:4000/)
 6. **Stop the container:** To stop the app from running, simply open an another
