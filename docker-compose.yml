@@ -5,7 +5,6 @@ services:
 
   jekyll:
     build: .
-    command: jekyll serve --incremental
     container_name: jekyll-cc-resource-archive
     ports:
       - "4000:4000"
