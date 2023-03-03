@@ -95,6 +95,29 @@ sensical.
 Local development can be previewed by installing Jekyll or by using Docker. We
 think the latter experience is easier to setup with more consistent behavior.
 
+### Jekyll setup
+
+1. [Install Ruby Installer](https://rubyinstaller.org/downloads/)
+2. To confirm the installation, in your terminal, change directory to where you have cloned this repository
+   (or a fork of it)
+   ```shell
+   ruby -v
+   gem -v
+   ```
+3. **To install bundler jekyll:**
+  ```shell
+    gem install bundler jekyll
+   ```
+4. **To run the jekyll site :**
+  ```shell
+   jekyll serve
+   ```
+   -The server may be slow .It will take some time to run 
+
+For detailed explaination of setting up github pages locally using Jekyll
+1. https://training.nih-cfde.org/en/latest/General-Tools/Web-Development/Jekyll_Tutorial/#step-2-build-jekyll-site-using-template-from-github
+2. https://jekyllrb.com/docs/
+
 
 ### Docker Compose setup
 
@@ -114,7 +137,7 @@ think the latter experience is easier to setup with more consistent behavior.
      ```
    - Once running successfully, you can access the site in your browser at
      [localhost:4000](http://localhost:4000/)
-6. **Stop the container:** To stop the app from running, simply open an another
+4. **Stop the container:** To stop the app from running, simply open an another
    instance of terminal and type
    ```shell
    docker compose down
