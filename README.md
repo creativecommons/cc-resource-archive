@@ -99,7 +99,7 @@ think the latter experience is easier to setup with more consistent behavior.
 ### Docker Compose setup
 
 1. [Install Docker Engine](https://docs.docker.com/engine/install/)
-2. In your terminal, change directory to where you have cloned this repository
+2. In your terminal, change the directory to where you have cloned this repository
    (or a fork of it)
 3. **Run the container:**
    ```shell
@@ -114,8 +114,8 @@ think the latter experience is easier to setup with more consistent behavior.
      ```
    - Once running successfully, you can access the site in your browser at
      [localhost:4000](http://localhost:4000/)
-6. **Stop the container:** To stop the app from running, simply open an another
-   instance of terminal and type
+6. **Stop the container:** To stop the app from running, simply open another
+   instance of the terminal and type
    ```shell
    docker compose down
    ```
