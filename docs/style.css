@@ -123,3 +123,37 @@ height: 50px;
 background-image: url(/images/cc-green-210.gif);
 margin-left: 100px;
 }
+
+/* Tag Section */
+
+.tag-section {
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+}
+
+.tag-section ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+}
+
+.tag-section li {
+padding: 10px 20px;
+background-color: #EEEEEE;
+color: #40ae49;
+font-size: 16px;
+font-weight: 600;
+margin: 0 5px;
+cursor: pointer;
+transition: all 0.5s ease;
+border-radius: 25px;
+}
+
+.tag-section li.active,
+.tag-section li:hover {
+background-color: #40ae49;
+color: #FFFFFF;
+}
