@@ -25,10 +25,11 @@ title: Home
 
 <div class="resourcenav resourcenavstatic">
 <h2>Language</h2>
-<p>
+<ul style="columns: 2;">
 	{% for language in site.data.languages %}
-		<a href="/all?&language={{ language.string }}">{{ language.string | upcase }}</a>
+		<li><a href="/all?&language={{ language.string }}">{{ language.string}}</a></li>
 	{% endfor %}
+</ul>
 </div>
 
 </div>
