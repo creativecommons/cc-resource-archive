@@ -1,37 +1,56 @@
-- string: Arabic
+- name: Arabic
+  string: ar
 
-- string: Mandarin
+- name: Mandarin
+  string: cmn
 
-- string: German
+- name: German
+  string: de
 
-- string: English
+- name: English
+  string: en
+  
+- name: Spanish
+  string: es
 
-- string: Spanish
+- name: French
+  string: fr
 
-- string: French
+- name: Hindi
+  string: hi
 
-- string: Hindi
+- name: Armenian
+  string: hy
 
-- string: Armenian
+- name: Italian
+  string: it
 
-- string: Italian
+- name: Japanese
+  string: ja
 
-- string: Japanese
+- name: Korean
+  string: ko
 
-- string: Korean
+- name: Ganda
+  string: lg
 
-- string: Ganda
+- name: Mongolian
+  string: mn
 
-- string: Mongolian
+- name: Polish
+  string: pl
 
-- string: Polish
+- name: Romanian
+  string: ro
 
-- string: Romanian
+- name: Russian
+  string: ru
 
-- string: Russian
+- name: Swedish
+  string: sv
 
-- string: Swedish
+- name: Tagalog
+  string: tl
 
-- string: Tagalog
-
-- string: Urdu
+- name: Urdu
+  string: ur

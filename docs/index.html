@@ -27,7 +27,7 @@ title: Home
 <h2>Language</h2>
 <ul style="columns: 2;">
 	{% for language in site.data.languages %}
-		<li><a href="/all?&language={{ language.string }}">{{ language.string}}</a></li>
+		<li><a href="/all?&language={{ language.string }}">{{ language.name}}</a></li>
 	{% endfor %}
 </ul>
 </div>
