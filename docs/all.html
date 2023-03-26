@@ -15,7 +15,7 @@ title: All
 <h2>Topic</h2>
 <ul>
 	{% for topic in site.data.topics %}
-		<li><a onclick="window.location.search += '&topic={{ topic.string }}';" href="#">{{ topic.name }}</a></li>
+		<li><a onclick="window.location.search += '&topic={{ topic.string }}';" href="#">{{ topic.name }}</a></li> 
 	{% endfor %}
 </ul>
 </div>
