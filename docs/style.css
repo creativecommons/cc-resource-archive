@@ -7,6 +7,13 @@ color: #40ae49;
 cursor:pointer;
 }
 
+.header-link{
+    display: block;
+    width: fit-content;
+    margin-left: 100px;
+    padding: 10px;
+}
+
 h1 {
 text-align: center;
 }
@@ -115,5 +122,4 @@ display: block;
 width: 210px;
 height: 50px;
 background-image: url(/images/cc-green-210.gif);
-margin-left: 100px;
 }
