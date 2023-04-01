@@ -42,10 +42,11 @@ title: All
 
 <div class="resourcenav resourcenavlanguageunknown">
 <h2>Language</h2>
-<p>
+<ul style="columns: 2;">
 	{% for language in site.data.languages %}
-		<a onclick="window.location.search += '&language={{ language.string }}';" href="#">{{ language.string | upcase }}</a> 
+		<li><a onclick="window.location.search += '&language={{ language.string }}';" href="#">{{ language.name }}</a> </li>
 	{% endfor %}
+</ul>
 </div>
 </div>
 <p style="text-align: center; "><a href="/submit/">Submit a resource</a></p>
