@@ -16,42 +16,51 @@
   ga('create', 'UA-2010376-29', 'auto');
   ga('send', 'pageview');
 
+/*
+  getUrlVars :-
 
-function getUrlVars()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
+  This function extracts the parameters from the URL of the current web page and returns them as an object with key-value pairs.
+  
+*/
+
+const getUrlVars = () =>{
+	const vars= {};
+	const hashes= window.location.href.slice(window.location.href.indexOf('?')+ 1).split('&');
+	for(const hash of hashes){ 
+		const [key , value]= hash.split('=');
+		vars[key]=value;
+	}
+	return vars;
 }
 
-function UpdateQueryString(key, value, url) {
-    if (!url) url = window.location.href;
-    var re = new RegExp("([?|&])" + key + "=.*?(&|#|$)(.*)", "gi");
+/*
+    UpdateQueryString :- 
 
+    The purpose of this function is to update the query string of a given URL.
+	The function then returns the updated URL. If no changes are made to the URL, the original URL is returned.
+
+*/
+
+const UpdateQueryString = (key, value, url = window.location.href) => {
+    const re = new RegExp(`([?|&])${key}=.*?(&|#|$)(.*)`, 'gi');
     if (re.test(url)) {
         if (typeof value !== 'undefined' && value !== null)
-            return url.replace(re, '$1' + key + "=" + value + '$2$3');
+            return url.replace(re, `$1${key}=${value}$2$3`);
         else {
-            var hash = url.split('#');
-            url = hash[0].replace(re, '$1$3').replace(/(&|\?)$/, '');
-            if (typeof hash[1] !== 'undefined' && hash[1] !== null) 
-                url += '#' + hash[1];
+            const [baseUrl , hash] = url.split('#');
+            url = baseUrl.replace(re, '$1$3').replace(/(&|\?)$/, '');
+            if ( hash !== 'undefined' && hash !== null) 
+                url += `#${hash}`;
             return url;
         }
     }
     else {
         if (typeof value !== 'undefined' && value !== null) {
-            var separator = url.indexOf('?') !== -1 ? '&' : '?',
-                hash = url.split('#');
-            url = hash[0] + separator + key + '=' + value;
-            if (typeof hash[1] !== 'undefined' && hash[1] !== null) 
-                url += '#' + hash[1];
+            const separator = url.indexOf('?') !== -1 ? '&' : '?';
+            const  [baseUrl , hash] = url.split('#');
+            url = `${baseUrl}${separator}${key}=${value}` ;
+            if ( hash !== 'undefined' && hash !== null) 
+                url += `#${hash}`;
             return url;
         }
         else
@@ -61,34 +70,32 @@ function UpdateQueryString(key, value, url) {
 
 document.write("<style>.thumbnailbox { display: none; }</style>");
 
-function RemoveQueryString(param1) {
-	var quer = param1
+const RemoveQueryString = (param1) => {
+	const quer = param1
 	location.href=location.href.replace(/&?quer=([^&]$|[^&]*)/i, "");
-	}
+}
 
-var topic = getUrlVars()["topic"];
-var language = getUrlVars()["language"];
-var medium = getUrlVars()["medium"];
+const topic = getUrlVars()["topic"];
+const language = getUrlVars()["language"];
+const medium = getUrlVars()["medium"];
 
 if (topic === undefined && medium === undefined && language === undefined) {
-document.write("<style>.thumbnailbox { display: block; }</style>");
+    document.write("<style>.thumbnailbox { display: block; }</style>") ;
 }
 else {
 	document.write("<style>");
 	if (topic != undefined) {document.write("."+topic)};
 	if (medium != undefined) {document.write("."+medium)};
 	if (language != undefined) {document.write("."+language)};
-	document.write(" { display: block; }</style>");
-	};
+	document.write("{ display: block; }</style>");
+}
 
-document.write("<style>");
- if (topic != undefined) {document.write(" .resourcenavtopicknown");}
-	else {document.write(" .resourcenavtopicunknown");};
- if (medium != undefined) {document.write(", .resourcenavmediumknown");}
-	else {document.write(", .resourcenavmediumunknown");};
- if (language != undefined) {document.write(", .resourcenavlanguageknown");}
-	else {document.write(", .resourcenavlanguageunknown");};
- document.write(" { display: block; }</style>");
+document.write(`<style> ${topic ? " .resourcenavtopicknown" : " .resourcenavtopicunknown"} 
+                    ${medium ? ", .resourcenavmediumknown" : ", .resourcenavmediumunknown"}
+                    ${language ? ", .resourcenavlanguageknown" : ", .resourcenavlanguageunknown"} 
+            { display: block; }
+            </style>`);
+
 </script>
 
 	{% endif %}
