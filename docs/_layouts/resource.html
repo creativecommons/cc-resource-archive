@@ -107,5 +107,13 @@
 		{% endif %}
 
 
-	</body>
+
+</body>
+<script>
+	const globalHeader = document.getElementById("global-header");
+    const handleExplore = (event) => {
+        globalHeader.classList.toggle("active");
+        event.preventDefault();
+    }
+</script>
 </html>

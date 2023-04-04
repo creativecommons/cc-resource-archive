@@ -40,11 +40,12 @@ title: All
 		<p><script>document.write(language);</script> [<a onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
 	</div>
 
-	<div class="resourcenav resourcenavlanguageunknown">
-		<h2>Language</h2>
-		<p>
-			{% for language in site.data.languages %}
-				<a onclick="window.location.search += '&language={{ language.string }}';" href="#">{{ language.string | upcase }}</a>
-			{% endfor %}
-	</div>
+<div class="resourcenav resourcenavlanguageunknown">
+<h2>Language</h2>
+<ul style="columns: 2;">
+	{% for language in site.data.languages %}
+		<li><a onclick="window.location.search += '&language={{ language.string }}';" href="#">{{ language.name }}</a> </li>
+	{% endfor %}
+</ul>
+</div>
 </div>
