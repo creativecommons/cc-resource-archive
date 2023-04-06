@@ -23,7 +23,7 @@ permalink: /submit/
 </head>
 <body>
 
-	<a href="//creativecommons.org/"><div id="bannercc"></div></a>
+	{% include header.html %}
 
 
 <div style="text-align: center; ">
@@ -37,6 +37,12 @@ permalink: /submit/
 </div>
 
 </body>
+
+<script> const globalHeader = document.getElementById("global-header"); const handleExplore = (event) => { globalHeader.classList.toggle("active"); event.preventDefault(); } </script>
+
+
+
+
 </html>
 
 
