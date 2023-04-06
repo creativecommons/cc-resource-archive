@@ -45,7 +45,7 @@
 
 		<h1><a href="/">Creative Commons Resource Archive</a></h1>
 
-		<h2 style="text-align: center; "><a>{{ page.title }}</a></h2>
+		<h2 style="text-align: center; ">{{ page.title }}</a></h3>
 
 		{% if page.embed %}
 		<div align="center">{{ page.embed }}</div>
@@ -55,9 +55,9 @@
 		{% endif %}
 
 		{% if page.image-full %}
-		<div class="preview" style="background-image: url({{page.image-full}})"></div>
+		<div id="preview" style="background-image: url({{page.image-full}})"></div>
 		{% else %}
-		<div class="preview"></div>
+		<div id="preview"></div>
 		{% endif %}
 
 		{% if page.downloadurl %}
