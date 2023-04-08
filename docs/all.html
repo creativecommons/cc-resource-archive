@@ -6,46 +6,128 @@ title: All
 
 <div id="resourcenavbar">
 
-<div class="resourcenav resourcenavtopicknown">
-<h2>Topic</h2>
-<p><script>document.write(topic);</script> [<a onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+	<div class="resourcenav resourcenavtopicknown">
+		<h2>Topic</h2>
+		<p><span id="topicText"></span> [<a onclick="clearTopic();" href="" aria-label="Clear topic selection">x</a>]
+		</p>
+	</div>
+
+	<div class="resourcenav resourcenavtopicunknown">
+		<h2>Topic</h2>
+		<ul>
+			{% for topic in site.data.topics %}
+			<li><a onclick="updateTopic('{{ topic.string }}');" href="" role="button">{{ topic.name }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="resourcenav resourcenavmediumknown">
+		<h2>Medium</h2>
+		<p><span id="mediumText"></span> [<a onclick="clearMedium();" href="" aria-label="Clear medium selection">x</a>]
+		</p>
+		<p></p>
+	</div>
+
+	<div class="resourcenav resourcenavmediumunknown">
+		<h2>Medium</h2>
+		<ul>
+			{% for medium in site.data.media %}
+			<li><a onclick="updateMedium('{{ medium.string }}');" href="" role="button">{{ medium.name }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<div class="resourcenav resourcenavlanguageknown">
+		<h2>Language</h2>
+		<p><span id="languageText"></span> [<a onclick="clearLanguage();" href=""
+				aria-label="Clear language selection">x</a>]</p>
+	</div>
+
+	<div class="resourcenav resourcenavlanguageunknown">
+		<h2>Language</h2>
+		<ul style="columns: 2;">
+			{% for language in site.data.languages %}
+			<li><a onclick="updateLanguage('{{ language.string }}');" href="" role="button">{{ language.name }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
 </div>
 
-<div class="resourcenav resourcenavtopicunknown">
-<h2>Topic</h2>
-<ul>
-	{% for topic in site.data.topics %}
-		<li><a onclick="window.location.search += '&topic={{ topic.string }}';" href="#">{{ topic.name }}</a></li>
-	{% endfor %}
-</ul>
-</div>
+<script>
+	// Update Topic
+	function updateTopic(topic) {
+		document.getElementById("topicText").textContent = topic;
+		localStorage.setItem("topic", topic);
+		updateUrlParam("topic", topic);
+	}
 
-<div class="resourcenav resourcenavmediumknown">
-<h2>Medium</h2>
-<p><script>document.write(medium);</script> [<a onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
-<p></p>
-</div>
+	// Clear Topic
+	function clearTopic() {
+		document.getElementById("topicText").textContent = "";
+		localStorage.removeItem("topic");
+		updateUrlParam("topic", "");
+	}
 
-<div class="resourcenav resourcenavmediumunknown">
-<h2>Medium</h2>
-<ul>
-	{% for medium in site.data.media %}
-		<li><a onclick="window.location.search += '&medium={{ medium.string }}';" href="#">{{ medium.name }}</a></li>
-	{% endfor %}
-</ul>
-</div>
+	// Update Medium
+	function updateMedium(medium) {
+		document.getElementById("mediumText").textContent = medium;
+		localStorage.setItem("medium", medium);
+		updateUrlParam("medium", medium);
+	}
 
-<div class="resourcenav resourcenavlanguageknown">
-<h2>Language</h2>
-<p><script>document.write(language);</script> [<a onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
-</div>
+	// Clear Medium
+	function clearMedium() {
+		document.getElementById("mediumText").textContent = "";
+		localStorage.removeItem("medium");
+		updateUrlParam("medium", "");
+	}
 
-<div class="resourcenav resourcenavlanguageunknown">
-<h2>Language</h2>
-<ul style="columns: 2;">
-	{% for language in site.data.languages %}
-		<li><a onclick="window.location.search += '&language={{ language.string }}';" href="#">{{ language.name }}</a> </li>
-	{% endfor %}
-</ul>
-</div>
-</div>
+	// Update Language
+	function updateLanguage(language) {
+		document.getElementById("languageText").textContent = language;
+		localStorage.setItem("language", language);
+		updateUrlParam("language", language);
+	}
+
+	// Clear Language
+	function clearLanguage() {
+		document.getElementById("languageText").textContent = "";
+		localStorage.removeItem("language");
+		updateUrlParam("language", "");
+	}
+
+	// Update URL parameter
+	function updateUrlParam(param, value) {
+		var searchParams = new URLSearchParams(window.location.search);
+		searchParams.set(param, value);
+
+		// Remove the URL parameter if value is empty
+		if (value === "") {
+			searchParams.delete(param);
+		}
+
+		var newUrl = window.location.pathname + "?" + searchParams.toString();
+		window.history.replaceState({}, '', newUrl);
+	}
+
+	// Set initial values from local storage
+	document.addEventListener("DOMContentLoaded", function () {
+		var topic = localStorage.getItem("topic");
+		var medium = localStorage.getItem("medium");
+		var language = localStorage.getItem("language");
+
+		if (topic) {
+			document.getElementById("topicText").textContent = topic;
+		}
+
+		if (medium) {
+			document.getElementById("mediumText").textContent = medium;
+		}
+
+		if (language) {
+			document.getElementById("languageText").textContent = language;
+		}
+	});
+
+</script>
