@@ -57,42 +57,36 @@ title: All
 <script>
 	// Update Topic
 	function updateTopic(topic) {
-		document.getElementById("topicText").textContent = topic;
 		localStorage.setItem("topic", topic);
 		updateUrlParam("topic", topic);
 	}
 
 	// Clear Topic
 	function clearTopic() {
-		document.getElementById("topicText").textContent = "";
 		localStorage.removeItem("topic");
 		updateUrlParam("topic", "");
 	}
 
 	// Update Medium
 	function updateMedium(medium) {
-		document.getElementById("mediumText").textContent = medium;
 		localStorage.setItem("medium", medium);
 		updateUrlParam("medium", medium);
 	}
 
 	// Clear Medium
 	function clearMedium() {
-		document.getElementById("mediumText").textContent = "";
 		localStorage.removeItem("medium");
 		updateUrlParam("medium", "");
 	}
 
 	// Update Language
 	function updateLanguage(language) {
-		document.getElementById("languageText").textContent = language;
 		localStorage.setItem("language", language);
 		updateUrlParam("language", language);
 	}
 
 	// Clear Language
 	function clearLanguage() {
-		document.getElementById("languageText").textContent = "";
 		localStorage.removeItem("language");
 		updateUrlParam("language", "");
 	}
