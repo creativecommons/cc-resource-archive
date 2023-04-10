@@ -4,46 +4,46 @@ permalink: /all/
 title: All
 ---
 
-<div id="resourcenavbar">
+<aside id="resourcenavbar">
 
-	<div class="resourcenav resourcenavtopicknown">
+	<section class="resourcenav resourcenavtopicknown">
 		<h2>Topic</h2>
 		<p><span id="topicText"></span> [<a onclick="clearTopic();" href="" aria-label="Clear topic selection">x</a>]
 		</p>
-	</div>
+	</section>
 
-	<div class="resourcenav resourcenavtopicunknown">
+	<section class="resourcenav resourcenavtopicunknown">
 		<h2>Topic</h2>
 		<ul>
 			{% for topic in site.data.topics %}
 			<li><a onclick="updateTopic('{{ topic.string }}');" href="" role="button">{{ topic.name }}</a></li>
 			{% endfor %}
 		</ul>
-	</div>
+	</section>
 
-	<div class="resourcenav resourcenavmediumknown">
+	<section class="resourcenav resourcenavmediumknown">
 		<h2>Medium</h2>
 		<p><span id="mediumText"></span> [<a onclick="clearMedium();" href="" aria-label="Clear medium selection">x</a>]
 		</p>
 		<p></p>
-	</div>
+	</section>
 
-	<div class="resourcenav resourcenavmediumunknown">
+	<section class="resourcenav resourcenavmediumunknown">
 		<h2>Medium</h2>
 		<ul>
 			{% for medium in site.data.media %}
 			<li><a onclick="updateMedium('{{ medium.string }}');" href="" role="button">{{ medium.name }}</a></li>
 			{% endfor %}
 		</ul>
-	</div>
+	</section>
 
-	<div class="resourcenav resourcenavlanguageknown">
+	<section class="resourcenav resourcenavlanguageknown">
 		<h2>Language</h2>
 		<p><span id="languageText"></span> [<a onclick="clearLanguage();" href=""
 				aria-label="Clear language selection">x</a>]</p>
-	</div>
+	</section>
 
-	<div class="resourcenav resourcenavlanguageunknown">
+	<section class="resourcenav resourcenavlanguageunknown">
 		<h2>Language</h2>
 		<ul style="columns: 2;">
 			{% for language in site.data.languages %}
@@ -51,8 +51,8 @@ title: All
 			</li>
 			{% endfor %}
 		</ul>
-	</div>
-</div>
+	</section>
+</aside>
 
 <script>
 	// Update Topic
