@@ -8,6 +8,12 @@
 
 <script>
 
+	/*   
+	
+	This part of code deals with Google Analytics. It initializes Google Analytics tracking on a website.  
+	
+	*/ 
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -16,19 +22,30 @@
   ga('create', 'UA-2010376-29', 'auto');
   ga('send', 'pageview');
 
+/*
+  getUrlVars :-
 
-function getUrlVars()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
+  This function extracts the parameters from the URL of the current web page and returns them as an object with key-value pairs.
+  
+*/
+
+const getUrlVars = () =>{
+	const vars= {};
+	const hashes= window.location.href.slice(window.location.href.indexOf('?')+ 1).split('&');
+	for(const hash of hashes){ 
+		const [key , value]= hash.split('=');
+		vars[key]=value;
+	}
+	return vars;
 }
+
+/*
+    UpdateQueryString :- 
+
+    The purpose of this function is to update the query string of a given URL.
+	The function then returns the updated URL. If no changes are made to the URL, the original URL is returned.
+
+*/
 
 function UpdateQueryString(key, value, url) {
     if (!url) url = window.location.href;
@@ -64,31 +81,29 @@ document.write("<style>.thumbnailbox { display: none; }</style>");
 function RemoveQueryString(param1) {
 	var quer = param1
 	location.href=location.href.replace(/&?quer=([^&]$|[^&]*)/i, "");
-	}
+}
 
-var topic = getUrlVars()["topic"];
-var language = getUrlVars()["language"];
-var medium = getUrlVars()["medium"];
+const topic = getUrlVars()["topic"];
+const language = getUrlVars()["language"];
+const medium = getUrlVars()["medium"];
 
 if (topic === undefined && medium === undefined && language === undefined) {
-document.write("<style>.thumbnailbox { display: block; }</style>");
+    document.write("<style>.thumbnailbox { display: block; }</style>") ;
 }
 else {
 	document.write("<style>");
 	if (topic != undefined) {document.write("."+topic)};
 	if (medium != undefined) {document.write("."+medium)};
 	if (language != undefined) {document.write("."+language)};
-	document.write(" { display: block; }</style>");
-	};
+	document.write("{ display: block; }</style>");
+}
 
-document.write("<style>");
- if (topic != undefined) {document.write(" .resourcenavtopicknown");}
-	else {document.write(" .resourcenavtopicunknown");};
- if (medium != undefined) {document.write(", .resourcenavmediumknown");}
-	else {document.write(", .resourcenavmediumunknown");};
- if (language != undefined) {document.write(", .resourcenavlanguageknown");}
-	else {document.write(", .resourcenavlanguageunknown");};
- document.write(" { display: block; }</style>");
+document.write(`<style> ${topic ? " .resourcenavtopicknown" : " .resourcenavtopicunknown"} 
+                    ${medium ? ", .resourcenavmediumknown" : ", .resourcenavmediumunknown"}
+                    ${language ? ", .resourcenavlanguageknown" : ", .resourcenavlanguageunknown"} 
+            { display: block; }
+            </style>`);
+
 </script>
 
 	{% endif %}
