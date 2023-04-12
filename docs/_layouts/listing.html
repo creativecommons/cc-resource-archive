@@ -123,13 +123,13 @@ Creative Commons Resource Archive
 					{% if page.topic contains topicfilter or topicfilter == null %}
 					{% if page.medium contains mediumfilter or mediumfilter == null %}
 					{% if page.language contains languagefilter or languagefilter == null %}
-						<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-						<a href="{{ page.permalink }}">
-						<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-						<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-						</a>
-						<div class="thumbnailblurb">{{ page.blurb }}</div>
-						</div>
+						<article class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+							<a href="{{ page.permalink }}" role="link" aria-label="{{ page.title }}">
+								<h3 class="thumbnailtitle">{{ page.title }}</h3>
+								<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+							</a>
+							<div class="thumbnailblurb">{{ page.blurb }}</div>
+						</article>
 					{% endif %}{% endif %}{% endif %}
 				{% endif %}
 			{% endif %}
@@ -146,13 +146,13 @@ Creative Commons Resource Archive
 					{% if page.topic contains topicfilter or topicfilter == null %}
 					{% if page.medium contains mediumfilter or mediumfilter == null %}
 					{% if page.language contains languagefilter or languagefilter == null %}
-							<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-							<a href="{{ page.permalink }}">
-							<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-							<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-							</a>
-							<div class="thumbnailblurb">{{ page.blurb }}</div>
-							</div>
+							<article class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+								<a href="{{ page.permalink }}" role="link" aria-label="{{ page.title }}">
+									<h3 class="thumbnailtitle">{{ page.title }}</h3>
+									<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+								</a>
+								<div class="thumbnailblurb">{{ page.blurb }}</div>
+							</article>
 					{% endif %}{% endif %}{% endif %}
 						{% endif %}
 					{% endunless %}
