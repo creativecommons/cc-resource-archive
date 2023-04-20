@@ -142,7 +142,7 @@ Creative Commons Resource Archive
 			{% if page.layout == 'resource' %}
 				{% if page.weight == i %}
 					{% unless page.featured %}
-						{% if page.{{paramfilter}} == page.{{paramvalue %}
+						{% if page.paramfilter == page.paramvalue %}
 					{% if page.topic contains topicfilter or topicfilter == null %}
 					{% if page.medium contains mediumfilter or mediumfilter == null %}
 					{% if page.language contains languagefilter or languagefilter == null %}
@@ -167,4 +167,11 @@ Creative Commons Resource Archive
 
 
 </body>
+<script>
+	const globalHeader = document.getElementById("global-header");
+    const handleExplore = (event) => {
+        globalHeader.classList.toggle("active");
+        event.preventDefault();
+    }
+</script>
 </html>
