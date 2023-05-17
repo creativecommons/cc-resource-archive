@@ -125,9 +125,9 @@ Creative Commons Resource Archive
 					{% if page.language contains languagefilter or languagefilter == null %}
 						<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
 							<a href="{{ page.permalink }}" style="text-decoration: none">
-							<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-							<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-							<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
+								<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+								<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+								<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
 							</a>
 						</div>
 					{% endif %}{% endif %}{% endif %}
