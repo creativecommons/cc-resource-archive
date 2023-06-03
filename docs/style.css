@@ -154,6 +154,10 @@ h1 {
 text-align: center;
 }
 
+.page_permakinik {
+    text-decoration: none;
+}
+
 #thumbnaillist {
 max-width: 900px;
 min-width: 250px;
