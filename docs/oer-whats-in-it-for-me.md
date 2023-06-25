@@ -19,4 +19,3 @@ license: CC BY 4.0
 ---
 
 Created during a 2-day workshop meeting of open education enthusiasts in Porto, Portugal ([related blog post](http://web.archive.org/web/20160328190836/http://oerpolicy.eu/postcard-from-the-oer-workshop-in-porto/)).
-
