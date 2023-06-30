@@ -2,7 +2,6 @@
 
 Collection of resources on Creative Commons (CC) tools and other open topics
 
-
 ## Overview
 
 Welcome to the CC Resources Archive. The idea of this project is to have a
@@ -10,7 +9,6 @@ simple, easy-to-update area for keeping track of all of the useful resources
 that people make about Creative Commons licenses and open content topics in
 general. The live site is at
 [resources.creativecommons.org](https://resources.creativecommons.org/).
-
 
 ## How it works
 
@@ -42,31 +40,28 @@ File: creative-commons-kiwi.textile
 permalink: /six-licenses-for-sharing-your-work/
 File: six-licenses-for-sharing-your-work.html
 
-
 ### Category URLs
 
 You can format the `resources.creativecommons.org/all?` URL to show any
 category or combination of categories you want. For example, videos available
 in English about licenses:
 
-http://resources.creativecommons.org/all/?&topic=licenses&medium=video&language=en
+<http://resources.creativecommons.org/all/?&topic=licenses&medium=video&language=en>
 
 You can use any category that's listed in one or more resources pages, not just
 the ones available in the menu on "all." For example, resources about music:
 
-http://resources.creativecommons.org/all/?&topic=music
+<http://resources.creativecommons.org/all/?&topic=music>
 
 It will also be trivial to create an RSS feed for any category or combination
 of categories - for example, to create a feed of all resources available in
 Spanish for embedding in an affiliate site. If you need one, submit an issue
 through GitHub.
 
-
 ### The index page
 
 The index page pulls up to 16 featured items. Each featured page has a
 "featured" variable. The number is the order in which they should appear.
-
 
 ### Menu categories
 
@@ -89,12 +84,10 @@ in the URLs and CSS classes. It's also what you use in the resource page itself
 to identify the category. So these should be relatively short, but still
 sensical.
 
-
 ## Local Development
 
 Local development can be previewed by installing Jekyll or by using Docker. We
 think the latter experience is easier to setup with more consistent behavior.
-
 
 ### Docker Compose setup
 
@@ -102,29 +95,34 @@ think the latter experience is easier to setup with more consistent behavior.
 2. In your terminal, change the directory to where you have cloned this repository
    (or a fork of it)
 3. **Run the container:**
+
    ```shell
    docker compose up
    ```
+
    - This should result in the container being built if it's the first time
    - The docker container may be slow :hourglass_flowing_sand::persevere: When
      it is ready you should see:
-     ```
+
+     ```resource
      jekyll-cc-resource-archive  |     Server address: http://0.0.0.0:4000
      jekyll-cc-resource-archive  |   Server running... press ctrl-c to stop.
      ```
+
    - Once running successfully, you can access the site in your browser at
      [localhost:4000](http://localhost:4000/)
-6. **Stop the container:** To stop the app from running, simply open another
+6.'''
+Stop the container:** To stop the app from running, simply open another
    instance of the terminal and type
+
    ```shell
    docker compose down
    ```
+
    or you can simply revisit the existing terminal which is running the
    container and type `CTRL + C`
 
-
 ## License
-
 
 ### Code
 
@@ -132,7 +130,6 @@ think the latter experience is easier to setup with more consistent behavior.
 Expat/[MIT][mit] license.
 
 [mit]: http://www.opensource.org/licenses/MIT "The MIT License | Open Source Initiative"
-
 
 ### Content/Text
 
