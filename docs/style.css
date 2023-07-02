@@ -1,3 +1,6 @@
+/* Import Vocabulary CDN CSS for global-header */
+@import url("https://vocabularycdn.com/global-header-styles.css");
+
 body {
 font-family: sans-serif; 
 margin: 0;
