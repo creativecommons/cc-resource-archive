@@ -154,10 +154,6 @@ h1 {
 text-align: center;
 }
 
-.page_permakinik {
-    text-decoration: none;
-}
-
 #thumbnaillist {
 max-width: 900px;
 min-width: 250px;
@@ -198,6 +194,10 @@ display: block;
 border-radius: 25px;
 border: 2px solid #C0C0C0;
 margin: 5px;
+}
+
+.thumbnailLink {
+    text-decoration: none;
 }
 
 .thumbnailtitle {
