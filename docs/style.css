@@ -238,6 +238,7 @@ width: 200px;
 height: 150px;
 float: left;
 display: none;
+margin-bottom: 20px;
 }
 
 .resourcenav.resourcenavstatic {
