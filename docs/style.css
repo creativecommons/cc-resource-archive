@@ -190,6 +190,10 @@ border: 2px solid #C0C0C0;
 margin: 5px;
 }
 
+.thumbnailLink {
+    text-decoration: none;
+}
+
 .thumbnailtitle {
 text-align: center;
 height: 75px;
