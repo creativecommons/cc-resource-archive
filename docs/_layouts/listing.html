@@ -95,11 +95,11 @@ Creative Commons Resource Archive
 					{% if page.medium contains mediumfilter or mediumfilter == null %}
 					{% if page.language contains languagefilter or languagefilter == null %}
 						<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-						<a href="{{ page.permalink }}">
-						<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-						<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-						</a>
-						<div class="thumbnailblurb">{{ page.blurb }}</div>
+							<a class="thumbnailLink" href="{{ page.permalink }}" >
+								<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+								<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+								<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
+							</a>
 						</div>
 					{% endif %}{% endif %}{% endif %}
 				{% endif %}
@@ -114,17 +114,17 @@ Creative Commons Resource Archive
 				{% if page.weight == i %}
 					{% unless page.featured %}
 						{% if page.paramfilter == page.paramvalue %}
-					{% if page.topic contains topicfilter or topicfilter == null %}
-					{% if page.medium contains mediumfilter or mediumfilter == null %}
-					{% if page.language contains languagefilter or languagefilter == null %}
-							<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-							<a href="{{ page.permalink }}">
-							<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-							<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-							</a>
-							<div class="thumbnailblurb">{{ page.blurb }}</div>
-							</div>
-					{% endif %}{% endif %}{% endif %}
+						{% if page.topic contains topicfilter or topicfilter == null %}
+						{% if page.medium contains mediumfilter or mediumfilter == null %}
+						{% if page.language contains languagefilter or languagefilter == null %}
+								<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+									<a class="thumbnailLink" href="{{ page.permalink }}">
+										<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+										<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+										<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
+									</a>
+								</div>
+						{% endif %}{% endif %}{% endif %}
 						{% endif %}
 					{% endunless %}
 				{% endif %}
