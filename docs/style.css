@@ -22,6 +22,12 @@ padding: 0;
     transition: transform 1.4s ease, margin-bottom 1.4s ease;
 } 
 
+#global-header .a{
+    cursor: pointer;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
 #global-header.active {
     margin-bottom: 50px;
     transform: translateY(0);
@@ -242,6 +248,32 @@ display: none;
 
 .resourcenav.resourcenavstatic {
 display: block;
+}
+
+.to-top{
+    background-color: white;
+    position: fixed;
+    bottom: 12px;
+    right: 32px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+
+
+}
+
+.to-top.active{
+    bottom: 28px;
+    pointer-events: none;
+    opacity: 1;
 }
 
 #bannercc {
