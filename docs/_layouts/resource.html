@@ -2,6 +2,7 @@
 <head>
 <title>{{ page.title }} | Creative Commons</title>
 <meta charset="UTF-8">
+<script src="https://kit.fontawesome.com/e8b530d48c.js" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -104,6 +105,9 @@
 		{% endif %}
 	{% endif %}
 
+	<a href="#" class="to-top">
+		<i class="fas fa-chevron-up"></i>
+	</a>
 
 </body>
 <script>
@@ -112,5 +116,20 @@
         globalHeader.classList.toggle("active");
         event.preventDefault();
     }
+   
+	const toTop = document.querySelector(" .to-top");
+
+	window.addEventListener("scroll", () => {
+		if (window.pageYOffset > 100){
+			toTop.classList.add("active");
+		}
+		else {
+			toTop.classList.remove("active");
+		}
+	})
+
+
 </script>
+
+
 </html>
