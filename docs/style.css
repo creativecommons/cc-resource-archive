@@ -190,11 +190,24 @@ padding: 10px;
 .thumbnailbox {
 width: 200px;
 float: left;
-display: block;
+display: flex;
+flex-direction: column;
 border-radius: 25px;
 border: 2px solid #C0C0C0;
-margin: 5px;
+margin: 10px;
+margin-top: 25px;
+
+
+
 }
+
+.thumbnailbox:hover {
+    background-color: #e0e0e0; 
+    border-color: #999; 
+    transform: scale(1.1); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+
 
 .thumbnailtitle {
 text-align: center;
@@ -212,6 +225,8 @@ height: 150px;
 margin: 0 auto;
 }
 
+
+
 .downloadbutton {
 width: 200px;
 height: 100px;
@@ -225,6 +240,8 @@ text-align: center;
 display: table-cell;
 margin: 0 10px;
 }
+
+
 
 .downloadbutton p {
 margin: 0;
