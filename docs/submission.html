@@ -4,41 +4,65 @@ permalink: /submit/
 ---
 
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title }} | Creative Commons</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} | Creative Commons</title>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Google Analytics Tracking Code -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        // 'i' is window, 's' is document, 'o' is script, 'g' is analytics.js url, 'r' is tracker name
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            // Pushes arguments to the tracker's queue
+            i[r].q = i[r].q || [];
+            i[r].q.push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        // Creates script element, sets its 'async' attribute to true, adds it to the head
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
 
-  ga('create', 'UA-2010376-29', 'auto');
-  ga('send', 'pageview');
+      // Creates a tracker with the given UA-property ID, and sets the 'auto' property to true
+      ga("create", "UA-2010376-29", "auto");
+      // Sends a pageview hit with the default 'page' field value
+      ga("send", "pageview");
+    </script>
 
-</script>
+    <!-- Stylesheet for the page -->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body>
+    <a href="//creativecommons.org/"><div id="bannercc"></div></a>
 
-<link rel="stylesheet" type="text/css" href="/style.css" />
+    <div style="text-align: center">
+      <h1><a href="/">Creative Commons Resource Archive</a></h1>
 
-</head>
-<body>
-
-	<a href="//creativecommons.org/"><div id="bannercc"></div></a>
-
-
-<div style="text-align: center; ">
-<h1><a href="/">Creative Commons Resource Archive</a></h1>
-
-<h2>Submit a Resource</h2>
-<h3>Come across an interesting, useful resource about CC?</h3>
-<p>We encourage you to fork the project on GitHub, and submit resources by making pull requests on the project.</p> 
-<p>See <a href="https://github.com/creativecommons/cc-resource-archive">https://github.com/creativecommons/cc-resource-archive</a> for more info.</p>
-
-</div>
-
-</body>
+      <h2>Submit a Resource</h2>
+      <h3>Come across an interesting, useful resource about CC?</h3>
+      <p>
+        We encourage you to fork the project on GitHub, and submit resources by
+        making pull requests on the project.
+      </p>
+      <p>
+        See
+        <a href="https://github.com/creativecommons/cc-resource-archive"
+          >https://github.com/creativecommons/cc-resource-archive</a
+        >
+        for more info.
+      </p>
+    </div>
+  </body>
 </html>
-
-
