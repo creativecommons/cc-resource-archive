@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>{{ page.title }} | Creative Commons Resource Archive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="/style.css" />
 
 
@@ -30,41 +33,7 @@ function getUrlVars()
     return vars;
 }
 
-function UpdateQueryString(key, value, url) {
-    if (!url) url = window.location.href;
-    var re = new RegExp("([?|&])" + key + "=.*?(&|#|$)(.*)", "gi");
-
-    if (re.test(url)) {
-        if (typeof value !== 'undefined' && value !== null)
-            return url.replace(re, '$1' + key + "=" + value + '$2$3');
-        else {
-            var hash = url.split('#');
-            url = hash[0].replace(re, '$1$3').replace(/(&|\?)$/, '');
-            if (typeof hash[1] !== 'undefined' && hash[1] !== null) 
-                url += '#' + hash[1];
-            return url;
-        }
-    }
-    else {
-        if (typeof value !== 'undefined' && value !== null) {
-            var separator = url.indexOf('?') !== -1 ? '&' : '?',
-                hash = url.split('#');
-            url = hash[0] + separator + key + '=' + value;
-            if (typeof hash[1] !== 'undefined' && hash[1] !== null) 
-                url += '#' + hash[1];
-            return url;
-        }
-        else
-            return url;
-    }
-}
-
 document.write("<style>.thumbnailbox { display: none; }</style>");
-
-function RemoveQueryString(param1) {
-	var quer = param1
-	location.href=location.href.replace(/&?quer=([^&]$|[^&]*)/i, "");
-	}
 
 var topic = getUrlVars()["topic"];
 var language = getUrlVars()["language"];
@@ -112,6 +81,8 @@ Creative Commons Resource Archive
 
 {{content}}
 
+	<p style="text-align: center; padding:1em; "><a href="/submit/">Submit a resource</a></p>
+
 
 
 <div id="thumbnaillist">
@@ -124,11 +95,11 @@ Creative Commons Resource Archive
 					{% if page.medium contains mediumfilter or mediumfilter == null %}
 					{% if page.language contains languagefilter or languagefilter == null %}
 						<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-						<a href="{{ page.permalink }}">
-						<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-						<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-						</a>
-						<div class="thumbnailblurb">{{ page.blurb }}</div>
+							<a class="thumbnailLink" href="{{ page.permalink }}" >
+								<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+								<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+								<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
+							</a>
 						</div>
 					{% endif %}{% endif %}{% endif %}
 				{% endif %}
@@ -143,17 +114,17 @@ Creative Commons Resource Archive
 				{% if page.weight == i %}
 					{% unless page.featured %}
 						{% if page.paramfilter == page.paramvalue %}
-					{% if page.topic contains topicfilter or topicfilter == null %}
-					{% if page.medium contains mediumfilter or mediumfilter == null %}
-					{% if page.language contains languagefilter or languagefilter == null %}
-							<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-							<a href="{{ page.permalink }}">
-							<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-							<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-							</a>
-							<div class="thumbnailblurb">{{ page.blurb }}</div>
-							</div>
-					{% endif %}{% endif %}{% endif %}
+						{% if page.topic contains topicfilter or topicfilter == null %}
+						{% if page.medium contains mediumfilter or mediumfilter == null %}
+						{% if page.language contains languagefilter or languagefilter == null %}
+								<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+									<a class="thumbnailLink" href="{{ page.permalink }}">
+										<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+										<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+										<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
+									</a>
+								</div>
+						{% endif %}{% endif %}{% endif %}
 						{% endif %}
 					{% endunless %}
 				{% endif %}

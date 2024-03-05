@@ -15,14 +15,14 @@ title: All
 		   document.write('{{topic.name}}')
 	</script>
 	{% endfor %}
-	 [<a onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+	 [<a role="button" onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');">x</a>]</p>
 </div>
 
 <div class="resourcenav resourcenavtopicunknown">
 <h2>Topic</h2>
 <ul>
 	{% for topic in site.data.topics %}
-		<li><a onclick="window.location.search += '&topic={{ topic.string }}';" href="#">{{ topic.name }}</a></li>
+		<li><a role="button" onclick="window.location.search += '&topic={{ topic.string }}';">{{ topic.name }}</a></li>
 	{% endfor %}
 </ul>
 </div>
@@ -36,7 +36,7 @@ title: All
 		   document.write('{{medium.name}}')
 	</script>
 	{% endfor %}
-	 [<a onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+	 [<a role="button" onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');">x</a>]</p>
 <p></p>
 </div>
 
@@ -44,7 +44,7 @@ title: All
 <h2>Medium</h2>
 <ul>
 	{% for medium in site.data.media %}
-		<li><a onclick="window.location.search += '&medium={{ medium.string }}';" href="#">{{ medium.name }}</a></li>
+		<li><a role="button" onclick="window.location.search += '&medium={{ medium.string }}';">{{ medium.name }}</a></li>
 	{% endfor %}
 </ul>
 </div>
@@ -58,14 +58,14 @@ title: All
 		   document.write('{{language.name}}')
 	</script>
 	{% endfor %}
-	 [<a onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');" href="#">x</a>]</p>
+	 [<a role="button" onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');">x</a>]</p>
 </div>
 
 <div class="resourcenav resourcenavlanguageunknown">
 <h2>Language</h2>
 <ul style="columns: 2;">
 	{% for language in site.data.languages %}
-		<li><a onclick="window.location.search += '&language={{ language.string }}';" href="#">{{ language.name }}</a> </li>
+		<li><a role="button" onclick="window.location.search += '&language={{ language.string }}';">{{ language.name }}</a> </li>
 	{% endfor %}
 </ul>
 </div>
