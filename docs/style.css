@@ -169,6 +169,8 @@ border-radius: 25px;
 }
 
 #downloadbuttonholder {
+display: flex;
+justify-content: center;
 height: 100px;
 margin: 10px auto;
 }
@@ -211,7 +213,7 @@ margin: 0 auto;
 }
 
 .downloadbutton {
-width: 200px;
+min-width: 350px;
 height: 100px;
 float: left;
 border-radius: 12px;
