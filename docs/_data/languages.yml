@@ -42,3 +42,15 @@
 
 - name: Tagalog
   string: tl
+  
+- name: Spanish
+  string: es
+
+- name: Mandarin
+  string: cmn
+  
+- name: Hindi
+  string: hi
+
+- name: Urdu
+  string: ur
