@@ -164,6 +164,7 @@ margin: 0 auto;
 #preview {
 width: 500px;
 height: 375px;
+
 margin: 0 auto;
 background-image: url(/images/placeholder-500.gif);
 border-radius: 25px;
