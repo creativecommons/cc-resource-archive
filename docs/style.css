@@ -1,6 +1,7 @@
 body {
 font-family: sans-serif; 
 margin: 0;
+width: 100%;
 padding: 30px 0 0;
 display: flex;
 flex-direction: column;
@@ -235,15 +236,14 @@ color: white;
 }
 
 #resourcenavbar {
-width: 600px;
-height: 150px;
+min-height: 150px;
 margin: 0 auto 100px;
+display: flex;
 }
 
 .resourcenav {
 width: 200px;
-height: 150px;
-float: left;
+min-height: 150px;
 display: none;
 }
 
@@ -256,4 +256,10 @@ width: 210px;
 height: 50px;
 background-image: url(/images/cc-green-210.gif);
 margin-left: 100px;
+}
+
+@media (max-width : 600px){
+    #resourcenavbar {
+        flex-direction: column;
+    }
 }
