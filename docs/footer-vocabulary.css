@@ -49,14 +49,6 @@
         url('./fonts/SourceSansPro-Bold.otf') format("opentype");
 }
 
-@font-face {
-    font-family: "CC Accidenz Commons";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('./fonts/CCAccidenzCommons-medium.otf') format("opentype");
-}
-
 
 
 :root{
@@ -69,14 +61,7 @@
     /* whitespace */
     --vocabulary-page-edges-space: 5%;
 
-    /* set default icon sprite */ 
-    --icon-sprite: url('./images/assets/cc-icons.svg#cc-logo');
-    --icon-sprite-color: black;
-    --icon-sprite-size: 1em;
-
     /* cc sprite names */
-    --cc-logo: url('./images/assets/cc-icons.svg#cc-logo');
-    --cc-heart: url('./images/assets/cc-icons.svg#cc-heart');
     --cc-heart-filled: url('./images/assets/cc-icons.svg#cc-heart-filled');
 
     /* brand typsetting */
@@ -85,7 +70,6 @@
     --vocabulary-brand-typeset-nav-color: #767676;
 
     /* Font awesomem sprite names */
-    --fa-instagram: url('./images/assets/fa-icons.svg#fa-instagram');
     --fa-twitter: url('./images/assets/fa-icons.svg#fa-twitter');
     --fa-facebook: url('./images/assets/fa-icons.svg#fa-facebook');
     --fa-linkedin: url('./images/assets/fa-icons.svg#fa-linkedin');
@@ -119,56 +103,8 @@ with .icon, an element replaced with an icon using .icon-replace,
 or attaching an icon to an element :before using .icon-attach,
 leaving room for semantic and accessible implementation choices  */
 
-.icon.cc-heart, .icon-attach.cc-heart:before {
-    --icon-sprite: var(--cc-heart);
-}
-
 .icon.cc-heart-filled, .icon-attach.cc-heart-filled:before {
     --icon-sprite: var(--cc-heart-filled);
-}
-
-.icon.fa-angle-down, .icon-attach.fa-angle-down:before {
-    --icon-sprite: var(--fa-angle-down);
-}
-
-.icon.fa-angle-left, .icon-attach.fa-angle-left:before {
-    --icon-sprite: var(--fa-angle-left);
-}
-
-.icon.fa-angle-right, .icon-attach.fa-angle-rignt:before {
-    --icon-sprite: var(--fa-angle-right);
-}
-
-.icon.fa-angle-up, .icon-attach.fa-angle-up:before {
-    --icon-sprite: var(--fa-angle-up);
-}
-
-.icon.fa-globe, .icon-attach.fa-globe:before {
-    --icon-sprite: var(--fa-globe);
-}
-
-.icon.fa-heart, .icon-attach.fa-heart:before {
-    --icon-sprite: var(--fa-heart);
-}
-
-.icon.fa-info, .icon-attach.fa-info:before {
-    --icon-sprite: var(--fa-info);
-}
-
-.icon.fa-quote, .icon-attach.fa-quote:before {
-    --icon-sprite: var(--fa-quote);
-}
-
-.icon.fa-right-angle, .icon-attach.fa-righ-angle:before {
-    --icon-sprite: var(--fa-heart);
-}
-
-.icon.fa-search, .icon-attach.fa-search:before {
-    --icon-sprite: var(--fa-search);
-}
-
-.icon-replace.fa-instagram {
-    --icon-sprite: var(--fa-instagram);
 }
 
 .icon-replace.fa-twitter {
