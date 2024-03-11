@@ -171,6 +171,10 @@ border-radius: 25px;
 
 #downloadbuttonholder {
 height: 100px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 margin: 10px auto;
 }
 
@@ -212,20 +216,19 @@ margin: 0 auto;
 }
 
 .downloadbutton {
-width: 200px;
-height: 100px;
-float: left;
+min-width: 230px;
+width: max-content;
+height: 100%;
+padding: 0 10px;
 border-radius: 12px;
 background-color: #40ae49;
-float: left;
-display: table-cell;
-vertical-align: middle;
-text-align: center;
-display: table-cell;
-margin: 0 10px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .downloadbutton p {
+height: 100%;
 margin: 0;
 font-size: 200%;
 line-height: 100px;
