@@ -1,0 +1,722 @@
+/* brand typsetting */
+@font-face {
+    font-family:"Roboto Condensed";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:  url('./fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('./fonts/RobotoCondensed-Regular.woff') format('woff'),
+        url('./fonts/RobotoCondensed-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family:"Roboto Condensed";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:  url('./fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+        url('./fonts/RobotoCondensed-Bold.woff') format('woff'),
+        url('./fonts/RobotoCondensed-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/SourceSansPro-Regular.woff2') format("woff2"),
+        url('./fonts/SourceSansPro-Regular.woff') format("woff"),
+        url('./fonts/SourceSansPro-Regular.otf') format("opentype");
+ }
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('./fonts/SourceSansPro-SemiBold.woff2') format("woff2"),
+        url('./fonts/SourceSansPro-SemiBold.woff') format("woff"),
+        url('./fonts/SourceSansPro-SemiBold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/SourceSansPro-Bold.woff2') format("woff2"),
+        url('./fonts/SourceSansPro-Bold.woff') format("woff"),
+        url('./fonts/SourceSansPro-Bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: "CC Accidenz Commons";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/CCAccidenzCommons-medium.otf') format("opentype");
+}
+
+
+
+:root{
+
+    /* brand colors */
+    --vocabulary-neutral-color-dark-gray: #767676;
+    --vocabulary-brand-color-turquoise: #05b5da;
+    --vocabulary-brand-color-gold: #FBD43C;
+
+    /* whitespace */
+    --vocabulary-page-edges-space: 5%;
+
+    /* set default icon sprite */ 
+    --icon-sprite: url('./images/assets/cc-icons.svg#cc-logo');
+    --icon-sprite-color: black;
+    --icon-sprite-size: 1em;
+
+    /* cc sprite names */
+    --cc-logo: url('./images/assets/cc-icons.svg#cc-logo');
+    --cc-heart: url('./images/assets/cc-icons.svg#cc-heart');
+    --cc-heart-filled: url('./images/assets/cc-icons.svg#cc-heart-filled');
+
+    /* brand typsetting */
+    --vocabulary-brand-typeset-nav-family: "Roboto Condensed";
+    --vocabulary-brand-typeset-nav-weight: bold;
+    --vocabulary-brand-typeset-nav-color: #767676;
+
+    /* Font awesomem sprite names */
+    --fa-instagram: url('./images/assets/fa-icons.svg#fa-instagram');
+    --fa-twitter: url('./images/assets/fa-icons.svg#fa-twitter');
+    --fa-facebook: url('./images/assets/fa-icons.svg#fa-facebook');
+    --fa-linkedin: url('./images/assets/fa-icons.svg#fa-linkedin');
+    --fa-mastodon: url('./images/assets/fa-icons.svg#fa-mastodon');
+}
+
+
+/* establish svg sprite icon defaults */
+.icon {
+    display: inline-block;
+    /* min-width: 30px;
+    min-height: 30px; */
+    height: 1em;
+    width: 1em;
+
+    font-size: var(--icon-sprite-size);
+    background-color: var(--icon-sprite-color);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-image: var(--icon-sprite);
+    mask-image: var(--icon-sprite);
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+
+/* customize a specific sprite via matching class on <span>
+with .icon, an element replaced with an icon using .icon-replace,
+or attaching an icon to an element :before using .icon-attach,
+leaving room for semantic and accessible implementation choices  */
+
+.icon.cc-heart, .icon-attach.cc-heart:before {
+    --icon-sprite: var(--cc-heart);
+}
+
+.icon.cc-heart-filled, .icon-attach.cc-heart-filled:before {
+    --icon-sprite: var(--cc-heart-filled);
+}
+
+.icon.fa-angle-down, .icon-attach.fa-angle-down:before {
+    --icon-sprite: var(--fa-angle-down);
+}
+
+.icon.fa-angle-left, .icon-attach.fa-angle-left:before {
+    --icon-sprite: var(--fa-angle-left);
+}
+
+.icon.fa-angle-right, .icon-attach.fa-angle-rignt:before {
+    --icon-sprite: var(--fa-angle-right);
+}
+
+.icon.fa-angle-up, .icon-attach.fa-angle-up:before {
+    --icon-sprite: var(--fa-angle-up);
+}
+
+.icon.fa-globe, .icon-attach.fa-globe:before {
+    --icon-sprite: var(--fa-globe);
+}
+
+.icon.fa-heart, .icon-attach.fa-heart:before {
+    --icon-sprite: var(--fa-heart);
+}
+
+.icon.fa-info, .icon-attach.fa-info:before {
+    --icon-sprite: var(--fa-info);
+}
+
+.icon.fa-quote, .icon-attach.fa-quote:before {
+    --icon-sprite: var(--fa-quote);
+}
+
+.icon.fa-right-angle, .icon-attach.fa-righ-angle:before {
+    --icon-sprite: var(--fa-heart);
+}
+
+.icon.fa-search, .icon-attach.fa-search:before {
+    --icon-sprite: var(--fa-search);
+}
+
+.icon-replace.fa-instagram {
+    --icon-sprite: var(--fa-instagram);
+}
+
+.icon-replace.fa-twitter {
+    --icon-sprite: var(--fa-twitter);
+}
+
+.icon-replace.fa-facebook {
+    --icon-sprite: var(--fa-facebook);
+}
+
+.icon-replace.fa-linkedin {
+    --icon-sprite: var(--fa-linkedin);
+}
+
+.icon-replace.fa-mastodon {
+    --icon-sprite: var(--fa-mastodon);
+}
+
+
+/* attach an icon to an existing element with a :before */
+.icon-attach:before {
+    display: inline-block;
+    content: '';
+    /* min-width: 30px; */
+    /* min-height: 30px; */
+    height: 1em;
+    width: 1em;
+
+    font-size: var(--icon-sprite-size);
+    background-color: var(--icon-sprite-color);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--icon-sprite);
+    mask-image: var(--icon-sprite);
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+    --icon-sprite: var(--cc-logo);
+}
+
+.icon-replace {
+    display: inline-block;
+    content: '';
+    text-indent: -1000px;
+
+    /* min-width: 30px; */
+    /* min-height: 30px; */
+    height: 1em;
+    width: 1em;
+
+    font-size: var(--icon-sprite-size);
+    background-color: var(--icon-sprite-color);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--icon-sprite);
+    mask-image: var(--icon-sprite);
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+    --icon-sprite: var(--cc-logo);
+}
+
+
+
+
+
+
+/* Style for footer */
+
+body > footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "logo nav nav nav"
+    "contact subscribe subscribe donate"
+    "contact license license donate";
+    gap: 40px;
+    padding: 40px var(--vocabulary-page-edges-space);
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    background: black;
+}
+
+body > footer h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+
+body > footer a {
+    color: var(--vocabulary-brand-color-turquoise);
+    text-decoration: none;
+}
+
+body > footer p {
+    line-height: 1.5;
+}
+
+/* needs to be moved to be broader in general specificity scope */
+body > footer p a {
+    /* better hyperlink underline typesetting inspired by Tufte CSS */
+    --underline-color: var(--vocabulary-brand-color-turquoise);
+    --underline-background-color: black;
+    color: var(--vocabulary-brand-color-turquoise);
+    /* text-decoration: none; */
+
+    /* adapted from Tufte.css -- Copyright (c) 2014 Dave Liepmann -- https://github.com/edwardtufte/tufte-css -- https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE */
+    background: -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(var( --underline-color), var( --underline-color)), -webkit-linear-gradient(currentColor, currentColor);
+    background: linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(var( --underline-color), var( --underline-color)), linear-gradient(currentColor, currentColor);
+    -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    text-shadow: 0.03em 0 var(--underline-background-color), -0.03em 0 var(--underline-background-color), 0 0.03em var(--underline-background-color), 0 -0.03em var(--underline-background-color), 0.06em 0 var(--underline-background-color), -0.06em 0 var(--underline-background-color), 0.09em 0 var(--underline-background-color), -0.09em 0 var(--underline-background-color), 0.12em 0 var(--underline-background-color), -0.12em 0 var(--underline-background-color), 0.15em 0 var(--underline-background-color), -0.15em 0 var(--underline-background-color);
+    background-position: 0% 93%, 100% 93%, 0% 93%;
+    /* background-position-y: 87%, 87%, 87%; */
+
+}
+
+body > footer .identity-logo {
+    grid-area: logo;
+    display: inline-block;
+    text-indent: -1000px;
+    vertical-align: bottom;
+    height: 50px;
+    width: 191px;
+
+
+    /* allows for color manipulation of svg */
+    background-color: white;
+    -webkit-mask-image: url('./../svg/cc/logos/cc/logomark.svg');
+    mask-image: url('./../svg/cc/logos/cc/logomark.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    cursor: pointer;
+
+    /* standard pattern for setting logo in lieu of background color manipulation */
+    /* background: url('../../svg/cc/logos/cc/logomark.svg') left top no-repeat; */
+}
+
+body > footer .identity-logo:hover {
+    background-color: var(--vocabulary-brand-color-turquoise);
+}
+
+body > footer .footer-menu {
+    grid-area: nav;
+
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+body > footer .footer-menu ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+body > footer .footer-menu ul li a {
+    text-decoration: none;
+    color: var(--vocabulary-brand-color-turquoise);
+
+}
+
+body > footer .contact {
+    grid-area: contact;
+}
+
+body > footer .contact .social-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 3em;
+
+    list-style: none;
+
+}
+
+body > footer .contact .social-menu ul li {
+    margin-right: 1.5em;
+}
+
+body > footer .social-menu li a {
+    --icon-sprite-color: white;
+    --icon-sprite-size: 1.9em;
+}
+
+body > footer .subscribe {
+    grid-area: subscribe;
+}
+
+body > footer .subscribe form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+body > footer .subscribe form input {
+    display: inline-flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: rgb(118, 118, 118);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.3;
+    border: 2px solid rgb(118, 118, 118);;
+    /* border-radius: 4px; */
+    box-shadow: none;
+
+}
+
+body > footer .subscribe form input.input {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: .5em;
+    width: 100%;
+}
+
+body > footer .subscribe form input.input:focus {
+    color: white;
+}
+
+body > footer .subscribe form input.button {
+    justify-content: center;
+    padding: 1.1em;
+
+    cursor: pointer;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.125rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 0;
+    white-space: nowrap;
+    background-color: rgb(118, 118, 118);
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: rgb(255, 255, 255);
+}
+
+body > footer .donate {
+    grid-area: donate;
+}
+
+body > footer .donate a.donate {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    font-style: normal;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    background: var(--vocabulary-brand-color-gold);
+}
+
+body > footer .donate a.donate:hover {
+    cursor: pointer;
+
+    background-color: rgb(248, 204, 44);
+}
+
+/* set the icon settings */
+body > footer .donate a.donate.icon-attach:before {
+    /* --icon-sprite: var(--cc-heart-filled); */
+    --icon-sprite-color: black;
+    --icon-sprite-size: 1.2em;
+
+    margin-right: .3em;
+}
+
+body > footer .license {
+    grid-area: license;
+}
+
+body > footer .license img path {
+    fill: white;
+    /* width: 1.2em; */
+}
+
+body > footer .license svg {
+    display: inline;
+    width: 1.9em;
+    height: 1.9em;
+    margin-right: .3em;
+}
+
+/* For responsiveness */
+
+@media (min-width: 1500px) {
+    body {
+      width: 1500px;
+      margin: 0 auto;
+    }
+
+  }
+
+@media (max-width: 1140px) {
+    .blog-index main footer .attribution-list ul.expand {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .blog-index main .authored-posts.highlight {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .blog-index main .authored-posts.highlight > article:nth-child(1) {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 705px) {
+
+    .masthead {
+        padding-top: 60px;
+        display: block;
+    }
+
+    button.expand-menu {
+        position: absolute;
+        top: 4.5em;
+        right: 0;
+        display: inline-block;
+        padding: .3em .5em;
+        border: none;
+        border-radius: 5px;
+        background: #F5F5F5;
+        text-transform: uppercase;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1em;
+        padding: .5rem 1rem;
+    }
+
+    .primary-menu {
+        display: none;
+
+    }
+
+    .primary-menu.expand {
+        display: initial;
+    }
+
+    .primary-menu.expand ul {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 1.5em;
+    }
+
+    .primary-menu.expand ul li {
+        margin: 0;
+        padding: 1em 0;
+        border-top: 1px solid rgba(1,1,1,.1);
+    }
+    /* .ancilliary-menu {
+        display: none;
+    } */
+
+    main {
+        width: 80%;
+    }
+
+    main > header:before {
+        left: initial;
+    }
+
+    main article.related-posts {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    main article.related-posts .authored-posts.highlight {
+        display: block;
+    }
+
+    .blog-index main .authored-posts.highlight:nth-of-type(1) > article:nth-child(1) {
+        padding: 2em;
+    }
+
+    .blog-index main .authored-posts.highlight {
+        padding: 0 5%;
+    }
+
+    .blog-index main footer .attribution-list ul.expand {
+        display: block;
+    }
+
+    .program-index main > article {
+        width: 90%;
+        margin: 0;
+    }
+
+    .program-index main > article.projects ul {
+        display: block;
+    }
+
+    .program-index main > article.projects ul li {
+        margin-bottom: 2em;
+    }
+
+    .search-index .search-form form button {
+        width: 20%;
+    }
+
+}
+
+@media (max-width: 680px) {
+
+    .explore-panel {
+        flex-wrap: wrap;
+    }
+
+    body > footer {
+        display: block;
+    }
+
+    body > footer > nav {
+        margin-top: 1em;
+        margin-bottom: 3em;
+    }
+
+    body > footer > nav ul li {
+        margin-bottom: 1em;
+    }
+
+    body > footer > div {
+        margin-bottom: 4em;
+    }
+
+    .default-page main {
+        display: block;
+        /* margin: 0 auto; */
+    }
+
+    .default-page main > aside .attention {
+        margin-bottom: 5em;
+    }
+
+    .authored-posts article figure {
+        width: 100%;
+        flex: initial;
+    }
+
+    .team-index main .persons ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .person-page main > header {
+        display: flex;
+    }
+
+    .person-page main > header figure {
+        width: auto;
+        margin-bottom: 3em;
+        position: relative;
+
+        order: -1;
+    }
+
+    nav.pagination {
+        width: 100%;
+    }
+
+    nav.pagination ol {
+        /* width: 100%; */
+        flex-wrap: wrap;
+    }
+
+    nav.pagination ol li {
+        line-height: 250%;
+    }
+}
+
+@media (max-width: 580px) {
+    .explore-panel .explore-menu ul {
+        grid-template-columns: 1fr 1fr;
+        /* display: flex;
+        flex-direction: column;
+        flex-wrap: wrap; */
+    }
+
+    body > footer .footer-menu ul {
+        display: block;
+    }
+}
+
+@media (max-width: 425px) {
+  
+    .blog-index .attribution-list {
+      padding: 2em;
+    }
+  
+    .blog-index .attribution-list h2 {
+      width: 50%;
+      hyphens: auto;
+      word-break: break-word;
+  
+    }
+  
+  }
+
+@media (max-width:400px) {
+
+    .explore-panel .explore-menu ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .team-index main .persons ul {
+        display: initial;
+    }
+}
+
+@media (max-width:340px) {
+    .ancilliary-menu button:before, .ancilliary-menu a:before {
+        display: none;
+    }
+
+}
