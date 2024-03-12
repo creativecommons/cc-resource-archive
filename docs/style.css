@@ -1,7 +1,7 @@
 body {
 font-family: sans-serif; 
 margin: 0;
-padding: 0;
+padding: 30px 0 0;
 }
 
 /* STYLES FOR GLOBAL HEADER */
@@ -13,7 +13,8 @@ padding: 0;
 
 #global-header {
     font-family: 'Source Sans Pro', sans-serif;
-    position: relative;
+    position: absolute;
+    top: 0;
     background-color: #000000;
     color: #ffffff;
     padding: 2.5% 7.5% 2.5%;
@@ -172,6 +173,10 @@ border-radius: 25px;
 display: flex;
 justify-content: center;
 height: 100px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 margin: 10px auto;
 }
 
@@ -213,20 +218,25 @@ margin: 0 auto;
 }
 
 .downloadbutton {
+
 min-width: 350px;
 height: 100px;
 float: left;
+
+min-width: 230px;
+width: max-content;
+height: 100%;
+padding: 0 10px;
+
 border-radius: 12px;
 background-color: #40ae49;
-float: left;
-display: table-cell;
-vertical-align: middle;
-text-align: center;
-display: table-cell;
-margin: 0 10px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .downloadbutton p {
+height: 100%;
 margin: 0;
 font-size: 200%;
 line-height: 100px;
