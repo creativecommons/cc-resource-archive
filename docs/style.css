@@ -13,26 +13,26 @@ padding: 30px 0 0;
 
 #global-header {
     font-family: 'Source Sans Pro', sans-serif;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -30px;
     background-color: #000000;
     color: #ffffff;
     padding: 2.5% 7.5% 2.5%;
-    margin-bottom: -50px;
+    margin-bottom: -78px;
     transform: translateY(-100%);
-    transition: transform 1.4s ease, margin-bottom 1.4s ease;
+    transition: transform 0s ease, margin-bottom 0s ease;
 } 
 
 #global-header.active {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     transform: translateY(0);
-    transition: transform 0.7s ease, margin-bottom 0.7s ease;
+    transition: transform 0s ease, margin-bottom 0s ease;
 }
 
 #global-header .container{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s ease;
+    transition: max-height 0s ease;
 }
 
 #global-header.active .container{
@@ -44,14 +44,15 @@ padding: 30px 0 0;
     color: #ffffff;
     position: absolute;
     bottom: -2rem;
-    right: 10%;
-    padding: 5px 5px 10px;
+    right: 5%;
+    padding: 16px 10px 6px;
     border: none;
     border-radius: 0 0 5px 5px;
+    font-size: 0.8em;
 }
 
 #global-header-btn:hover {
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: white;
     cursor: pointer;
 }
@@ -79,6 +80,7 @@ padding: 30px 0 0;
     background-color: #FBD43C;
     color: #000000;
     font-weight: bold;
+    border-radius: 3px;
 }
 
 #cc-heart{
@@ -99,17 +101,12 @@ padding: 30px 0 0;
     min-width: fit-content;
 }
 
-#global-header-link:hover {
-    text-decoration: underline;
-}
-
 #global-header-title {
     color: #05ACC7;
     font-weight: bold;
 }
 
 #global-header-link:hover #global-header-title {
-    text-decoration: underline;
     text-decoration-color: #05ACC7;
 }
 
