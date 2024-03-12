@@ -1,7 +1,7 @@
 body {
 font-family: sans-serif; 
 margin: 0;
-padding: 30px 0 0;
+padding: 0;
 }
 
 /* STYLES FOR GLOBAL HEADER */
@@ -13,30 +13,31 @@ padding: 30px 0 0;
 
 #global-header {
     font-family: 'Source Sans Pro', sans-serif;
-    position: absolute;
+    position: relative;
     top: 0;
     background-color: #000000;
     color: #ffffff;
     padding: 2.5% 7.5% 2.5%;
     margin-bottom: -50px;
     transform: translateY(-100%);
-    transition: transform 1.4s ease, margin-bottom 1.4s ease;
+    transition: transform 1.4s ease, margin-bottom 1.4s ease, max-height 1s ease;
+
 } 
 
 #global-header.active {
     margin-bottom: 50px;
     transform: translateY(0);
-    transition: transform 0.7s ease, margin-bottom 0.7s ease;
 }
 
 #global-header .container{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s ease;
 }
 
 #global-header.active .container{
     max-height: 100%;
+    transition: max-height 1s ease;
+
 }
 
 #global-header-btn {
