@@ -45,18 +45,12 @@
 	{% if page.embed %}
 	<div align="center">{{ page.embed }}</div>
 	{% else %}
-	{% if page.downloadurl %}
-		<a href="{{ page.downloadurl }}" target="_blank">
-	{% endif %}
-
+	
 	{% if page.image-full %}
 		<div id="preview" style="background-image: url({{page.image-full}})"></div>
 	{% else %}
 		<div id="preview"></div>
-	{% endif %}
-
-	{% if page.downloadurl %}
-		</a>
+		
 	{% endif %}
 	{% endif %}
 	{% if page.downloadurl or page.repourl %}
