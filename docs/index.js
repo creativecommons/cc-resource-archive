@@ -29,4 +29,3 @@ for (let i = 0; i < tagItems.length; i++) {
     }
   });
 }
-
