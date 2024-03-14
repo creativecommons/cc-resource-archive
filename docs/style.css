@@ -13,8 +13,6 @@ padding: 30px 0 0;
 
 #global-header {
     font-family: 'Source Sans Pro', sans-serif;
-    position: absolute;
-    top: 0;
     background-color: #000000;
     color: #ffffff;
     padding: 2.5% 7.5% 2.5%;
