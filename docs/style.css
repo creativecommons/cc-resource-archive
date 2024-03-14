@@ -1,7 +1,7 @@
 body {
 font-family: sans-serif; 
 margin: 0;
-padding: 0;
+padding: 30px 0 0;
 }
 
 /* STYLES FOR GLOBAL HEADER */
@@ -13,7 +13,8 @@ padding: 0;
 
 #global-header {
     font-family: 'Source Sans Pro', sans-serif;
-    position: relative;
+    position: absolute;
+    top: 0;
     background-color: #000000;
     color: #ffffff;
     padding: 2.5% 7.5% 2.5%;
@@ -157,31 +158,29 @@ text-align: center;
 #thumbnaillist {
 max-width: 900px;
 min-width: 250px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 }
 
 #preview {
 width: 500px;
 height: 375px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 background-image: url(/images/placeholder-500.gif);
 border-radius: 25px;
 }
 
 #downloadbuttonholder {
 height: 100px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 10px;
-margin-bottom: 10px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px auto;
 }
 
 #longdescription {
 max-width: 500px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 border: 2px solid #C0C0C0;
 border-radius: 25px;
 padding: 10px;
@@ -194,6 +193,10 @@ display: block;
 border-radius: 25px;
 border: 2px solid #C0C0C0;
 margin: 5px;
+}
+
+.thumbnailLink {
+    text-decoration: none;
 }
 
 .thumbnailtitle {
@@ -209,26 +212,23 @@ padding: 5px;
 .thumbnail {
 width: 200px;
 height: 150px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 }
 
 .downloadbutton {
-width: 200px;
-height: 100px;
-float: left;
+min-width: 230px;
+width: max-content;
+height: 100%;
+padding: 0 10px;
 border-radius: 12px;
 background-color: #40ae49;
-float: left;
-display: table-cell;
-vertical-align: middle;
-text-align: center;
-display: table-cell;
-margin-left: 10px;
-margin-right: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .downloadbutton p {
+height: 100%;
 margin: 0;
 font-size: 200%;
 line-height: 100px;
@@ -238,9 +238,7 @@ color: white;
 #resourcenavbar {
 width: 600px;
 height: 150px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 100px;
+margin: 0 auto 100px;
 }
 
 .resourcenav {
