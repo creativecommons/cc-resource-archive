@@ -1,3 +1,5 @@
+@import 'vocabulary/css/vocabulary.css' layer(vocabulary);
+
 body {
 font-family: sans-serif; 
 margin: 0;
@@ -259,4 +261,12 @@ width: 210px;
 height: 50px;
 background-image: url(/images/cc-green-210.gif);
 margin-left: 100px;
+}
+
+footer a {
+    color: var(--vocabulary-brand-color-turquoise);
+}
+
+footer .donate a {
+    color: #000;
 }
