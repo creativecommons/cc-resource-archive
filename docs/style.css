@@ -116,6 +116,24 @@ padding: 30px 0 0;
     text-decoration-color: #05ACC7;
 }
 
+
+.masthead{
+    padding-top: 0;
+}
+
+.masthead .tagline {
+    display: block;
+    padding-left: 2.8rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.masthead h1{
+    text-align: left ;
+}
+
 @media screen and (max-width: 768px) {
 
     #global-header {
@@ -144,6 +162,21 @@ padding: 30px 0 0;
 
     #global-header-head p {
         margin-top: 2%;
+    }
+}
+
+
+@media screen and (max-width: 1150px){
+    .masthead {
+        padding-top: 25px;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 705px){
+    .masthead {
+        padding-top: 60px;
+        display: block;
     }
 }
 
@@ -253,13 +286,6 @@ display: none;
 
 .resourcenav.resourcenavstatic {
 display: block;
-}
-
-#bannercc {
-width: 210px;
-height: 50px;
-background-image: url(/images/cc-green-210.gif);
-margin-left: 100px;
 }
 
 footer a {
