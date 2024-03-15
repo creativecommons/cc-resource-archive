@@ -8,7 +8,14 @@ title: All
 
 <div class="resourcenav resourcenavtopicknown">
 <h2>Topic</h2>
-<p><script>document.write(topic);</script> [<a role="button" onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');">x</a>]</p>
+<p>
+	{% for topic in site.data.topics %}
+	<script>
+		if ('{{topic.string}}' == topic)
+		   document.write('{{topic.name}}')
+	</script>
+	{% endfor %}
+	 [<a role="button" onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');">x</a>]</p>
 </div>
 
 <div class="resourcenav resourcenavtopicunknown">
@@ -22,7 +29,14 @@ title: All
 
 <div class="resourcenav resourcenavmediumknown">
 <h2>Medium</h2>
-<p><script>document.write(medium);</script> [<a role="button" onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');">x</a>]</p>
+<p>
+	{% for medium in site.data.media %}
+	<script>
+		if ('{{medium.string}}' == medium)
+		   document.write('{{medium.name}}')
+	</script>
+	{% endfor %}
+	 [<a role="button" onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');">x</a>]</p>
 <p></p>
 </div>
 
@@ -37,7 +51,14 @@ title: All
 
 <div class="resourcenav resourcenavlanguageknown">
 <h2>Language</h2>
-<p><script>document.write(language);</script> [<a role="button" onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');">x</a>]</p>
+<p>
+	{% for language in site.data.languages %}
+	<script>
+		if ('{{language.string}}' == language)
+		   document.write('{{language.name}}')
+	</script>
+	{% endfor %}
+	 [<a role="button" onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');">x</a>]</p>
 </div>
 
 <div class="resourcenav resourcenavlanguageunknown">
