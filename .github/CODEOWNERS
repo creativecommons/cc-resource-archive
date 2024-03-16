@@ -3,4 +3,3 @@
 # code owners must be on the same line. If the code owners are not on the same
 # line, the pattern matches only the last mentioned code owner.
 * @creativecommons/technology
-cd
