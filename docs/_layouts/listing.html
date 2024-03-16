@@ -92,17 +92,13 @@ Creative Commons Resource Archive
 		{% for page in site.pages %}
 			{% if page.layout == 'resource' %}
 				{% if page.featured == i %}
-					{% if page.topic contains topicfilter or topicfilter == null %}
-					{% if page.medium contains mediumfilter or mediumfilter == null %}
-					{% if page.language contains languagefilter or languagefilter == null %}
-						<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-							<a class="thumbnailLink" href="{{ page.permalink }}" >
-								<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-								<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-								<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
-							</a>
-						</div>
-					{% endif %}{% endif %}{% endif %}
+					<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+						<a class="thumbnailLink" href="{{ page.permalink }}" >
+							<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+							<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+							<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
+						</a>
+					</div>
 				{% endif %}
 			{% endif %}
 		{% endfor %}
@@ -115,17 +111,13 @@ Creative Commons Resource Archive
 				{% if page.weight == i %}
 					{% unless page.featured %}
 						{% if page.paramfilter == page.paramvalue %}
-						{% if page.topic contains topicfilter or topicfilter == null %}
-						{% if page.medium contains mediumfilter or mediumfilter == null %}
-						{% if page.language contains languagefilter or languagefilter == null %}
-								<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-									<a class="thumbnailLink" href="{{ page.permalink }}">
-										<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-										<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-										<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
-									</a>
-								</div>
-						{% endif %}{% endif %}{% endif %}
+							<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+								<a class="thumbnailLink" href="{{ page.permalink }}">
+									<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+									<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
+									<div class="thumbnailblurb" style="color: rgb(0, 0, 0)">{{ page.blurb }}</div>
+								</a>
+							</div>
 						{% endif %}
 					{% endunless %}
 				{% endif %}
@@ -135,6 +127,7 @@ Creative Commons Resource Archive
 {% endunless %}
 
 </div>
+
 
 <footer>
     <a href="https://www.creativecommons.org"><img id="cc-main" src="../images/assets/cc-main.svg" alt="Creative Commons"></a>
@@ -146,15 +139,34 @@ Creative Commons Resource Archive
             <li><a href="/privacy">Privacy</a></li>
             <li><a href="/policies">Policies</a></li>
             <li><a href="/terms">Terms</a></li>
+
+
+
+<footer>
+    <a class="identity-logo" href="https://www.creativecommons.org">Creative Commons</a>
+
+    <nav class="footer-menu">
+        <ul>
+            <li><a href="https://creativecommons.org/about/contact">Contact</a></li>
+            <li><a href="https://mail.creativecommons.org/subscribe" target="_blank">Newsletter</a></li>
+            <li><a href="https://creativecommons.org/privacy">Privacy</a></li>
+            <li><a href="https://creativecommons.org/policies">Policies</a></li>
+            <li><a href="https://creativecommons.org/terms">Terms</a></li>
+
         </ul>
     </nav>
 
     <div class="contact">
     <!-- this area lacks a heading? -->
+
     <h2>contact us</h2>
+
+    <h2>Contact Us</h2>
+
     <p>Creative Commons </br> PO Box 1866, Mountain View, CA 94042</p>
     <p><a href="mailto:info@creativecommons.org">info@creativecommons.org</a></p>
     <p><a href="tel:+14154296753">+1-415-429-6753</a></p>
+
 
     <div class="social-menu">
             <!-- <li><a class="icon-replace fa-instagram" href="#">Instagram</a></li> -->
@@ -167,6 +179,21 @@ Creative Commons Resource Archive
 
     <div class="subscribe">
     <h2>subscribe to our newsletter</h2>
+
+    <nav class="social-menu">
+        <ul>
+            <!-- <li><a class="icon-replace fa-instagram" href="#">Instagram</a></li> -->
+            <li><a class="icon-replace fa-twitter" href="https://twitter.com/creativecommons" target="_blank">Twitter</a></li>
+            <li><a class="icon-replace fa-mastodon" href="https://mastodon.social/@creativecommons" target="_blank">Mastodon</a></li>
+            <li><a class="icon-replace fa-facebook" href="https://www.facebook.com/creativecommons" target="_blank">Facebook</a></li>
+            <li><a class="icon-replace fa-linkedin" href="https://www.linkedin.com/company/creative-commons/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <div class="subscribe">
+    <h2>Subscribe to our Newsletter</h2>
+
     <form action="https://creativecommons.us4.list-manage.com/subscribe/post?u=fd30364b6577b471373d6076c&amp;id=4603fe102a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter" target="_blank" novalidate="">
         <input type="email" value="" name="EMAIL" class="email input" id="mce-EMAIL" placeholder="Your email" required="">
         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -178,20 +205,42 @@ Creative Commons Resource Archive
     </div>
 
     <div class="donate">
+
         <h2>support our work</h2>
         <p>Our work relies on you! Help us keep the Internet free and open.</p>
 		<a href="https://www.classy.org/give/313412/#!/donation/checkout" id="footer-donate" target="_blank" rel="noopener noreferrer"><img id="cc-heart" src="../images/assets/ccheart_black.svg" alt="cc-heart"> DONATE NOW</a>
+
+        <h2>Support Our Work</h2>
+        <p>Our work relies on you! Help us keep the Internet free and open.</p>
+        <a class="donate icon-attach cc-heart-filled" href="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner" target="_blank">Donate Now</a>       
+
     </div>
 
 
     <div class="license">
         <p>Except where otherwise <a href="/policies/#license">noted</a>, content on this site is licensed under a <a href="/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>. Icons by <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>.</p>
 
+
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M245.8 214.9l-33.2 17.3c-9.4-19.6-25.2-19.9-27.5-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.6 9.2 43.8 33.2 43.8 14.5 0 24.7-7.1 30.6-21.3l30.6 15.5c-6.2 11.5-25.7 39-65.1 39-22.6 0-74-10.3-74-77.1 0-58.7 43-77.1 72.6-77.1 30.7 0 52.7 12 66 35.9zm143.1 0l-32.8 17.3c-9.5-19.8-25.7-19.9-27.9-19.9-22.1 0-33.2 14.6-33.2 43.8 0 23.6 9.2 43.8 33.2 43.8 14.5 0 24.7-7.1 30.5-21.3l31 15.5c-2.1 3.8-21.4 39-65.1 39-22.7 0-74-9.9-74-77.1 0-58.7 43-77.1 72.6-77.1 30.7 0 52.6 12 65.6 35.9zM247.6 8.1C104.7 8.1 0 123.1 0 256.1c0 138.5 113.6 248 247.6 248 129.9 0 248.4-100.9 248.4-248 0-137.9-106.6-248-248.4-248zm.9 450.8c-112.5 0-203.7-93-203.7-202.8 0-105.4 85.4-203.3 203.7-203.3 112.5 0 202.8 89.5 202.8 203.3 0 121.7-99.7 202.8-202.8 202.8z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff"d="M314.9 194.4v101.4h-28.3v120.5h-77.1V295.9h-28.3V194.4c0-4.4 1.6-8.2 4.6-11.3 3.1-3.1 6.9-4.7 11.3-4.7H299c4.1 0 7.8 1.6 11.1 4.7 3.1 3.2 4.8 6.9 4.8 11.3zm-101.5-63.7c0-23.3 11.5-35 34.5-35s34.5 11.7 34.5 35c0 23-11.5 34.5-34.5 34.5s-34.5-11.5-34.5-34.5zM247.6 8C389.4 8 496 118.1 496 256c0 147.1-118.5 248-248.4 248C113.6 504 0 394.5 0 256 0 123.1 104.7 8 247.6 8zm.8 44.7C130.2 52.7 44.7 150.6 44.7 256c0 109.8 91.2 202.8 203.7 202.8 103.2 0 202.8-81.1 202.8-202.8 .1-113.8-90.2-203.3-202.8-203.3z"/></svg>
     </div>
 
 </footer>
+
+        <svg>
+            <use href="./../vocabulary/svg/cc/icons/cc-icons.svg#cc-logo"></use>
+        </svg>
+        <svg>
+            <use href="./../vocabulary/svg/cc/icons/cc-icons.svg#cc-by"></use>
+        </svg>
+    </div>
+
+</footer>
+
+
+
+
+
 
 </body>
 <script>
