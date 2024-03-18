@@ -134,7 +134,7 @@ Creative Commons Resource Archive
 {% endunless %}
 
 </div>
-
+<button onclick=topFunction() id="top-Btn">GO TO TOP</button>
 
 
 </body>
@@ -143,6 +143,22 @@ Creative Commons Resource Archive
     const handleExplore = (event) => {
         globalHeader.classList.toggle("active");
         event.preventDefault();
+    }
+
+	//go to top button functionality
+	window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.getElementById("top-Btn").style.display = "block";
+        } else {
+            document.getElementById("top-Btn").style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 </script>
 </html>
