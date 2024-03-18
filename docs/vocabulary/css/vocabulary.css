@@ -78,7 +78,8 @@ body > header {
 
     width: 100%;
     /* padding-top: 3%; */
-    padding-top: 40px;
+    /* padding-top: 40px; */
+    padding-top: 0px;
     margin: 0 var(--vocabulary-page-edges-space);
 }
 
@@ -91,19 +92,19 @@ body > header {
     text-indent: -1000px;
     vertical-align: bottom;
     height: 50px;
-    width: 191px;
+    width: 300px;
 
 
     /* allows for color manipulation of svg */
     background-color: black;
-    -webkit-mask-image: url('./../svg/cc/logos/cc/logomark.svg');
-    mask-image: url('./../svg/cc/logos/cc/logomark.svg');
+    -webkit-mask-image: url('./../svg/cc/logos/products/resource_archive.svg');
+    mask-image: url('./../svg/cc/logos/products/resource_archive.svg');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     cursor: pointer;
 
     /* standard pattern for setting logo in lieu of background color manipulation */
-    /* background: url('../../svg/cc/logos/cc/logomark.svg') left top no-repeat; */
+    /* background: url('../../svg/cc/logos/products/resource_archive.svg') left top no-repeat; */
 }
 
 .masthead .identity-logo:hover {
@@ -2581,6 +2582,11 @@ body > footer .license svg {
     .blog-index main footer .attribution-list ul.expand {
         grid-template-columns: 1fr 1fr;
     }
+
+    .masthead {
+        padding-top: 25px;
+        display: block;
+    }
 }
 
 @media (max-width: 900px) {
@@ -2602,6 +2608,12 @@ body > footer .license svg {
     .masthead {
         padding-top: 60px;
         display: block;
+    }
+
+    .masthead .identity-logo{
+        height: 35px;
+        width: 200px;
+        mask-size: contain;
     }
 
     button.expand-menu {
