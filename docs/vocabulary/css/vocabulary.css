@@ -97,14 +97,14 @@ body > header {
 
     /* allows for color manipulation of svg */
     background-color: black;
-    -webkit-mask-image: url('./../svg/cc/logos/products/resource_archive.svg');
-    mask-image: url('./../svg/cc/logos/products/resource_archive.svg');
+    -webkit-mask-image: url('./../svg/cc/logos/cc/logomark.svg');
+    mask-image: url('./../svg/cc/logos/cc/logomark.svgg');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     cursor: pointer;
 
     /* standard pattern for setting logo in lieu of background color manipulation */
-    /* background: url('../../svg/cc/logos/products/resource_archive.svg') left top no-repeat; */
+    /* background: url('../../svg/cc/logos/cc/logomark.svg') left top no-repeat; */
 }
 
 .masthead .identity-logo:hover {
@@ -179,7 +179,7 @@ body > header {
 
     text-decoration: none;
     font-family: "CC Accidenz Commons";
-    font-weight: normal;
+    font-weight: bold;
     text-transform: lowercase;
     letter-spacing: -1px;
     line-height: 1em;

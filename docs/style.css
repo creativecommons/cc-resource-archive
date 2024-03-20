@@ -120,6 +120,10 @@ padding: 30px 0 0;
     text-align: left;
 }
 
+.masthead a{
+    color : black;
+}
+
 @media screen and (max-width: 768px) {
 
     #global-header {
