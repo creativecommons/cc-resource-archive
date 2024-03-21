@@ -78,8 +78,7 @@ body > header {
 
     width: 100%;
     /* padding-top: 3%; */
-    /* padding-top: 40px; */
-    padding-top: 0px;
+    padding-top: 40px;
     margin: 0 var(--vocabulary-page-edges-space);
 }
 
