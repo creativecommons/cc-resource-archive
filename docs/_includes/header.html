@@ -2,9 +2,9 @@
 <!-- CC Global Header -->
 
 <div class="global-header" id="global-header">
-    <a id="global-header-btn" onclick="handleExplore()">Explore CC</a>
+    <a id="global-header-btn" onclick="handleExplore()" href="https://www.creativecommons.org" style="text-decoration: none;">Explore CC</a>
     <div class="container">
-        <a href="https://www.creativecommons.org"><img id="cc-main" src="../images/assets/cc-main.svg" alt="Creative Commons"></a>
+        
         <div id="global-header-content">
             <div id="global-header-head">
                 <h3>OUR WORK RELIES ON YOU!</h3>
@@ -37,6 +37,9 @@
 
 <!-- Main Content -->
 
-<a href="//creativecommons.org/">
-    <div id="bannercc"></div>
-</a>
+<div id="bannercc" onclick="redirectToLink()" style="cursor: pointer;"></div>
+<script>
+    function redirectToLink() {
+        window.location.href = "//creativecommons.org/"
+    }
+</script>
