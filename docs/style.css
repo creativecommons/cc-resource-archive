@@ -237,15 +237,15 @@ color: white;
 }
 
 #resourcenavbar {
-width: 600px;
-height: 150px;
+height: fit-content;
 margin: 0 auto 100px;
+display: flex;
+justify-content: center;
 }
 
 .resourcenav {
 width: 200px;
-height: 150px;
-float: left;
+height: fit-content;
 display: none;
 }
 
@@ -266,4 +266,10 @@ footer a {
 
 footer .donate a {
     color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    #resourcenavbar {
+        flex-direction: column;
+    }
 }
