@@ -7,6 +7,7 @@ permalink: /submit/
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>{{ page.title }} | Creative Commons</title>
 
 <script>
@@ -25,7 +26,12 @@ permalink: /submit/
 </head>
 <body>
 
-	<a href="//creativecommons.org/"><div id="bannercc"></div></a>
+ <div id="bannercc" onclick="redirectToLink()"></div>
+<script>
+  function redirectToLink() {
+      window.location.href = "//creativecommons.org/";
+  }
+</script>
 
 
 <div style="text-align: center; ">
