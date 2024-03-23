@@ -69,16 +69,6 @@ document.write("<style>");
 
 	{% include header.html %}
 
-<h1>
-	{% unless page.title == 'Home' %}
-		<a href="/">
-	{% endunless %}
-Creative Commons Resource Archive
-	{% unless page.title == 'Home' %}
-		</a>
-	{% endunless %}
-</h1>
-
 {{content}}
 
 	<p style="text-align: center; padding:1em; "><a href="/submit/">Submit a resource</a></p>
@@ -198,9 +188,9 @@ Creative Commons Resource Archive
 
 </body>
 <script>
-	const globalHeader = document.getElementById("global-header");
+	const globalHeader = document.getElementById("explore-panel");
     const handleExplore = (event) => {
-        globalHeader.classList.toggle("active");
+        globalHeader.classList.toggle("expand");
         event.preventDefault();
     }
 </script>
