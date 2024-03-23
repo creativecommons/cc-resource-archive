@@ -76,6 +76,10 @@ padding: 0 0 0;
     color : black;
 }
 
+.masthead .identity-logo.product {
+    font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
 
     #global-header {
@@ -106,7 +110,6 @@ padding: 0 0 0;
         margin-top: 2%;
     }
 }
-
 
 /* STYLES FOR MAIN CONTENT */
 
