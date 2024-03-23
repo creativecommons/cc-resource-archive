@@ -160,6 +160,39 @@ h1 {
 text-align: center;
 }
 
+
+
+.submit{
+    background-color: rgb(235, 233, 233);
+    padding: 2px 4px;
+    font-size: 16px;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    color: white;
+    
+}
+
+.submit:hover{
+
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.center{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+
+
 #thumbnaillist {
 max-width: 900px;
 min-width: 250px;
