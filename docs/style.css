@@ -162,6 +162,16 @@ min-width: 250px;
 margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+    #thumbnaillist {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       justify-items: center;
+        margin: auto auto;
+        }
+}
+
 #preview {
 width: 500px;
 height: 375px;
@@ -259,7 +269,11 @@ height: 50px;
 background-image: url(/images/cc-green-210.gif);
 margin-left: 100px;
 }
-
+@media only screen and (max-width: 768px) {
+    #bannercc {
+        margin-top: 10%;
+    }
+}
 footer a {
     color: var(--vocabulary-brand-color-turquoise);
 }
