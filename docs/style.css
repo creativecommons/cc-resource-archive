@@ -257,6 +257,11 @@ display: block;
    position: relative;
    padding: 1rem 0 1rem 1.5rem;
 }
+@media screen and (max-width:350px) {
+    .banner-container{
+        padding: 1rem 0 1rem .65rem;
+     }
+}
 #bannercc {
 width: 210px;
 height: 50px;
