@@ -253,12 +253,14 @@ display: none;
 display: block;
 }
 
+.banner-container{
+   position: relative;
+}
 #bannercc {
 width: 210px;
 height: 50px;
 background-image: url(/images/cc-green-210.gif);
-/* margin-left: 100px; */
-/* margin-top: 100px; */
+
 }
 
 footer a {
