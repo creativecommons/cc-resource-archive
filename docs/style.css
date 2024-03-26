@@ -255,6 +255,7 @@ display: block;
 
 .banner-container{
    position: relative;
+   padding: 1rem 0 1rem 1.5rem;
 }
 #bannercc {
 width: 210px;
