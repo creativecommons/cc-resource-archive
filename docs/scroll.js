@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
 
         // Get a reference to the target element with the ID "resourcenavbar"
-        let targetElement = document.getElementById("resourcenavbar");
+        let targetElement = document.getElementById("global-header");
 
         // Check if the target element exists
         if (targetElement) {
             // Scroll to the target element
             targetElement.scrollIntoView({ behavior: "smooth" });
         }
-    });
+});
