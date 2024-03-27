@@ -57,6 +57,7 @@ padding: 30px 0 0;
 
 #global-header-btn:hover {
     text-decoration: none;
+    font-size: larger;
     text-decoration-color: white;
     cursor: pointer;
 }
@@ -114,10 +115,20 @@ padding: 30px 0 0;
     text-decoration-color: #05ACC7;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
 
     #global-header {
         padding: 2%;
+    }
+
+    #bannercc {
+        margin-top: 10%;
+        margin-left: 2%;
+    }
+
+    #global-header-btn{
+        right: 2%;
+        margin-top: 4%;
     }
 
     #cc-main {
@@ -144,7 +155,45 @@ padding: 30px 0 0;
         margin-top: 2%;
     }
 }
+ @media screen and (min-width: 767px) and (max-width: 1500px) {
 
+    #global-header {
+        padding: 2%;
+    }
+
+    #bannercc {
+        margin-top: 3%;
+        margin-left: 2%;
+    }
+
+    #global-header-btn{
+        right: 2%;
+    }
+
+    #cc-main {
+        display: block;
+        margin: auto;
+    }
+
+    #global-header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #global-header-donate {
+        margin: auto;
+    }
+
+    #global-header-head {
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    #global-header-head p {
+        margin-top: 2%;
+    }
+} 
 /* STYLES FOR MAIN CONTENT */
 
 a {
@@ -257,7 +306,7 @@ display: block;
 width: 210px;
 height: 50px;
 background-image: url(/images/cc-green-210.gif);
-margin-left: 100px;
+/* margin-left: 100px; */
 }
 
 footer a {
