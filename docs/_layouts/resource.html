@@ -38,8 +38,6 @@
 
 {% include header.html %}
 
-<h1><a href="/">Creative Commons Resource Archive</a></h1>
-
 <h2 style="text-align: center; ">{{ page.title }}</h2>
 
 	{% if page.embed %}
@@ -102,11 +100,5 @@
 
 
 </body>
-<script>
-	const globalHeader = document.getElementById("global-header");
-    const handleExplore = (event) => {
-        globalHeader.classList.toggle("active");
-        event.preventDefault();
-    }
-</script>
+<script src="../vocabulary/js/vocabulary.js"></script>
 </html>
