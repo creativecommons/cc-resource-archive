@@ -143,6 +143,58 @@ think the latter experience is easier to setup with more consistent behavior.
    or you can simply revisit the existing terminal which is running the
    container and type `CTRL + C`
 
+### Jekyll setup
+Setting up Jekyll locally using the Windows Command Prompt (CLI) or Git Bash:
+
+Step 1: Install Ruby
+
+  1. Download and install Ruby from the official Ruby website (<https://www.ruby-lang.org/en/downloads/>).
+  2. Make sure to select the option to add Ruby to your PATH environment variable during the installation process.
+
+Step 2: Install Jekyll
+  1. Open the Command Prompt or Git Bash (Windows key + R, type "cmd," and press Enter).
+  2. Install Jekyll by running the following command:
+      gem install jekyll
+  3. If you encounter an error message saying "The specified directory does not exist," navigate to the directory where you want to install Jekyll and run the command again.
+
+Step 3: Create a New Jekyll Project
+  1. Create a new folder for your Jekyll project and enter to it in the Command Prompt.
+  2. Run the following command to create a new Jekyll project:
+     jekyll new myproject
+  3. Replace "myproject" with the name of your project.
+
+Step 4: Serve the Site Locally
+  1. Navigate to the _site folder in your Jekyll project using the Command Prompt.
+  2. Run the following command to serve your site locally:
+     jekyll serve
+  3. If you encounter an error message saying "Invalid configuration: invalid value for ' Brigadier::CommandTree'", run the following command to update Jekyll:
+     gem update jekyll
+  4. Run the command to serve your site locally again.
+
+Step 5: Build the Site
+  1. Navigate to the root directory of your Jekyll project using the Command Prompt.
+  2. Run the following command to build your site:
+     jekyll build
+  3. If you encounter an error message saying "The command 'jekyll build' failed. Check the output for errors.," check the output for any error messages and resolve them.
+
+Step 6: Deploy the Site
+  1. Once your site is built, you can deploy it to a hosting service like GitHub Pages or a server.
+  2. To deploy to GitHub Pages, run the following command:
+     jekyll deploy
+
+  ```gem update jekyll
+   ```
+  3. Run the command to serve your site locally again.
+
+Common Error Messages and Solutions:
+
+  1. "Thd directory does not exist" - Make sure the directory you're trying to install Jekyll in exists and that you have the necessary permissions to write to it.
+  2. "Invalid configuration: invalid value for 'Brigadier::CommandTree'" - Run the following command to update Jekyll:
+  ```
+  gem update jekyll
+  ```
+  3. "The command 'jekyll build' failed. Check the output for errors." - Check the output for any error messages and resolve them. Common issues include missing files or invalid file names.
+  4. "The command 'jekyll deploy' failed. Check the output for errors." - Check the output for any error messages and resolve them. Common issues include incorrect GitHub Pages settings or invalid credentials.
 
 ## License
 
