@@ -1,12 +1,12 @@
 - name: Arabic
   string: ar
-  
+
 - name: German
   string: de
 
 - name: English
   string: en
-  
+
 - name: French
   string: fr
 
@@ -42,15 +42,3 @@
 
 - name: Tagalog
   string: tl
-  
-- name: Spanish
-  string: es
-
-- name: Mandarin
-  string: cmn
-  
-- name: Hindi
-  string: hi
-
-- name: Urdu
-  string: ur
