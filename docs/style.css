@@ -80,11 +80,11 @@ margin: 0 auto;
 }
 
 .downloadbutton {
-min-width: 230px;
+min-width: 150px;
 width: max-content;
-height: 100%;
-padding: 0 10px;
-border-radius: 12px;
+height: 70%;
+padding: 0 5px;
+border-radius: 8px;
 background-color: #40ae49;
 display: flex;
 justify-content: center;
@@ -94,8 +94,8 @@ align-items: center;
 .downloadbutton p {
 height: 100%;
 margin: 0;
-font-size: 200%;
-line-height: 100px;
+font-size: 130%;
+line-height: 75px;
 color: white;
 }
 
@@ -119,7 +119,6 @@ display: block;
 #bannercc {
 width: 210px;
 height: 50px;
-background-image: url(/images/cc-green-210.gif);
 margin-left: 100px;
 }
 
