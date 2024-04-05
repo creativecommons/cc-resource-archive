@@ -1,7 +1,11 @@
+@import 'vocabulary/css/vocabulary.css' layer(vocabulary);
+
 body {
 font-family: sans-serif; 
 margin: 0;
-padding: 0;
+display: flex;
+flex-direction: column;
+padding: 30px 0 0;
 }
 
 /* STYLES FOR GLOBAL HEADER */
@@ -14,24 +18,25 @@ padding: 0;
 #global-header {
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
+    top: -30px;
     background-color: #000000;
     color: #ffffff;
     padding: 2.5% 7.5% 2.5%;
-    margin-bottom: -50px;
+    margin-bottom: -78px;
     transform: translateY(-100%);
-    transition: transform 1.4s ease, margin-bottom 1.4s ease;
+    transition: transform 0s ease, margin-bottom 0s ease;
 } 
 
 #global-header.active {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     transform: translateY(0);
-    transition: transform 0.7s ease, margin-bottom 0.7s ease;
+    transition: transform 0s ease, margin-bottom 0s ease;
 }
 
 #global-header .container{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1s ease;
+    transition: max-height 0s ease;
 }
 
 #global-header.active .container{
@@ -43,14 +48,15 @@ padding: 0;
     color: #ffffff;
     position: absolute;
     bottom: -2rem;
-    right: 10%;
-    padding: 5px 5px 10px;
+    right: 5%;
+    padding: 16px 10px 6px;
     border: none;
     border-radius: 0 0 5px 5px;
+    font-size: 0.8em;
 }
 
 #global-header-btn:hover {
-    text-decoration: underline;
+    text-decoration: none;
     text-decoration-color: white;
     cursor: pointer;
 }
@@ -78,6 +84,7 @@ padding: 0;
     background-color: #FBD43C;
     color: #000000;
     font-weight: bold;
+    border-radius: 3px;
 }
 
 #cc-heart{
@@ -98,17 +105,12 @@ padding: 0;
     min-width: fit-content;
 }
 
-#global-header-link:hover {
-    text-decoration: underline;
-}
-
 #global-header-title {
     color: #05ACC7;
     font-weight: bold;
 }
 
 #global-header-link:hover #global-header-title {
-    text-decoration: underline;
     text-decoration-color: #05ACC7;
 }
 
@@ -157,31 +159,29 @@ text-align: center;
 #thumbnaillist {
 max-width: 900px;
 min-width: 250px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 }
 
 #preview {
 width: 500px;
 height: 375px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 background-image: url(/images/placeholder-500.gif);
 border-radius: 25px;
 }
 
 #downloadbuttonholder {
 height: 100px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 10px;
-margin-bottom: 10px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px auto;
 }
 
 #longdescription {
 max-width: 500px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 border: 2px solid #C0C0C0;
 border-radius: 25px;
 padding: 10px;
@@ -194,6 +194,10 @@ display: block;
 border-radius: 25px;
 border: 2px solid #C0C0C0;
 margin: 5px;
+}
+
+.thumbnailLink {
+    text-decoration: none;
 }
 
 .thumbnailtitle {
@@ -209,44 +213,39 @@ padding: 5px;
 .thumbnail {
 width: 200px;
 height: 150px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 }
 
 .downloadbutton {
-width: 200px;
-height: 100px;
-float: left;
-border-radius: 12px;
+min-width: 150px;
+width: max-content;
+height: 70%;
+padding: 0 5px;
+border-radius: 8px;
 background-color: #40ae49;
-float: left;
-display: table-cell;
-vertical-align: middle;
-text-align: center;
-display: table-cell;
-margin-left: 10px;
-margin-right: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .downloadbutton p {
+height: 100%;
 margin: 0;
-font-size: 200%;
-line-height: 100px;
+font-size: 130%;
+line-height: 75px;
 color: white;
 }
 
 #resourcenavbar {
-width: 600px;
-height: 150px;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 100px;
+height: fit-content;
+margin: 0 auto 100px;
+display: flex;
+justify-content: center;
 }
 
 .resourcenav {
 width: 200px;
-height: 150px;
-float: left;
+height: fit-content;
 display: none;
 }
 
@@ -258,4 +257,18 @@ display: block;
 width: 210px;
 height: 50px;
 margin-left: 100px;
+}
+
+footer a {
+    color: var(--vocabulary-brand-color-turquoise);
+}
+
+footer .donate a {
+    color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    #resourcenavbar {
+        flex-direction: column;
+    }
 }
