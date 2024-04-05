@@ -31,7 +31,7 @@ RUN gem install bundler
 WORKDIR /srv/jekyll
 
 # Install site dependencies
-COPY docs/Gemfile docs/Gemfile.lock ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", \
