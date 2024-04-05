@@ -4,7 +4,7 @@ version: "3.8"
 services:
 
   jekyll:
-    build: .
+    build: dev/jekyll
     container_name: jekyll-cc-resource-archive
     ports:
       - "4000:4000"
@@ -13,3 +13,13 @@ services:
     volumes:
       # https://github.com/docker/for-mac/issues/1592
       - ./docs:/srv/jekyll
+
+  # Example commands using this service:
+  #   docker compose run node prettier --write docs/index.html
+  node:
+    build: dev/node
+    container_name: cc-search-node
+    volumes:
+      # Mount repository to working directory
+      - ./:/docs
+    working_dir: /docs
