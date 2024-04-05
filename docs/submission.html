@@ -28,11 +28,9 @@ permalink: /submit/
 
 <body>
 
-  {% include header.html %}
+{% include header.html %}
 
-
-  <div style="text-align: center; ">
-    <h1><a href="/">Creative Commons Resource Archive</a></h1>
+<div class="main-content" style="text-align: center;">
 
     <h2>Submit a Resource</h2>
     <h3>Come across an interesting, useful resource about CC?</h3>
@@ -44,13 +42,5 @@ permalink: /submit/
   </div>
 
 </body>
-
-<script>
-  const globalHeader = document.getElementById("global-header");
-  const handleExplore = (event) => {
-    globalHeader.classList.toggle("active");
-    event.preventDefault();
-  }
-</script>
-
+<script src="../vocabulary/js/vocabulary.js"></script>
 </html>

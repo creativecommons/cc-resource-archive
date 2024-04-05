@@ -69,19 +69,11 @@ document.write("<style>");
 
 	{% include header.html %}
 
-<h1>
-	{% unless page.title == 'Home' %}
-		<a href="/">
-	{% endunless %}
-Creative Commons Resource Archive
-	{% unless page.title == 'Home' %}
-		</a>
-	{% endunless %}
-</h1>
+<div class="main-content">
 
-{{content}}
+    {{content}}
 
-	<p style="text-align: center; padding:1em; "><a href="/submit/">Submit a resource</a></p>
+<p style="text-align: center; padding:1em; "><a href="/submit/">Submit a resource</a></p>
 
 
 
@@ -125,6 +117,7 @@ Creative Commons Resource Archive
 	{% endfor %}
 {% endunless %}
 
+</div>
 </div>
 
 
@@ -191,17 +184,7 @@ Creative Commons Resource Archive
     </div>
 
 </footer>
-
-
-
-
-
 </body>
-<script>
-	const globalHeader = document.getElementById("global-header");
-    const handleExplore = (event) => {
-        globalHeader.classList.toggle("active");
-        event.preventDefault();
-    }
-</script>
+
+<script src="../vocabulary/js/vocabulary.js"></script>
 </html>
