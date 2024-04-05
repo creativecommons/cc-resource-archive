@@ -38,16 +38,12 @@
 
 {% include header.html %}
 
-<h1><a href="/">Creative Commons Resource Archive</a></h1>
-
 <h2 style="text-align: center; ">{{ page.title }}</h2>
 
 	{% if page.embed %}
 	<div align="center">{{ page.embed }}</div>
 	{% else %}
-	{% if page.downloadurl %}
-		<a href="{{ page.downloadurl }}" target="_blank">
-	{% endif %}
+	
 
 	{% if page.image-full %}
 		<div id="preview" style="background-image: url({{page.image-full}})"></div>
@@ -55,9 +51,7 @@
 		<div id="preview"></div>
 	{% endif %}
 
-	{% if page.downloadurl %}
-		</a>
-	{% endif %}
+
 	{% endif %}
 	{% if page.downloadurl or page.repourl %}
 <div id="downloadbuttonholder">
@@ -66,7 +60,7 @@
 	{% if page.downloadurl %}
 		<a href="{{ page.downloadurl }}" target="_blank">
 		<div class="downloadbutton">
-		{% if page.medium == "website" or page.medium == "course" %} 
+		{% if page.medium == "website" or page.medium == "course" %}
 			<p>Visit</p>
 		{% else %}
 			<p>View in Detail</p>
@@ -106,11 +100,5 @@
 
 
 </body>
-<script>
-	const globalHeader = document.getElementById("global-header");
-    const handleExplore = (event) => {
-        globalHeader.classList.toggle("active");
-        event.preventDefault();
-    }
-</script>
+<script src="../vocabulary/js/vocabulary.js"></script>
 </html>
