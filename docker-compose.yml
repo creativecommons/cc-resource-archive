@@ -19,7 +19,7 @@ services:
   #   docker compose run node prettier --write docs/index.html
   node:
     build: dev/node
-    container_name: cc-search-node
+    container_name: node-cc-resource-archive
     volumes:
       # Mount repository to working directory
       - ./:/docs
