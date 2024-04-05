@@ -1,177 +1,302 @@
-<html>
-<head>
-<title>{{ page.title }} | Creative Commons Resource Archive</title>
-<link rel="stylesheet" type="text/css" href="/style.css" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }} | Creative Commons Resource Archive</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
 
+    {% if page.title == "All" %}
 
-	{% if page.title == "All" %}
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga",
+      );
 
-<script>
+      ga("create", "UA-2010376-29", "auto");
+      ga("send", "pageview");
 
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-2010376-29', 'auto');
-  ga('send', 'pageview');
-
-
-function getUrlVars()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-}
-
-function UpdateQueryString(key, value, url) {
-    if (!url) url = window.location.href;
-    var re = new RegExp("([?|&])" + key + "=.*?(&|#|$)(.*)", "gi");
-
-    if (re.test(url)) {
-        if (typeof value !== 'undefined' && value !== null)
-            return url.replace(re, '$1' + key + "=" + value + '$2$3');
-        else {
-            var hash = url.split('#');
-            url = hash[0].replace(re, '$1$3').replace(/(&|\?)$/, '');
-            if (typeof hash[1] !== 'undefined' && hash[1] !== null) 
-                url += '#' + hash[1];
-            return url;
+      function getUrlVars() {
+        var vars = [],
+          hash;
+        var hashes = window.location.href
+          .slice(window.location.href.indexOf("?") + 1)
+          .split("&");
+        for (var i = 0; i < hashes.length; i++) {
+          hash = hashes[i].split("=");
+          vars.push(hash[0]);
+          vars[hash[0]] = hash[1];
         }
-    }
-    else {
-        if (typeof value !== 'undefined' && value !== null) {
-            var separator = url.indexOf('?') !== -1 ? '&' : '?',
-                hash = url.split('#');
-            url = hash[0] + separator + key + '=' + value;
-            if (typeof hash[1] !== 'undefined' && hash[1] !== null) 
-                url += '#' + hash[1];
-            return url;
+        return vars;
+      }
+
+      document.write("<style>.thumbnailbox { display: none; }</style>");
+
+      var topic = getUrlVars()["topic"];
+      var language = getUrlVars()["language"];
+      var medium = getUrlVars()["medium"];
+
+      if (
+        topic === undefined &&
+        medium === undefined &&
+        language === undefined
+      ) {
+        document.write("<style>.thumbnailbox { display: block; }</style>");
+      } else {
+        document.write("<style>");
+        if (topic != undefined) {
+          document.write("." + topic);
         }
-        else
-            return url;
-    }
-}
+        if (medium != undefined) {
+          document.write("." + medium);
+        }
+        if (language != undefined) {
+          document.write("." + language);
+        }
+        document.write(" { display: block; }</style>");
+      }
 
-document.write("<style>.thumbnailbox { display: none; }</style>");
+      document.write("<style>");
+      if (topic != undefined) {
+        document.write(" .resourcenavtopicknown");
+      } else {
+        document.write(" .resourcenavtopicunknown");
+      }
+      if (medium != undefined) {
+        document.write(", .resourcenavmediumknown");
+      } else {
+        document.write(", .resourcenavmediumunknown");
+      }
+      if (language != undefined) {
+        document.write(", .resourcenavlanguageknown");
+      } else {
+        document.write(", .resourcenavlanguageunknown");
+      }
+      document.write(" { display: block; }</style>");
+    </script>
 
-function RemoveQueryString(param1) {
-	var quer = param1
-	location.href=location.href.replace(/&?quer=([^&]$|[^&]*)/i, "");
-	}
+    {% endif %}
+  </head>
 
-var topic = getUrlVars()["topic"];
-var language = getUrlVars()["language"];
-var medium = getUrlVars()["medium"];
+  <body>
+    {% include header.html %}
 
-if (topic === undefined && medium === undefined && language === undefined) {
-document.write("<style>.thumbnailbox { display: block; }</style>");
-}
-else {
-	document.write("<style>");
-	if (topic != undefined) {document.write("."+topic)};
-	if (medium != undefined) {document.write("."+medium)};
-	if (language != undefined) {document.write("."+language)};
-	document.write(" { display: block; }</style>");
-	};
+    <h1>
+      {% unless page.title == 'Home' %}
+      <a href="/">
+        {% endunless %} Creative Commons Resource Archive {% unless page.title
+        == 'Home' %}
+      </a>
+      {% endunless %}
+    </h1>
 
-document.write("<style>");
- if (topic != undefined) {document.write(" .resourcenavtopicknown");}
-	else {document.write(" .resourcenavtopicunknown");};
- if (medium != undefined) {document.write(", .resourcenavmediumknown");}
-	else {document.write(", .resourcenavmediumunknown");};
- if (language != undefined) {document.write(", .resourcenavlanguageknown");}
-	else {document.write(", .resourcenavlanguageunknown");};
- document.write(" { display: block; }</style>");
-</script>
+    {{content}}
 
-	{% endif %}
+    <p style="text-align: center; padding: 1em">
+      <a href="/submit/">Submit a resource</a>
+    </p>
 
-</head>
+    <div id="thumbnaillist">
+      {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout ==
+      'resource' %} {% if page.featured == i %}
+      <div
+        class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
+      >
+        <a class="thumbnailLink" href="{{ page.permalink }}">
+          <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+          <div
+            class="thumbnail"
+            style="background-image: url('{{ page.image-thumb }}'); "
+          ></div>
+          <div class="thumbnailblurb" style="color: rgb(0, 0, 0)">
+            {{ page.blurb }}
+          </div>
+        </a>
+      </div>
+      {% endif %} {% endif %} {% endfor %} {% endfor %} {% unless page.title ==
+      'Home' %} {% for i in (1..4) %} {% for page in site.pages %} {% if
+      page.layout == 'resource' %} {% if page.weight == i %} {% unless
+      page.featured %} {% if page.paramfilter == page.paramvalue %}
+      <div
+        class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
+      >
+        <a class="thumbnailLink" href="{{ page.permalink }}">
+          <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
+          <div
+            class="thumbnail"
+            style="background-image: url('{{ page.image-thumb }}'); "
+          ></div>
+          <div class="thumbnailblurb" style="color: rgb(0, 0, 0)">
+            {{ page.blurb }}
+          </div>
+        </a>
+      </div>
+      {% endif %} {% endunless %} {% endif %} {% endif %} {% endfor %} {% endfor
+      %} {% endunless %}
+    </div>
 
+    <!-- Footer -->
+    <footer>
+      <a class="identity-logo" href="https://www.creativecommons.org"
+        >Creative Commons</a
+      >
 
-<body>
+      <nav class="footer-menu">
+        <ul>
+          <li>
+            <a href="https://creativecommons.org/about/contact">Contact</a>
+          </li>
+          <li>
+            <a href="https://mail.creativecommons.org/subscribe" target="_blank"
+              >Newsletter</a
+            >
+          </li>
+          <li><a href="https://creativecommons.org/privacy">Privacy</a></li>
+          <li><a href="https://creativecommons.org/policies">Policies</a></li>
+          <li><a href="https://creativecommons.org/terms">Terms</a></li>
+        </ul>
+      </nav>
 
-	{% include header.html %}
+      <div class="contact">
+        <!-- this area lacks a heading? -->
+        <h2>Contact Us</h2>
+        <p>
+          Creative Commons <br />
+          PO Box 1866, Mountain View, CA 94042
+        </p>
+        <p>
+          <a href="mailto:info@creativecommons.org">info@creativecommons.org</a>
+        </p>
+        <p><a href="tel:+14154296753">+1-415-429-6753</a></p>
 
-<h1>
-	{% unless page.title == 'Home' %}
-		<a href="/">
-	{% endunless %}
-Creative Commons Resource Archive
-	{% unless page.title == 'Home' %}
-		</a>
-	{% endunless %}
-</h1>
+        <nav class="social-menu">
+          <ul>
+            <!-- <li><a class="icon-replace fa-instagram" href="#">Instagram</a></li> -->
+            <li>
+              <a
+                class="icon-replace fa-twitter"
+                href="https://twitter.com/creativecommons"
+                target="_blank"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                class="icon-replace fa-mastodon"
+                href="https://mastodon.social/@creativecommons"
+                target="_blank"
+                >Mastodon</a
+              >
+            </li>
+            <li>
+              <a
+                class="icon-replace fa-facebook"
+                href="https://www.facebook.com/creativecommons"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                class="icon-replace fa-linkedin"
+                href="https://www.linkedin.com/company/creative-commons/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-{{content}}
+      <div class="subscribe">
+        <h2>Subscribe to our Newsletter</h2>
+        <form
+          action="https://creativecommons.us4.list-manage.com/subscribe/post?u=fd30364b6577b471373d6076c&amp;id=4603fe102a"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="validate newsletter"
+          target="_blank"
+          novalidate=""
+        >
+          <input
+            type="email"
+            value=""
+            name="EMAIL"
+            class="email input"
+            id="mce-EMAIL"
+            placeholder="Your email"
+            required=""
+          />
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px" aria-hidden="true">
+            <input
+              type="text"
+              name="b_fd30364b6577b471373d6076c_4603fe102a"
+              tabindex="-1"
+              value=""
+            />
+          </div>
+          <input
+            type="submit"
+            value="subscribe"
+            id="mc-embedded-subscribe"
+            class="button small"
+          />
+        </form>
+      </div>
 
+      <div class="donate">
+        <h2>Support Our Work</h2>
+        <p>Our work relies on you! Help us keep the Internet free and open.</p>
+        <a
+          class="donate icon-attach cc-heart-filled"
+          href="https://www.classy.org/give/313412/#!/donation/checkout?c_src=website&c_src2=top-of-page-banner"
+          target="_blank"
+          >Donate Now</a
+        >
+      </div>
 
+      <div class="license">
+        <p>
+          Except where otherwise <a href="/policies/#license">noted</a>, content
+          on this site is licensed under a
+          <a href="/licenses/by/4.0/"
+            >Creative Commons Attribution 4.0 International license</a
+          >. Icons by
+          <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>.
+        </p>
 
-<div id="thumbnaillist">
-
-	{% for i in (1..16) %}
-		{% for page in site.pages %}
-			{% if page.layout == 'resource' %}
-				{% if page.featured == i %}
-					{% if page.topic contains topicfilter or topicfilter == null %}
-					{% if page.medium contains mediumfilter or mediumfilter == null %}
-					{% if page.language contains languagefilter or languagefilter == null %}
-						<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-						<a href="{{ page.permalink }}">
-						<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-						<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-						</a>
-						<div class="thumbnailblurb">{{ page.blurb }}</div>
-						</div>
-					{% endif %}{% endif %}{% endif %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-	{% endfor %}
-
-{% unless page.title == 'Home' %}
-	{% for i in (1..4) %}
-		{% for page in site.pages %}
-			{% if page.layout == 'resource' %}
-				{% if page.weight == i %}
-					{% unless page.featured %}
-						{% if page.paramfilter == page.paramvalue %}
-					{% if page.topic contains topicfilter or topicfilter == null %}
-					{% if page.medium contains mediumfilter or mediumfilter == null %}
-					{% if page.language contains languagefilter or languagefilter == null %}
-							<div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-							<a href="{{ page.permalink }}">
-							<div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-							<div class="thumbnail" style="background-image: url('{{ page.image-thumb }}'); "></div>
-							</a>
-							<div class="thumbnailblurb">{{ page.blurb }}</div>
-							</div>
-					{% endif %}{% endif %}{% endif %}
-						{% endif %}
-					{% endunless %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-	{% endfor %}
-{% endunless %}
-
-</div>
-
-
-
-</body>
-<script>
-	const globalHeader = document.getElementById("global-header");
+        <svg>
+          <use href="./../vocabulary/svg/cc/icons/cc-icons.svg#cc-logo"></use>
+        </svg>
+        <svg>
+          <use href="./../vocabulary/svg/cc/icons/cc-icons.svg#cc-by"></use>
+        </svg>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const globalHeader = document.getElementById("global-header");
     const handleExplore = (event) => {
-        globalHeader.classList.toggle("active");
-        event.preventDefault();
-    }
-</script>
+      globalHeader.classList.toggle("active");
+      event.preventDefault();
+    };
+  </script>
 </html>
