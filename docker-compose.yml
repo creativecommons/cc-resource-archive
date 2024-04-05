@@ -1,5 +1,6 @@
-# https://docs.docker.com/compose/compose-file/compose-file-v3/
-version: "3.8"
+# Use docker compose v2 for non swarm deployments
+# https://docs.docker.com/compose/compose-file/compose-file-v2/
+version: '2.4'
 
 services:
 
@@ -7,7 +8,7 @@ services:
     build: dev/jekyll
     container_name: jekyll-cc-resource-archive
     ports:
-      - "4000:4000"
+      - '4000:4000'
     restart: always
     tty: true
     volumes:
