@@ -273,3 +273,9 @@ footer .donate a {
         flex-direction: column;
     }
 }
+
+#submitButtonPara:hover a{
+    cursor: pointer;
+    color:  #2b8732;
+    transition: .4s;
+}
