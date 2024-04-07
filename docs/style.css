@@ -282,3 +282,17 @@ margin-left: 100px;
   .stt:active {
     opacity: 1;
   }
+
+footer a {
+    color: var(--vocabulary-brand-color-turquoise);
+}
+
+footer .donate a {
+    color: #000;
+}
+
+@media screen and (max-width: 600px) {
+    #resourcenavbar {
+        flex-direction: column;
+    }
+}
