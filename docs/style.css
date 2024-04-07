@@ -270,8 +270,7 @@ margin-left: 100px;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
-  font-size: 18px;
-    scroll-behavior: smooth; 
+  font-size: 18px; 
   }
   .stt:hover {
     opacity: 0.8;
