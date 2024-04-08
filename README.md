@@ -144,6 +144,19 @@ think the latter experience is easier to setup with more consistent behavior.
    container and type `CTRL + C`
 
 
+### Formatting with Prettier
+
+- Format specific HTML file using prettier:
+    ```shell
+    docker compose run node prettier --write docs/index.html
+    ```
+- Format all HTML using prettier:
+    ```shell
+    find docs -name '*.html' -exec docker compose run node prettier --write {} +
+    ```
+- [Prettier · Opinionated Code Formatter](https://prettier.io/)
+
+
 ## License
 
 
