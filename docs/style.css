@@ -1,7 +1,7 @@
 body {
-font-family: sans-serif; 
-margin: 0;
-padding: 0;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* STYLES FOR GLOBAL HEADER */
@@ -20,7 +20,7 @@ padding: 0;
     margin-bottom: -50px;
     transform: translateY(-100%);
     transition: transform 1.4s ease, margin-bottom 1.4s ease;
-} 
+}
 
 #global-header.active {
     margin-bottom: 50px;
@@ -28,13 +28,13 @@ padding: 0;
     transition: transform 0.7s ease, margin-bottom 0.7s ease;
 }
 
-#global-header .container{
+#global-header .container {
     max-height: 0;
     overflow: hidden;
     transition: max-height 1s ease;
 }
 
-#global-header.active .container{
+#global-header.active .container {
     max-height: 100%;
 }
 
@@ -80,7 +80,7 @@ padding: 0;
     font-weight: bold;
 }
 
-#cc-heart{
+#cc-heart {
     width: 20px;
     position: absolute;
     left: 10px;
@@ -146,48 +146,48 @@ padding: 0;
 /* STYLES FOR MAIN CONTENT */
 
 a {
-color: #40ae49;
-cursor:pointer;
+    color: #40ae49;
+    cursor: pointer;
 }
 
 h1 {
-text-align: center;
+    text-align: center;
 }
 
 #thumbnaillist {
-max-width: 900px;
-min-width: 250px;
-margin: 0 auto;
+    max-width: 900px;
+    min-width: 250px;
+    margin: 0 auto;
 }
 
 #preview {
-width: 500px;
-height: 375px;
-margin: 0 auto;
-background-image: url(/images/placeholder-500.gif);
-border-radius: 25px;
+    width: 500px;
+    height: 375px;
+    margin: 0 auto;
+    background-image: url(/images/placeholder-500.gif);
+    border-radius: 25px;
 }
 
 #downloadbuttonholder {
-height: 100px;
-margin: 10px auto;
+    height: 100px;
+    margin: 10px auto;
 }
 
 #longdescription {
-max-width: 500px;
-margin: 0 auto;
-border: 2px solid #C0C0C0;
-border-radius: 25px;
-padding: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid #C0C0C0;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 .thumbnailbox {
-width: 200px;
-float: left;
-display: block;
-border-radius: 25px;
-border: 2px solid #C0C0C0;
-margin: 5px;
+    width: 200px;
+    float: left;
+    display: block;
+    border-radius: 25px;
+    border: 2px solid #C0C0C0;
+    margin: 5px;
 }
 
 .thumbnailLink {
@@ -195,93 +195,96 @@ margin: 5px;
 }
 
 .thumbnailtitle {
-text-align: center;
-height: 75px;
+    text-align: center;
+    height: 75px;
 }
 
 .thumbnailblurb {
-height: 100px;
-padding: 5px;
+    height: 100px;
+    padding: 5px;
 }
 
 .thumbnail {
-width: 200px;
-height: 150px;
-margin: 0 auto;
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
 }
 
 .downloadbutton {
-width: 200px;
-height: 100px;
-float: left;
-border-radius: 12px;
-background-color: #40ae49;
-float: left;
-display: table-cell;
-vertical-align: middle;
-text-align: center;
-display: table-cell;
-margin: 0 10px;
+    width: 200px;
+    height: 100px;
+    float: left;
+    border-radius: 12px;
+    background-color: #40ae49;
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    margin: 0 10px;
 }
 
 .downloadbutton p {
-margin: 0;
-font-size: 200%;
-line-height: 100px;
-color: white;
+    margin: 0;
+    font-size: 200%;
+    line-height: 100px;
+    color: white;
 }
 
 #resourcenavbar {
-width: 600px;
-height: 150px;
-margin: 0 auto 100px;
+    width: 600px;
+    height: 150px;
+    margin: 0 auto 100px;
 }
 
 .resourcenav {
-width: 200px;
-height: 150px;
-float: left;
-display: none;
+    width: 200px;
+    height: 150px;
+    float: left;
+    display: none;
 }
 
 .resourcenav.resourcenavstatic {
-display: block;
+    display: block;
 }
 
 #bannercc {
-width: 210px;
-height: 50px;
-background-image: url(/images/cc-green-210.gif);
-margin-left: 100px;
+    width: 210px;
+    height: 50px;
+    background-image: url(/images/cc-green-210.gif);
+    margin-left: 100px;
 }
 
 
 
-  .stt {
+.stt {
     display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: rgb(17, 95, 61);
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 18px; 
-  }
-  .stt:hover {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgb(17, 95, 61);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.stt:hover {
     opacity: 0.8;
     background-color: #20cb7b;
-  }
-  .stt:focus {
+}
+
+.stt:focus {
     opacity: 0.9;
-  }
-  .stt:active {
+}
+
+.stt:active {
     opacity: 1;
-  }
+}
 
 footer a {
     color: var(--vocabulary-brand-color-turquoise);
