@@ -1,4 +1,7 @@
+@import 'vocabulary/css/vocabulary.css' layer(vocabulary);
+
 body {
+
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -141,13 +144,26 @@ body {
     #global-header-head p {
         margin-top: 2%;
     }
+
+font-family: sans-serif; 
+margin: 0;
+display: flex;
+flex-direction: column;
+padding: 0 0 0;
+
 }
 
 /* STYLES FOR MAIN CONTENT */
 
+
 a {
     color: #40ae49;
     cursor: pointer;
+
+.main-content a {
+color: #40ae49;
+cursor:pointer;
+
 }
 
 h1 {
@@ -169,8 +185,17 @@ h1 {
 }
 
 #downloadbuttonholder {
+
     height: 100px;
     margin: 10px auto;
+
+height: 100px;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px auto;
+
 }
 
 #longdescription {
@@ -211,6 +236,7 @@ h1 {
 }
 
 .downloadbutton {
+
     width: 200px;
     height: 100px;
     float: left;
@@ -242,6 +268,38 @@ h1 {
     height: 150px;
     float: left;
     display: none;
+
+min-width: 150px;
+width: max-content;
+height: 70%;
+padding: 0 5px;
+border-radius: 8px;
+background-color: #40ae49;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.downloadbutton p {
+height: 100%;
+margin: 0;
+font-size: 130%;
+line-height: 75px;
+color: white;
+}
+
+#resourcenavbar {
+height: fit-content;
+margin: 0 auto 100px;
+display: flex;
+justify-content: center;
+}
+
+.resourcenav {
+width: 200px;
+height: fit-content;
+display: none;
+
 }
 
 .resourcenav.resourcenavstatic {
@@ -249,6 +307,7 @@ h1 {
 }
 
 #bannercc {
+
     width: 210px;
     height: 50px;
     background-image: url(/images/cc-green-210.gif);
@@ -284,6 +343,11 @@ h1 {
 
 .stt:active {
     opacity: 1;
+
+width: 210px;
+height: 50px;
+margin-left: 100px;
+
 }
 
 footer a {
