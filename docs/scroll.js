@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    let stt = document.getElementById("stt");
+    let stt = document.querySelector(".scroll-to-top");
 
     window.onscroll = function() {
         if (window.scrollY > 400) {

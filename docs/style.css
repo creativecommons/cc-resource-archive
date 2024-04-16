@@ -257,7 +257,7 @@ h1 {
 
 
 
-.stt {
+.scroll-to-top {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -273,16 +273,16 @@ h1 {
     font-size: 18px;
 }
 
-.stt:hover {
+.scroll-to-top:hover {
     opacity: 0.8;
     background-color: #20cb7b;
 }
 
-.stt:focus {
+.scroll-to-top:focus {
     opacity: 0.9;
 }
 
-.stt:active {
+.scroll-to-top:active {
     opacity: 1;
 }
 
