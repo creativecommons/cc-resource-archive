@@ -1,14 +1,3 @@
 title: CC Resource Archive
 
 repository: creativecommons/cc-resource-archive
-
-include:
-  - _resources
-
-defaults:
-  - scope:
-      path: '_resources'
-      type: 'pages'
-    values:
-      # make URL of pages in the folder _resources as on the root.
-      permalink: /:basename/

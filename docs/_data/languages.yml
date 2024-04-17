@@ -1,14 +1,23 @@
 - name: Arabic
   string: ar
 
+- name: Mandarin
+  string: cmn
+
 - name: German
   string: de
 
 - name: English
   string: en
+  
+- name: Spanish
+  string: es
 
 - name: French
   string: fr
+
+- name: Hindi
+  string: hi
 
 - name: Armenian
   string: hy
@@ -42,3 +51,6 @@
 
 - name: Tagalog
   string: tl
+
+- name: Urdu
+  string: ur
