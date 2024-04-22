@@ -79,16 +79,25 @@ height: 150px;
 margin: 0 auto;
 }
 
-.downloadbutton {
+.button {
 min-width: 150px;
-width: max-content;
-height: 70%;
-padding: 0 5px;
 border-radius: 8px;
 background-color: #40ae49;
 display: flex;
 justify-content: center;
 align-items: center;
+text-decoration: none;
+color: white;
+}
+
+.button:hover, .button:focus {
+    background-color: #37933e;
+}
+
+.downloadbutton {
+width: max-content;
+height: 70%;
+padding: 0 5px;
 }
 
 .downloadbutton p {
@@ -96,7 +105,6 @@ height: 100%;
 margin: 0;
 font-size: 130%;
 line-height: 75px;
-color: white;
 }
 
 #resourcenavbar {
@@ -128,21 +136,11 @@ position: sticky;
 bottom: 10px;
 align-self: end;
 margin: 10px;
-border-radius: 8px;
-background-color: #40ae49;
-color: white;
-text-decoration: none;
 width: 5rem;
 min-width: 150px;
-justify-content: center;
-align-items: center;
 font-size: 130%;
 line-height: 75px;
 animation: show-scroll-button 400ms alternate;
-}
-
-.backtotopbutton:hover, .backtotopbutton:focus {
-    background-color: #37933e;
 }
 
 footer a {
