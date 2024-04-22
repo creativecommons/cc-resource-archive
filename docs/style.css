@@ -122,6 +122,29 @@ height: 50px;
 margin-left: 100px;
 }
 
+.backtotopbutton {
+display: none;
+position: sticky;
+bottom: 10px;
+align-self: end;
+margin: 10px;
+border-radius: 8px;
+background-color: #40ae49;
+color: white;
+text-decoration: none;
+width: 5rem;
+min-width: 150px;
+justify-content: center;
+align-items: center;
+font-size: 130%;
+line-height: 75px;
+animation: show-scroll-button 400ms alternate;
+}
+
+.backtotopbutton:hover, .backtotopbutton:focus {
+    background-color: #37933e;
+}
+
 footer a {
     color: var(--vocabulary-brand-color-turquoise);
 }
@@ -135,3 +158,8 @@ footer .donate a {
         flex-direction: column;
     }
 }
+
+@keyframes show-scroll-button {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
