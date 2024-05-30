@@ -28,10 +28,13 @@ RUN apt-get install -y build-essential git
 # Install Ruby dependencies
 RUN gem install bundler
 
+#Set the Working Directory
 WORKDIR /srv/jekyll
 
-# Install site dependencies
+# Copy Gemfile and Gemfile.lock
 COPY Gemfile Gemfile.lock ./
+
+#Install site dependencies
 RUN bundle install
 
 CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", \
