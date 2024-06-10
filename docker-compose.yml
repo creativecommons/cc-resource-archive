@@ -1,24 +1,15 @@
-# https://docs.docker.com/compose/compose-file/
+# https://docs.docker.com/compose/compose-file/compose-file-v3/
+version: "2.4"
 
 services:
 
   jekyll:
-    build: dev/jekyll
+    build: .
     container_name: jekyll-cc-resource-archive
     ports:
-      - '4000:4000'
+      - "4000:4000"
     restart: always
     tty: true
     volumes:
       # https://github.com/docker/for-mac/issues/1592
       - ./docs:/srv/jekyll
-
-  # Example commands using this service:
-  #   docker compose run node prettier --write docs/index.html
-  node:
-    build: dev/node
-    container_name: node-cc-resource-archive
-    volumes:
-      # Mount repository to working directory
-      - ./:/docs
-    working_dir: /docs
