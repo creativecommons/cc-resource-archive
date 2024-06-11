@@ -4,7 +4,7 @@ services:
 
   jekyll:
     build:
-      context: dev/jekyll
+      context: .
       dockerfile: dev/jekyll/Dockerfile
     container_name: jekyll-cc-resource-archive
     ports:
@@ -19,8 +19,8 @@ services:
   #   docker compose run node prettier --write docs/index.html
   node:
     build:
-      context: dev/node
-      dockerfile: dev/node/Dockerfile
+      context: .
+      dockerfile: dev/jekyll/Dockerfile
     container_name: node-cc-resource-archive
     volumes:
       # Mount repository to working directory

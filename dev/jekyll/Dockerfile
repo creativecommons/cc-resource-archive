@@ -32,7 +32,7 @@ RUN gem install bundler
 WORKDIR /srv/jekyll
 
 # Copy Gemfile and Gemfile.lock
-COPY Gemfile Gemfile.lock ./
+COPY dev/jekyll/Gemfile dev/jekyll/Gemfile.lock ./
 
 #Install site dependencies
 RUN bundle install
