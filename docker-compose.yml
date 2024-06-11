@@ -3,7 +3,9 @@
 services:
 
   jekyll:
-    build: dev/jekyll
+    build:
+      context: dev/jekyll
+      dockerfile: dev/jekyll/Dockerfile
     container_name: jekyll-cc-resource-archive
     ports:
       - '4000:4000'
@@ -16,7 +18,9 @@ services:
   # Example commands using this service:
   #   docker compose run node prettier --write docs/index.html
   node:
-    build: dev/node
+    build:
+      context: dev/node
+      dockerfile: dev/node/Dockerfile
     container_name: node-cc-resource-archive
     volumes:
       # Mount repository to working directory
