@@ -1,4 +1,4 @@
-@import '/vocabulary/css/vocabulary.css' layer(vocabulary);
+@import '/_assets/vocabulary/css/vocabulary.css' layer(vocabulary);
 
 body {
 font-family: sans-serif; 
