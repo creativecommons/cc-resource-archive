@@ -4,6 +4,7 @@ repository: creativecommons/cc-resource-archive
 
 include:
   - _resources
+  - _pages
   - _assets
 
 defaults:
