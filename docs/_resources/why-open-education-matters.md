@@ -5,7 +5,7 @@ weight: 3
 featured: 10
 layout: resource
 image-full: /_assets/images/why-open-education-matters-500.gif
-image-thumb: /images/why-open-education-matters-200.gif
+image-thumb: /_assets/images/why-open-education-matters-200.gif
 topic: oer
 language: en
 medium: video

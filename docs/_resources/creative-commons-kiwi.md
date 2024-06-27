@@ -5,7 +5,7 @@ weight: 2
 featured: 4
 layout: resource
 image-full: /_assets/images/creative-commons-kiwi-500.jpg
-image-thumb: /images/creative-commons-kiwi-200.jpg
+image-thumb: /_assets/images/creative-commons-kiwi-200.jpg
 topic: licenses
 language: en
 medium: video

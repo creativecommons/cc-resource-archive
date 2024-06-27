@@ -6,7 +6,7 @@ weight: 3
 author: Martin Missfeldt
 license: CC BY-SA 3.0 DE
 image-full: /_assets/images/what-does-creative-commons-mean-500.gif
-image-thumb: /images/what-does-creative-commons-mean-200.gif
+image-thumb: /_assets/images/what-does-creative-commons-mean-200.gif
 topic: licenses
 language: de en
 medium: infographic
