@@ -1,5 +1,7 @@
+/* Importing vocabulary.css */
 @import '/_assets/vocabulary/css/vocabulary.css' layer(vocabulary);
 
+/* CSS For All Pages */
 body {
 font-family: sans-serif; 
 margin: 0;
@@ -8,8 +10,7 @@ flex-direction: column;
 padding: 0 0 0;
 }
 
-/* STYLES FOR MAIN CONTENT */
-
+/* Styles For listing.html and submission.html*/
 .main-content a {
 color: #40ae49;
 cursor:pointer;
@@ -23,31 +24,6 @@ text-align: center;
 max-width: 900px;
 min-width: 250px;
 margin: 0 auto;
-}
-
-#preview {
-width: 500px;
-height: 375px;
-margin: 0 auto;
-background-image: url(/_assets/images/placeholder-500.gif);
-border-radius: 25px;
-}
-
-#downloadbuttonholder {
-height: 100px;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 10px auto;
-}
-
-#longdescription {
-max-width: 500px;
-margin: 0 auto;
-border: 2px solid #C0C0C0;
-border-radius: 25px;
-padding: 10px;
 }
 
 .thumbnailbox {
@@ -79,6 +55,32 @@ height: 150px;
 margin: 0 auto;
 }
 
+/* Styles For resource.html */
+#preview {
+    width: 500px;
+    height: 375px;
+    margin: 0 auto;
+    background-image: url(/_assets/images/placeholder-500.gif);
+    border-radius: 25px;
+    }
+    
+    #downloadbuttonholder {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    }
+    
+    #longdescription {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid #C0C0C0;
+    border-radius: 25px;
+    padding: 10px;
+    }
+
 .downloadbutton {
 min-width: 150px;
 width: max-content;
@@ -99,6 +101,7 @@ line-height: 75px;
 color: white;
 }
 
+/* Styles For index.html and all.html */
 #resourcenavbar {
 height: fit-content;
 margin: 0 auto 100px;
@@ -122,6 +125,8 @@ height: 50px;
 margin-left: 100px;
 }
 
+
+/* Styles For footer.html */
 footer a {
     color: var(--vocabulary-brand-color-turquoise);
 }
@@ -130,6 +135,7 @@ footer .donate a {
     color: #000;
 }
 
+/* Media Queries for responsiveness */
 @media screen and (max-width: 600px) {
     #resourcenavbar {
         flex-direction: column;
