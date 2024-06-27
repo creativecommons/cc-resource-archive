@@ -4,7 +4,11 @@
     <title>{{ page.title }} | Creative Commons Resource Archive</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="icon" href="/_assets/vocabulary/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/_assets/vocabulary/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/_assets/vocabulary/favicon/manifest.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/_assets/vocabulary/favicon/apple-touch-icon.png" />
+    <link rel="stylesheet" type="text/css" href="/_assets/css/style.css" />
 
     {% if page.title == "All" %}
 
@@ -92,7 +96,7 @@
             <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
             <div
               class="thumbnail"
-              style="background-image: url('{{ page.image-thumb }}'); "
+              style="background-image: url({{ page.image-thumb }});"
             ></div>
             <div class="thumbnailblurb" style="color: rgb(0, 0, 0)">
               {{ page.blurb }}
@@ -127,5 +131,5 @@
 
   </body>
 
-  <script src="../vocabulary/js/vocabulary.js"></script>
+  <script src="/_assets/vocabulary/js/vocabulary.js"></script>
 </html>

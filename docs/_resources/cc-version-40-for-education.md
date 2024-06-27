@@ -3,8 +3,8 @@ layout: resource
 title: CC Version 4.0 for Education
 published: true
 weight: 3
-image-full: /images/cc-version-40-for-education-500.png
-image-thumb: /images/cc-version-40-for-education-200.png
+image-full: /_assets/images/cc-version-40-for-education-500.png
+image-thumb: /_assets/images/cc-version-40-for-education-200.png
 topic: oer licenses
 language: en
 medium: slides

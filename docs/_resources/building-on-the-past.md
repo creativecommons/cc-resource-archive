@@ -4,8 +4,8 @@ title: Building on the Past
 published: true
 weight: 1
 featured: 7
-image-full: /images/buildingonthepast-500.png
-image-thumb: /images/buildingonthepast-200.png
+image-full: /_assets/images/buildingonthepast-500.png
+image-thumb: /_assets/images/buildingonthepast-200.png
 topic: creativity
 language: en
 medium: video

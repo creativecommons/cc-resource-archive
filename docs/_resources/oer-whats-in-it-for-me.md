@@ -5,8 +5,8 @@ published: true
 weight: 3
 featured: 10
 layout: resource
-image-full: /images/oer-whats-in-it-for-me-500.png
-image-thumb: /images/oer-whats-in-it-for-me-200.png
+image-full: /_assets/images/oer-whats-in-it-for-me-500.png
+image-thumb: /_assets/images/oer-whats-in-it-for-me-200.png
 topic: oer
 language: en
 medium: print

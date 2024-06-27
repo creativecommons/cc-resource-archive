@@ -1,4 +1,4 @@
-@import 'vocabulary/css/vocabulary.css' layer(vocabulary);
+@import '/_assets/vocabulary/css/vocabulary.css' layer(vocabulary);
 
 body {
 font-family: sans-serif; 
@@ -29,7 +29,7 @@ margin: 0 auto;
 width: 500px;
 height: 375px;
 margin: 0 auto;
-background-image: url(/images/placeholder-500.gif);
+background-image: url(/_assets/images/placeholder-500.gif);
 border-radius: 25px;
 }
 
