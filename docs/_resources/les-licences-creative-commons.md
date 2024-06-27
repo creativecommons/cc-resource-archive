@@ -5,7 +5,7 @@ layout: resource
 weight: 1
 author: Minist&#232;re de la Culture et des Communications
 license: CC BY-SA 4.0
-image-full: /images/les-licences-creative-commons-500.png
+image-full: /_assets/images/les-licences-creative-commons-500.png
 image-thumb: /images/les-licences-creative-commons-200.png
 topic: licenses
 language: fr
