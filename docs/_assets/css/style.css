@@ -1,7 +1,7 @@
 /* Importing vocabulary.css */
 @import '/_assets/vocabulary/css/vocabulary.css' layer(vocabulary);
 
-/* CSS For All Pages */
+/* CSS for All Pages */
 body {
 font-family: sans-serif; 
 margin: 0;
@@ -10,7 +10,7 @@ flex-direction: column;
 padding: 0 0 0;
 }
 
-/* Styles For listing.html and submission.html*/
+/* Styles for listing.html and submission.html*/
 .main-content a {
 color: #40ae49;
 cursor:pointer;
@@ -20,6 +20,7 @@ h1 {
 text-align: center;
 }
 
+/* Styles for listing.html resource thumbnail cards */
 #thumbnaillist {
 max-width: 900px;
 min-width: 250px;
