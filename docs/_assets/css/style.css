@@ -43,6 +43,12 @@ h1 {
   text-decoration: none;
 }
 
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 200/150;
+  margin: 0 auto;
+}
+
 .thumbnailtitle {
   text-align: center;
   height: 75px;
@@ -51,12 +57,6 @@ h1 {
 .thumbnailblurb {
   height: 100px;
   padding: 5px;
-}
-
-.thumbnail {
-  width: 200px;
-  height: 150px;
-  margin: 0 auto;
 }
 
 /* Styles For resource.html */
