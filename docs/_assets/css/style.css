@@ -22,9 +22,16 @@ h1 {
 
 /* Styles for listing.html resource thumbnail cards */
 #thumbnaillist {
-  max-width: 900px;
-  min-width: 250px;
-  margin: 0 auto;
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 4em 0 8em;
+    padding: 4em var(--vocabulary-page-edges-space);;
+    gap: 5%;
+    box-sizing: border-box;
+
+    width:100%;
+    height: fit-content;
+    background: var(--vocabulary-neutral-color-lighter-gray);
 }
 
 .thumbnailbox {
