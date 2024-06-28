@@ -23,15 +23,15 @@ h1 {
 /* Styles for listing.html resource thumbnail cards */
 #thumbnaillist {
   display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 4em 0 8em;
-    padding: 4em var(--vocabulary-page-edges-space);;
-    gap: 5%;
-    box-sizing: border-box;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 4em 0 8em;
+  padding: 4em var(--vocabulary-page-edges-space);
+  gap: 5%;
+  box-sizing: border-box;
 
-    width:100%;
-    height: fit-content;
-    background: var(--vocabulary-neutral-color-lighter-gray);
+  width: 100%;
+  height: fit-content;
+  background: var(--vocabulary-neutral-color-lighter-gray);
 }
 
 .thumbnailbox {
@@ -50,13 +50,13 @@ h1 {
 }
 
 .thumbnailtitle {
-    font-family:"Roboto Condensed";
-      font-style: normal;
-      font-weight: 700;
-    font-size: 1.5vw;
-    color: var(--vocabulary-brand-color-dark-tomato);
-    --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
-    --underline-color: var(--vocabulary-brand-color-dark-tomato);
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5vw;
+  color: var(--vocabulary-brand-color-dark-tomato);
+  --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
+  --underline-color: var(--vocabulary-brand-color-dark-tomato);
 }
 
 .thumbnailblurb {
