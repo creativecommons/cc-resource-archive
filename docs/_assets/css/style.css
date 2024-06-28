@@ -50,8 +50,13 @@ h1 {
 }
 
 .thumbnailtitle {
-  text-align: center;
-  height: 75px;
+    font-family:"Roboto Condensed";
+      font-style: normal;
+      font-weight: 700;
+    font-size: 1.5vw;
+    color: var(--vocabulary-brand-color-dark-tomato);
+    --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
+    --underline-color: var(--vocabulary-brand-color-dark-tomato);
 }
 
 .thumbnailblurb {
