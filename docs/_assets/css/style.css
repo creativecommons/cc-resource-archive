@@ -35,12 +35,8 @@ h1 {
 }
 
 .thumbnailbox {
-  width: 200px;
-  float: left;
-  display: block;
-  border-radius: 25px;
-  border: 2px solid #c0c0c0;
-  margin: 5px;
+  grid-column: span 3;
+  border: 2px solid black;
 }
 
 .thumbnailLink {
