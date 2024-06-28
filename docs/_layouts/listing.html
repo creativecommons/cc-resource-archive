@@ -93,11 +93,11 @@
           class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
         >
           <a class="thumbnailLink" href="{{ page.permalink }}">
-            <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-            <div
+            <img
               class="thumbnail"
-              style="background-image: url({{ page.image-thumb }});"
-            ></div>
+              src="{{page.image-thumb}}"
+            ></img>
+            <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
             <div class="thumbnailblurb" style="color: rgb(0, 0, 0)">
               {{ page.blurb }}
             </div>
@@ -111,11 +111,11 @@
           class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
         >
           <a class="thumbnailLink" href="{{ page.permalink }}">
-            <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-            <div
+            <img
               class="thumbnail"
-              style="background-image: url('{{ page.image-thumb }}'); "
-            ></div>
+              src="{{page.image-thumb}}"
+            ></img>
+            <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
             <div class="thumbnailblurb" style="color: rgb(0, 0, 0)">
               {{ page.blurb }}
             </div>
