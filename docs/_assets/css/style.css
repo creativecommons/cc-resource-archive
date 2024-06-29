@@ -37,8 +37,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 4em 0 0;
-  padding: 4em var(--vocabulary-page-edges-space) 8em;
-  gap: 5%;
+  padding: 4em 10vw 8em;
+  gap: 10% 5%;
   box-sizing: border-box;
   width: 100%;
   height: fit-content;
