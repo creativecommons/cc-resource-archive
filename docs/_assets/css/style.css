@@ -37,7 +37,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 4em 0 0;
-  padding: 4em 10vw 8em;
+  padding: 4em 10vw 16em;
   gap: 10% 5%;
   box-sizing: border-box;
   width: 100%;
@@ -48,6 +48,7 @@ h1 {
 
 .thumbnailbox {
   grid-column: span 3;
+  height: fit-content;
 }
 
 .thumbnailLink {
