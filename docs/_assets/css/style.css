@@ -10,9 +10,13 @@ body {
 }
 
 /* Styles for listing.html and submission.html*/
-.main-content a {
-  color: #40ae49;
-  cursor: pointer;
+main {
+  width: 100%;
+}
+
+main a {
+cursor: pointer;
+height: fit-content;
 }
 
 h1 {
