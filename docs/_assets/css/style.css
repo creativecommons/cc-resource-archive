@@ -41,7 +41,7 @@ h1 {
 }
 
 .thumbnailLink {
-  text-decoration: none;
+  --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
 }
 
 .thumbnail {
@@ -55,14 +55,14 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 1.5vw;
-  color: var(--vocabulary-brand-color-dark-tomato);
-  --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
-  --underline-color: var(--vocabulary-brand-color-dark-tomato);
 }
 
 .thumbnailblurb {
-  height: 100px;
-  padding: 5px;
+  color: #000;
+  font-size: 1.2vw;
+  font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
 }
 
 /* Styles For resource.html */
