@@ -45,6 +45,7 @@ h1 {
   width: 100%;
   height: fit-content;
   background: var(--vocabulary-neutral-color-lighter-gray);
+  grid-auto-rows: minmax(100px, auto); /* Adjust this value as needed */
 }
 
 .thumbnailbox {
