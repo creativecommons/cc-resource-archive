@@ -9,7 +9,8 @@ body {
   padding: 0 0 0;
 }
 
-/* Styles for listing.html and submission.html*/
+
+/* Styles common for all the pages*/
 main {
   width: 100%;
 }
@@ -22,6 +23,7 @@ main a {
 h1 {
   text-align: center;
 }
+
 
 /* Styles for listing.html resource thumbnail cards */
 #thumbnaillist {
@@ -64,6 +66,32 @@ h1 {
   font-style: normal;
   font-weight: 400;
 }
+
+
+/* Styles For index.html and all.html */
+#resourcenavbar {
+  height: fit-content;
+  margin: 0 auto 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.resourcenav {
+  width: 200px;
+  height: fit-content;
+  display: none;
+}
+
+.resourcenav.resourcenavstatic {
+  display: block;
+}
+
+#bannercc {
+  width: 210px;
+  height: 50px;
+  margin-left: 100px;
+}
+
 
 /* Styles For resource.html */
 #preview {
@@ -111,29 +139,9 @@ h1 {
   color: white;
 }
 
-/* Styles For index.html and all.html */
-#resourcenavbar {
-  height: fit-content;
-  margin: 0 auto 100px;
-  display: flex;
-  justify-content: center;
-}
 
-.resourcenav {
-  width: 200px;
-  height: fit-content;
-  display: none;
-}
+/* Styles for submission.html */
 
-.resourcenav.resourcenavstatic {
-  display: block;
-}
-
-#bannercc {
-  width: 210px;
-  height: 50px;
-  margin-left: 100px;
-}
 
 /* Styles For footer.html */
 footer a {
@@ -143,6 +151,7 @@ footer a {
 footer .donate a {
   color: #000;
 }
+
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 600px) {
