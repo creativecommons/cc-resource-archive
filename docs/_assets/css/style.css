@@ -31,7 +31,6 @@ h1 {
   padding: 4em var(--vocabulary-page-edges-space);
   gap: 5%;
   box-sizing: border-box;
-
   width: 100%;
   height: fit-content;
   background: var(--vocabulary-neutral-color-lighter-gray);
@@ -39,7 +38,6 @@ h1 {
 
 .thumbnailbox {
   grid-column: span 3;
-  border: 2px solid black;
 }
 
 .thumbnailLink {
