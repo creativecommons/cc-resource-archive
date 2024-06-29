@@ -163,61 +163,61 @@ footer .donate a {
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1024px) {
   #thumbnaillist {
-      gap: 6vw 5%;
-      padding: 4em 7vw 8em;
+    gap: 6vw 5%;
+    padding: 4em 7vw 8em;
   }
 
   .thumbnailbox {
-      grid-column: span 4;
+    grid-column: span 4;
   }
 
   .thumbnailtitle {
-      font-size: 2.4vw;
+    font-size: 2.4vw;
   }
-    
+
   .thumbnailblurb {
-      font-size: 1.7vw;
+    font-size: 1.7vw;
   }
 }
 
 @media screen and (max-width: 600px) {
   #thumbnaillist {
-      gap: 12vw 7%;
-      padding: 4em 6vw 8em;
+    gap: 12vw 7%;
+    padding: 4em 6vw 8em;
   }
 
   .thumbnailbox {
-      grid-column: span 6;
+    grid-column: span 6;
   }
 
   .thumbnailtitle {
-      font-size: 3.5vw;
+    font-size: 3.5vw;
   }
-    
+
   .thumbnailblurb {
-      font-size: 2.5vw;
+    font-size: 2.5vw;
   }
 }
 
 @media screen and (max-width: 480px) {
   #thumbnaillist {
-      gap: 35vw 5%;
-      padding: 4em 6vw 8em;
+    gap: 35vw 5%;
+    padding: 4em 6vw 8em;
   }
 
   .thumbnailbox {
-      grid-column: span 12;
+    grid-column: span 12;
   }
 
   .thumbnailtitle {
-      font-size: 6.5vw;
+    font-size: 6.5vw;
   }
-    
+
   .thumbnailblurb {
-      font-size: 5vw;
+    font-size: 5vw;
   }
 
   #resourcenavbar {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
