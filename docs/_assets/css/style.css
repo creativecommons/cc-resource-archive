@@ -21,6 +21,7 @@ header {
 /* Styles common for all the pages*/
 main {
   width: 100%;
+  padding: 0 0;
 }
 
 main a {
@@ -37,8 +38,8 @@ h1 {
 #thumbnaillist {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 4em 0 8em;
-  padding: 4em var(--vocabulary-page-edges-space);
+  margin: 4em 0 0;
+  padding: 4em var(--vocabulary-page-edges-space) 8em;
   gap: 5%;
   box-sizing: border-box;
   width: 100%;
