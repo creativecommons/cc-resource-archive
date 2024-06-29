@@ -89,24 +89,24 @@
       <div id="thumbnaillist">
         {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout ==
         'resource' %} {% if page.featured == i %}
-        <div
-          class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
-        >
-            <img class="thumbnail" src="{{page.image-thumb}}"></img>
-            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
-            <p class="thumbnailblurb">{{ page.blurb }}</p>
+        <div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+
+          <img class="thumbnail" src="{{page.image-thumb}}"></img>
+          <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+          <p class="thumbnailblurb">{{ page.blurb }}</p>
+
         </div>
         {% endif %} {% endif %} {% endfor %} {% endfor %} {% unless page.title
         == 'Home' %} {% for i in (1..4) %} {% for page in site.pages %} {% if
         page.layout == 'resource' %} {% if page.weight == i %} {% unless
         page.featured %} {% if page.paramfilter == page.paramvalue %}
-        <div
-          class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
-        >
-            <img class="thumbnail" src="{{page.image-thumb}}"></img>
-            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
-            <p class="thumbnailblurb">{{ page.blurb }}</p>
-        </div>
+        <div class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+
+          <img class="thumbnail" src="{{page.image-thumb}}"></img>
+          <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+          <p class="thumbnailblurb">{{ page.blurb }}</p>
+
+      </div>
         {% endif %} {% endunless %} {% endif %} {% endif %} {% endfor %} {%
         endfor %} {% endunless %}
       </div>
