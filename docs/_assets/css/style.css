@@ -15,8 +15,8 @@ main {
 }
 
 main a {
-cursor: pointer;
-height: fit-content;
+  cursor: pointer;
+  height: fit-content;
 }
 
 h1 {
@@ -61,8 +61,8 @@ h1 {
   color: #000;
   font-size: 1.2vw;
   font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* Styles For resource.html */
