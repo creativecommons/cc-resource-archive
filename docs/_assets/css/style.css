@@ -161,6 +161,25 @@ footer .donate a {
 }
 
 /* Media Queries for responsiveness */
+@media screen and (max-width: 1024px) {
+  #thumbnaillist {
+      gap: 6vw 5%;
+      padding: 4em 7vw 8em;
+  }
+
+  .thumbnailbox {
+      grid-column: span 4;
+  }
+
+  .thumbnailtitle {
+      font-size: 2.4vw;
+  }
+    
+  .thumbnailblurb {
+      font-size: 1.7vw;
+  }
+}
+
 @media screen and (max-width: 600px) {
   #resourcenavbar {
     flex-direction: column;
