@@ -6,8 +6,8 @@ weight: 1
 featured: 1
 author: Creative Commons
 license: CC0
-image-full: /images/sixlicenses-500.gif
-image-thumb: /images/sixlicenses-200.gif
+image-full: /_assets/images/sixlicenses-500.gif
+image-thumb: /_assets/images/sixlicenses-200.gif
 topic: licenses
 language: ar ja ko lg mn ro tl en
 medium: print
