@@ -17,7 +17,6 @@ header {
   width: 100%;
 }
 
-
 /* Styles common for all the pages*/
 main {
   width: 100%;
@@ -32,7 +31,6 @@ main a {
 h1 {
   text-align: center;
 }
-
 
 /* Styles for listing.html resource thumbnail cards */
 #thumbnaillist {
@@ -77,7 +75,6 @@ h1 {
   font-weight: 400;
 }
 
-
 /* Styles For index.html and all.html */
 #resourcenavbar {
   height: fit-content;
@@ -101,7 +98,6 @@ h1 {
   height: 50px;
   margin-left: 100px;
 }
-
 
 /* Styles For resource.html */
 #preview {
@@ -149,9 +145,7 @@ h1 {
   color: white;
 }
 
-
 /* Styles for submission.html */
-
 
 /* Styles For footer.html */
 footer {
@@ -165,7 +159,6 @@ footer a {
 footer .donate a {
   color: #000;
 }
-
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 600px) {
