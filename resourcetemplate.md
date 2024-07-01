@@ -6,8 +6,8 @@ weight: 1
 featured: 1
 author: Creative Commons
 license: CC0
-image-full: /images/sixlicenses-500.gif
-image-thumb: /images/sixlicenses-200.gif
+image-full: /_assets/images/sixlicenses-500.gif
+image-thumb: /_assets/images/sixlicenses-200.gif
 topic: licenses
 language: ar ja ko lg mn ro tl en
 medium: print
@@ -61,7 +61,7 @@ The license the work is under. Format as follows:
 
 **image-full and image-thumb**
 
-Image-full should be 500px * 375px. Image-thumb should be 200*150. Put in the "images" folder. Use the full title as the filename, separated by hyphens.
+Image-full should be 500px * 375px. Image-thumb should be 200*150. Put in the "docs/_assets/images" folder. Use the full title as the filename, separated by hyphens.
 
 **topic**
 
