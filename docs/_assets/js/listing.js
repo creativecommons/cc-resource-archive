@@ -19,7 +19,13 @@ function getUrlVars() {
 // assigning variable to the filters selected by user (retrieved by getUrlVars)
 const { topic, language, medium } = getUrlVars();
 
-  document.write("<style>.thumbnailbox { display: none; }</style>");
+
+// Setting every thumbnailbox to display:none by creating a new element "dynamicStyle".
+// This "dynamicStyle" element can be used to create all the dynamic styles.
+const dynamicStyle = document.createElement('style');
+dynamicStyle.type = 'text/css';
+dynamicStyle.innerHTML = '.thumbnailbox { display: none; }';
+document.head.appendChild(dynamicStyle);
 
   if (
     topic === undefined &&
