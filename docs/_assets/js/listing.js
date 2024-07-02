@@ -16,12 +16,10 @@ function getUrlVars() {
     return vars;
 }
 
+// assigning variable to the filters selected by user (retrieved by getUrlVars)
+const { topic, language, medium } = getUrlVars();
 
   document.write("<style>.thumbnailbox { display: none; }</style>");
-
-  var topic = getUrlVars()["topic"];
-  var language = getUrlVars()["language"];
-  var medium = getUrlVars()["medium"];
 
   if (
     topic === undefined &&
