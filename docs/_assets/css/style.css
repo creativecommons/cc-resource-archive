@@ -5,15 +5,23 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   padding: 0 0 0;
 }
 
-/* Styles for listing.html and submission.html*/
-.main-content a {
-  color: #40ae49;
+header {
+  width: 100%;
+}
+
+/* Styles common for all the pages*/
+main {
+  width: 100%;
+  padding: 0 0;
+}
+
+main a {
   cursor: pointer;
+  height: fit-content;
 }
 
 h1 {
@@ -22,38 +30,71 @@ h1 {
 
 /* Styles for listing.html resource thumbnail cards */
 #thumbnaillist {
-  max-width: 900px;
-  min-width: 250px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 4em 0 0;
+  padding: 4em var(--vocabulary-page-edges-space) 16em;
+  gap: 10% 5%;
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+  background: var(--vocabulary-neutral-color-lighter-gray);
+  grid-auto-rows: minmax(100px, auto);
+  list-style: none;
 }
 
 .thumbnailbox {
-  width: 200px;
-  float: left;
-  display: block;
-  border-radius: 25px;
-  border: 2px solid #c0c0c0;
-  margin: 5px;
+  grid-column: span 3;
+  height: fit-content;
 }
 
 .thumbnailLink {
-  text-decoration: none;
-}
-
-.thumbnailtitle {
-  text-align: center;
-  height: 75px;
-}
-
-.thumbnailblurb {
-  height: 100px;
-  padding: 5px;
+  --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
 }
 
 .thumbnail {
-  width: 200px;
-  height: 150px;
+  width: 100%;
+  aspect-ratio: 200/150;
   margin: 0 auto;
+}
+
+.thumbnailtitle {
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6vw;
+}
+
+.thumbnailblurb {
+  color: #000;
+  font-size: 1.3vw;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Styles For index.html and all.html */
+#resourcenavbar {
+  height: fit-content;
+  margin: 0 auto 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.resourcenav {
+  width: 200px;
+  height: fit-content;
+  display: none;
+}
+
+.resourcenav.resourcenavstatic {
+  display: block;
+}
+
+#bannercc {
+  width: 210px;
+  height: 50px;
+  margin-left: 100px;
 }
 
 /* Styles For resource.html */
@@ -102,31 +143,14 @@ h1 {
   color: white;
 }
 
-/* Styles For index.html and all.html */
-#resourcenavbar {
-  height: fit-content;
-  margin: 0 auto 100px;
-  display: flex;
-  justify-content: center;
-}
-
-.resourcenav {
-  width: 200px;
-  height: fit-content;
-  display: none;
-}
-
-.resourcenav.resourcenavstatic {
-  display: block;
-}
-
-#bannercc {
-  width: 210px;
-  height: 50px;
-  margin-left: 100px;
-}
+/* Styles for submission.html */
 
 /* Styles For footer.html */
+footer {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 footer a {
   color: var(--vocabulary-brand-color-turquoise);
 }
@@ -136,8 +160,63 @@ footer .donate a {
 }
 
 /* Media Queries for responsiveness */
+@media screen and (max-width: 1024px) {
+  #thumbnaillist {
+    gap: 6vw 5%;
+    padding: 4em var(--vocabulary-page-edges-space) 8em;
+  }
+
+  .thumbnailbox {
+    grid-column: span 4;
+  }
+
+  .thumbnailtitle {
+    font-size: 2.4vw;
+  }
+
+  .thumbnailblurb {
+    font-size: 1.7vw;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  #thumbnaillist {
+    gap: 12vw 7%;
+    padding: 4em var(--vocabulary-page-edges-space) 8em;
+  }
+
+  .thumbnailbox {
+    grid-column: span 6;
+  }
+
+  .thumbnailtitle {
+    font-size: 3.5vw;
+  }
+
+  .thumbnailblurb {
+    font-size: 2.5vw;
+  }
+
   #resourcenavbar {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #thumbnaillist {
+    gap: 35vw 5%;
+    padding: 4em var(--vocabulary-page-edges-space) 8em;
+  }
+
+  .thumbnailbox {
+    grid-column: span 12;
+  }
+
+  .thumbnailtitle {
+    font-size: 6.5vw;
+  }
+
+  .thumbnailblurb {
+    font-size: 5vw;
   }
 }

@@ -79,52 +79,42 @@
   <body>
     {% include header.html %}
 
-    <div class="main-content">
+    <main>
       {{content}}
 
       <p style="text-align: center; padding: 1em">
         <a href="/submit/">Submit a resource</a>
       </p>
 
-      <div id="thumbnaillist">
+      <ul id="thumbnaillist">
         {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout ==
         'resource' %} {% if page.featured == i %}
-        <div
-          class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
-        >
-          <a class="thumbnailLink" href="{{ page.permalink }}">
-            <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-            <div
-              class="thumbnail"
-              style="background-image: url({{ page.image-thumb }});"
-            ></div>
-            <div class="thumbnailblurb" style="color: rgb(0, 0, 0)">
-              {{ page.blurb }}
-            </div>
-          </a>
-        </div>
+        <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+          <article>
+
+            <img class="thumbnail" src="{{page.image-thumb}}"></img>
+            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            <p class="thumbnailblurb">{{ page.blurb }}</p>
+
+          </article>
+        </li>
         {% endif %} {% endif %} {% endfor %} {% endfor %} {% unless page.title
         == 'Home' %} {% for i in (1..4) %} {% for page in site.pages %} {% if
         page.layout == 'resource' %} {% if page.weight == i %} {% unless
         page.featured %} {% if page.paramfilter == page.paramvalue %}
-        <div
-          class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
-        >
-          <a class="thumbnailLink" href="{{ page.permalink }}">
-            <div class="thumbnailtitle"><h3>{{ page.title }}</h3></div>
-            <div
-              class="thumbnail"
-              style="background-image: url('{{ page.image-thumb }}'); "
-            ></div>
-            <div class="thumbnailblurb" style="color: rgb(0, 0, 0)">
-              {{ page.blurb }}
-            </div>
-          </a>
-        </div>
+        <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+          <article>
+
+            <img class="thumbnail" src="{{page.image-thumb}}"></img>
+            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            <p class="thumbnailblurb">{{ page.blurb }}</p>
+
+          </article>
+        </li>
         {% endif %} {% endunless %} {% endif %} {% endif %} {% endfor %} {%
         endfor %} {% endunless %}
-      </div>
-    </div>
+      </ul>
+    </main>
 
     <!-- Footer -->
     {% include footer.html %}
