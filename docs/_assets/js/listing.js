@@ -50,20 +50,20 @@ else {
 // If user has selected some Topic filter, add class resourcenavtopicknown with "display:block".
 // Otherwise, add class resourcenavtopicunknown with "display:block"
 // This is for displaying the list of available filters to be selected from
-  document.write("<style>");
-  if (topic != undefined) {
-    document.write(" .resourcenavtopicknown");
-  } else {
-    document.write(" .resourcenavtopicunknown");
-  }
-  if (medium != undefined) {
-    document.write(", .resourcenavmediumknown");
-  } else {
-    document.write(", .resourcenavmediumunknown");
-  }
-  if (language != undefined) {
-    document.write(", .resourcenavlanguageknown");
-  } else {
-    document.write(", .resourcenavlanguageunknown");
-  }
-  document.write(" { display: block; }</style>");
+let isFilterSelected = '';
+if (topic) {
+  isFilterSelected += ' .resourcenavtopicknown';
+} else {
+  isFilterSelected += ' .resourcenavtopicunknown';
+}
+if (medium) {
+  isFilterSelected += ', .resourcenavmediumknown';
+} else {
+  isFilterSelected += ', .resourcenavmediumunknown';
+}
+if (language) {
+  isFilterSelected += ', .resourcenavlanguageknown';
+} else {
+  isFilterSelected += ', .resourcenavlanguageunknown';
+}
+dynamicStyle.innerHTML += `${isFilterSelected} { display: block; }`;
