@@ -14,10 +14,6 @@ header {
 }
 
 /* Styles common for all the pages*/
-body.listing-page {
-  box-sizing: border-box;
-}
-
 main {
   width: 100%;
   padding: 0 0;
