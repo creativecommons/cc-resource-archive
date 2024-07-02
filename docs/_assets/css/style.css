@@ -2,9 +2,6 @@
 @import "/_assets/vocabulary/css/vocabulary.css" layer(vocabulary);
 
 /* CSS for All Pages */
-* {
-  box-sizing: border-box;
-}
 
 body {
   font-family: sans-serif;
