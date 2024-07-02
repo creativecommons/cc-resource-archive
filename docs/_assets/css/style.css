@@ -37,7 +37,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 4em 0 0;
-  padding: 4em 10vw 16em;
+  padding: 4em var(--vocabulary-page-edges-space) 16em;
   gap: 10% 5%;
   box-sizing: border-box;
   width: 100%;
@@ -166,7 +166,7 @@ footer .donate a {
 @media screen and (max-width: 1024px) {
   #thumbnaillist {
     gap: 6vw 5%;
-    padding: 4em 7vw 8em;
+    padding: 4em var(--vocabulary-page-edges-space) 8em;
   }
 
   .thumbnailbox {
@@ -185,7 +185,7 @@ footer .donate a {
 @media screen and (max-width: 600px) {
   #thumbnaillist {
     gap: 12vw 7%;
-    padding: 4em 6vw 8em;
+    padding: 4em var(--vocabulary-page-edges-space) 8em;
   }
 
   .thumbnailbox {
@@ -208,7 +208,7 @@ footer .donate a {
 @media screen and (max-width: 480px) {
   #thumbnaillist {
     gap: 35vw 5%;
-    padding: 4em 6vw 8em;
+    padding: 4em var(--vocabulary-page-edges-space) 8em;
   }
 
   .thumbnailbox {
