@@ -27,24 +27,24 @@ dynamicStyle.type = 'text/css';
 dynamicStyle.innerHTML = '.thumbnailbox { display: none; }';
 document.head.appendChild(dynamicStyle);
 
-  if (
-    topic === undefined &&
-    medium === undefined &&
-    language === undefined
-  ) {
-    document.write("<style>.thumbnailbox { display: block; }</style>");
-  } else {
-    document.write("<style>");
-    if (topic != undefined) {
-      document.write("." + topic);
+
+// If no filter is selected, display all the resources by "display:block"
+if (!topic && !medium && !language) {
+    dynamicStyle.innerHTML += ' .thumbnailbox { display: block; }';
+  } 
+else {
+    // If filter(s) is/are selected, display all the resources which have all the filters
+    let selectedFilters = '';
+    if (topic) {
+      selectedFilters += `.${topic}`;
     }
-    if (medium != undefined) {
-      document.write("." + medium);
+    if (medium) {
+      selectedFilters += `.${medium}`;
     }
-    if (language != undefined) {
-      document.write("." + language);
+    if (language) {
+      selectedFilters += `.${language}`;
     }
-    document.write(" { display: block; }</style>");
+    dynamicStyle.innerHTML += `${selectedFilters} { display: block; }`;
   }
 
   document.write("<style>");
