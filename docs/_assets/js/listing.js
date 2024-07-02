@@ -1,3 +1,7 @@
+// This is the JavaScript code for listing of filtered resources in the "all.html" page. 
+// The all.html page is based on the layout listing.html
+
+
 function getUrlVars() {
     var vars = [],
       hash;
