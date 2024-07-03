@@ -1,6 +1,19 @@
 // This is the JavaScript code for listing of filtered resources in the "all.html" page.
 // The all.html page is based on the layout listing.html
 
+//Valid filter inputs for the URL parameters
+const validTopics = [
+  "licenses" , "publicdomain", "oer", "oa", "openscience", "openpolicy", "opendata"
+];
+
+const validMedia = [
+  "print", "video", "infographic", "website", "course", "slides"
+];
+
+const validLanguages = [
+  "ar", "de", "en", "fr", "hy", "it", "ja", "ko", "lg", "mn", "pl", "ro", "ru", "sv", "tl" 
+];
+
 // Function to get the selected filters for Topic, Medium and Language
 function getUrlVars() {
   const vars = {};
