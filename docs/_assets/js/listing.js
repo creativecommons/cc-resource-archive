@@ -31,23 +31,6 @@ function getUrlVars() {
 // assigning variable to the filters selected by user (retrieved by getUrlVars)
 const { topic, language, medium } = getUrlVars();
 
-// Declaring valid variables for topic, medium and languages
-let validTopic;
-let validMedium;
-let validLanguage;
-// Checking if the user-entered values match with the valid filter values
-if (validTopics.includes(topic)){
-  validTopic = topic;
-}
-
-if (validMedia.includes(medium)){
-  validMedium = medium;
-}
-
-if (validLanguages.includes(language)){
-  validLanguage = language;
-}
-
 // Setting every thumbnailbox to display:none by creating a new element "dynamicStyle".
 // This "dynamicStyle" element can be used to create all the dynamic styles.
 const dynamicStyle = document.createElement("style");
@@ -56,19 +39,19 @@ dynamicStyle.innerHTML = ".thumbnailbox { display: none; }";
 document.head.appendChild(dynamicStyle);
 
 // If no filter is selected, display all the resources by "display:block"
-if (!validTopic && !validMedium && !validLanguage) {
+if (!topic && !medium && !language) {
   dynamicStyle.innerHTML += " .thumbnailbox { display: block; }";
 } else {
   // If filter(s) is/are selected, display all the resources which have all the filters
   let selectedFilters = "";
-  if (validTopic) {
-    selectedFilters += `.${validTopic}`;
+  if (topic) {
+    selectedFilters += `.${topic}`;
   }
-  if (validMedium) {
-    selectedFilters += `.${validMedium}`;
+  if (medium) {
+    selectedFilters += `.${medium}`;
   }
-  if (validLanguage) {
-    selectedFilters += `.${validLanguage}`;
+  if (language) {
+    selectedFilters += `.${language}`;
   }
   dynamicStyle.innerHTML += `${selectedFilters} { display: block; }`;
 }
@@ -77,17 +60,17 @@ if (!validTopic && !validMedium && !validLanguage) {
 // Otherwise, add class resourcenavtopicunknown with "display:block"
 // This is for displaying the list of available filters to be selected from
 let isFilterSelected = "";
-if (validTopic) {
+if (topic) {
   isFilterSelected += " .resourcenavtopicknown";
 } else {
   isFilterSelected += " .resourcenavtopicunknown";
 }
-if (validMedium) {
+if (medium) {
   isFilterSelected += ", .resourcenavmediumknown";
 } else {
   isFilterSelected += ", .resourcenavmediumunknown";
 }
-if (validLanguage) {
+if (language) {
   isFilterSelected += ", .resourcenavlanguageknown";
 } else {
   isFilterSelected += ", .resourcenavlanguageunknown";
