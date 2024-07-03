@@ -21,8 +21,24 @@ function getUrlVars() {
   const hashes = filterString.split("&");
 
   hashes.forEach((hash) => {
+    let validKey;
+    let validValue;
     const [key, value] = hash.split("=");
-    vars[key] = value;
+    if (key == 'topic' && validTopics.includes(value)){
+      validKey = key;
+      validValue = value;
+    }
+
+    if (key == 'medium' && validMedia.includes(value)){
+      validKey = key;
+      validValue = value;
+    }
+
+    if (key == 'language' && validLanguages.includes(value)){
+      validKey = key;
+      validValue = value;
+    }
+    vars[validKey] = validValue;
   });
 
   return vars;
