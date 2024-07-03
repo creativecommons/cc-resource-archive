@@ -31,10 +31,8 @@
       <!-- All the content inside the pages following this layout will be present here. -->
       {{content}}
 
-      <p style="text-align: center; padding: 1em">
-        <a href="/submit/">Submit a resource</a>
-      </p>
-
+      <!-- This is the section that shows all the resource cards in the site.
+       The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
       <ul id="thumbnaillist">
         {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout ==
         'resource' %} {% if page.featured == i %}
@@ -49,7 +47,12 @@
         </li>
         {% endif %} {% endif %} {% endfor %} {% endfor %} {% unless page.title
         == 'Home' %} {% for i in (1..4) %} {% for page in site.pages %} {% if
-        page.layout == 'resource' %} {% if page.weight == i %} {% unless
+        page.layout == 'resource' %} {% if page.weight == i %} 
+        
+        <!-- Apart from the homepage, we want to list all the resources present in the site.
+         So this part lists the other resources apart from the starting 16. This does that on the basis
+         of weight (1 to 4) property. -->
+        {% unless
         page.featured %} {% if page.paramfilter == page.paramvalue %}
         <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
           <article>
@@ -65,10 +68,11 @@
       </ul>
     </main>
 
-    <!-- Footer -->
+    <!-- The standard CC footer, located at docs/_includes/footer.html -->
     {% include footer.html %}
 
   </body>
 
+  <!-- Including vocabulary.js from vocabulary directory -->
   <script src="/_assets/vocabulary/js/vocabulary.js"></script>
 </html>
