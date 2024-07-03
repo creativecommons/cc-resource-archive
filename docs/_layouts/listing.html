@@ -34,37 +34,50 @@
       <!-- This is the section that shows all the resource cards in the site.
        The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
       <ul id="thumbnaillist">
-        {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout ==
-        'resource' %} {% if page.featured == i %}
-        <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-          <article>
+        {% for i in (1..16) %} 
+          {% for page in site.pages %} 
+            {% if page.layout =='resource' %} 
+              {% if page.featured == i %}
+                <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+                  <article>
 
-            <img class="thumbnail" src="{{page.image-thumb}}"></img>
-            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
-            <p class="thumbnailblurb">{{ page.blurb }}</p>
+                    <img class="thumbnail" src="{{page.image-thumb}}"></img>
+                    <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+                    <p class="thumbnailblurb">{{ page.blurb }}</p>
 
-          </article>
-        </li>
-        {% endif %} {% endif %} {% endfor %} {% endfor %} {% unless page.title
-        == 'Home' %} {% for i in (1..4) %} {% for page in site.pages %} {% if
-        page.layout == 'resource' %} {% if page.weight == i %} 
+                  </article>
+                </li>
+              {% endif %} 
+            {% endif %} 
+          {% endfor %} 
+        {% endfor %} 
         
         <!-- Apart from the homepage, we want to list all the resources present in the site.
          So this part lists the other resources apart from the starting 16. This does that on the basis
          of weight (1 to 4) property. -->
-        {% unless
-        page.featured %} {% if page.paramfilter == page.paramvalue %}
-        <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
-          <article>
+        {% unless page.title == 'Home' %} 
+          {% for i in (1..4) %} 
+            {% for page in site.pages %} 
+              {% if page.layout == 'resource' %} 
+                {% if page.weight == i %} 
+                  {% unless page.featured %} 
+                    {% if page.paramfilter == page.paramvalue %}
+                      <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+                        <article>
 
-            <img class="thumbnail" src="{{page.image-thumb}}"></img>
-            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
-            <p class="thumbnailblurb">{{ page.blurb }}</p>
+                          <img class="thumbnail" src="{{page.image-thumb}}"></img>
+                          <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+                          <p class="thumbnailblurb">{{ page.blurb }}</p>
 
-          </article>
-        </li>
-        {% endif %} {% endunless %} {% endif %} {% endif %} {% endfor %} {%
-        endfor %} {% endunless %}
+                        </article>
+                      </li>
+                    {% endif %} 
+                  {% endunless %} 
+                {% endif %} 
+              {% endif %} 
+            {% endfor %} 
+          {% endfor %} 
+        {% endunless %}
       </ul>
     </main>
 
