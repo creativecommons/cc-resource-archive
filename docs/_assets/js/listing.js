@@ -31,6 +31,23 @@ function getUrlVars() {
 // assigning variable to the filters selected by user (retrieved by getUrlVars)
 const { topic, language, medium } = getUrlVars();
 
+// Declaring valid variables for topic, medium and languages
+let validTopic;
+let validMedium;
+let validLanguage;
+// Checking if the user-entered values match with the valid filter values
+if (validTopics.includes(topic)){
+  validTopic = topic;
+}
+
+if (validMedia.includes(medium)){
+  validMedium = medium;
+}
+
+if (validLanguages.includes(language)){
+  validLanguage = language;
+}
+
 // Setting every thumbnailbox to display:none by creating a new element "dynamicStyle".
 // This "dynamicStyle" element can be used to create all the dynamic styles.
 const dynamicStyle = document.createElement("style");
