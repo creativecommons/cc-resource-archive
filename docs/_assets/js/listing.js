@@ -3,15 +3,40 @@
 
 //Valid filter inputs for the URL parameters
 const validTopics = [
-  "licenses" , "publicdomain", "oer", "oa", "openscience", "openpolicy", "opendata"
+  "licenses",
+  "publicdomain",
+  "oer",
+  "oa",
+  "openscience",
+  "openpolicy",
+  "opendata",
 ];
 
 const validMedia = [
-  "print", "video", "infographic", "website", "course", "slides"
+  "print",
+  "video",
+  "infographic",
+  "website",
+  "course",
+  "slides",
 ];
 
 const validLanguages = [
-  "ar", "de", "en", "fr", "hy", "it", "ja", "ko", "lg", "mn", "pl", "ro", "ru", "sv", "tl" 
+  "ar",
+  "de",
+  "en",
+  "fr",
+  "hy",
+  "it",
+  "ja",
+  "ko",
+  "lg",
+  "mn",
+  "pl",
+  "ro",
+  "ru",
+  "sv",
+  "tl",
 ];
 
 // Function to get the selected filters for Topic, Medium and Language
@@ -24,17 +49,17 @@ function getUrlVars() {
     let validKey;
     let validValue;
     const [key, value] = hash.split("=");
-    if (key == 'topic' && validTopics.includes(value)){
+    if (key == "topic" && validTopics.includes(value)) {
       validKey = key;
       validValue = value;
     }
 
-    if (key == 'medium' && validMedia.includes(value)){
+    if (key == "medium" && validMedia.includes(value)) {
       validKey = key;
       validValue = value;
     }
 
-    if (key == 'language' && validLanguages.includes(value)){
+    if (key == "language" && validLanguages.includes(value)) {
       validKey = key;
       validValue = value;
     }
