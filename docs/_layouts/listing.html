@@ -10,15 +10,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/_assets/vocabulary/favicon/apple-touch-icon.png" />
     <link rel="stylesheet" type="text/css" href="/_assets/css/style.css" />
 
+    <!-- If the page is all.html, apply the following javascript -->
     {% if page.title == "All" %}
     <script src="/_assets/js/listing.js"></script>
     {% endif %}
   </head>
 
   <body>
+    <!-- The standard CC header, located at docs/_includes/header.html -->
     {% include header.html %}
 
     <main>
+      <!-- All the content inside the pages following this layout will be present here. -->
       {{content}}
 
       <p style="text-align: center; padding: 1em">
