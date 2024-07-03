@@ -56,19 +56,19 @@ dynamicStyle.innerHTML = ".thumbnailbox { display: none; }";
 document.head.appendChild(dynamicStyle);
 
 // If no filter is selected, display all the resources by "display:block"
-if (!topic && !medium && !language) {
+if (!validTopic && !validMedium && !validLanguage) {
   dynamicStyle.innerHTML += " .thumbnailbox { display: block; }";
 } else {
   // If filter(s) is/are selected, display all the resources which have all the filters
   let selectedFilters = "";
-  if (topic) {
-    selectedFilters += `.${topic}`;
+  if (validTopic) {
+    selectedFilters += `.${validTopic}`;
   }
-  if (medium) {
-    selectedFilters += `.${medium}`;
+  if (validMedium) {
+    selectedFilters += `.${validMedium}`;
   }
-  if (language) {
-    selectedFilters += `.${language}`;
+  if (validLanguage) {
+    selectedFilters += `.${validLanguage}`;
   }
   dynamicStyle.innerHTML += `${selectedFilters} { display: block; }`;
 }
@@ -77,17 +77,17 @@ if (!topic && !medium && !language) {
 // Otherwise, add class resourcenavtopicunknown with "display:block"
 // This is for displaying the list of available filters to be selected from
 let isFilterSelected = "";
-if (topic) {
+if (validTopic) {
   isFilterSelected += " .resourcenavtopicknown";
 } else {
   isFilterSelected += " .resourcenavtopicunknown";
 }
-if (medium) {
+if (validMedium) {
   isFilterSelected += ", .resourcenavmediumknown";
 } else {
   isFilterSelected += ", .resourcenavmediumunknown";
 }
-if (language) {
+if (validLanguage) {
   isFilterSelected += ", .resourcenavlanguageknown";
 } else {
   isFilterSelected += ", .resourcenavlanguageunknown";
