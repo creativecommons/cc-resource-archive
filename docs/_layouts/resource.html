@@ -33,8 +33,6 @@
       <header>
         <h1>{{page.title}}</h1>
 
-        <span class="byline">by {{page.author}}</span>
-
         <!-- If the topic of resource is present in the data/ folder, then display the topic name here -->
         <span class="topic-categories">
           {% for topic in site.data.topics %} {% if page.topic contains
