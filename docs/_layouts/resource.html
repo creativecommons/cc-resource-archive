@@ -72,7 +72,24 @@
         <p>
           To the extent possible under law, <span property="dct:publisher">{{ page.author }}</span> has waived all copyright and related or neighboring rights to <a href="{{ page.downloadurl}}" property="dct:title">{{ page.title }}</a>.
         </p>
-        
+        {% else %}
+
+        <a rel="license" href="http://creativecommons.org/licenses/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/">
+          <img alt="Creative Commons License" src="http://i.creativecommons.org/l/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/88x31.png" />
+        </a>
+        <p>
+          {% if page.downloadurl %}
+          <a href="{{ page.downloadurl }}" rel="cc:attributionURL">
+          {% endif %}
+            <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">{{ page.title }}</span>
+          {% if page.downloadurl %}
+          </a>
+          {% endif %}{% if page.author %} by
+          <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">{{ page.author }}</span>{% endif %} is licensed under
+          <a rel="license" href="http://creativecommons.org/licenses/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/">{{ page.license }}</a>.
+        </p>
+
+        {% endif %}
       </article>
       {% endif %}
 
