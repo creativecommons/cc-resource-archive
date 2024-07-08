@@ -48,22 +48,28 @@
       {% endif %}
       {% endif %}
 
+      <!-- The links to download, view or visit the resource are present here -->
       <article class="downloadlinks">
+        <!-- for pages containing download url -->
         {% if page.downloadurl %}
 
+        <!-- If the page is website or a course, text should be "Visit" -->
         {% if page.medium == "website" or page.medium == "course" %}
         <a href="{{page.downloadurl}}">Visit</a>
         {% else %}
 
+        <!-- If the page is not a website or a course, text should be "View in detail" -->
         <a href="{{page.downloadurl}}">View in detail</a>
         {% endif %}
         {% endif %}
 
+        <!-- For pages containing repo url, text should View source -->
         {% if page.repourl %}
         <a href="{{page.repourl}}">View source</a>
         {% endif %}
       </article>
 
+      <!-- All the content inside the pages following this layout will be present inside this <p>. -->
       <p class="description">{{content}}</p>
 
       {% if page.license %}
