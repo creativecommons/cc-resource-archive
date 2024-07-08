@@ -8,37 +8,7 @@
     <link rel="manifest" href="/_assets/vocabulary/favicon/manifest.webmanifest">
     <link rel="apple-touch-icon" sizes="180x180" href="/_assets/vocabulary/favicon/apple-touch-icon.png" />
     <link rel="stylesheet" type="text/css" href="/_assets/css/style.css" />
-    {% if page.downloadurl %} {% if page.repourl %}
-    <style>
-      #downloadbuttonholder {
-        width: 440px;
-      }
-    </style>
-    {% else %}
-    <style>
-      #downloadbuttonholder {
-        width: 220px;
-      }
-    </style>
-    {% endif %} {% elsif page.repourl %}
-    <style>
-      #downloadbuttonholder {
-        width: 220px;
-      }
-    </style>
-    {% endif %} {% if page.repourl contains 'layervault.com' %}
-    <style>
-      .downloadbutton.repository {
-        background-image: url("/images/layervault.png");
-      }
-    </style>
-    {% endif %} {% if page.repourl contains 'github.com' %}
-    <style>
-      .downloadbutton.repository {
-        background-image: url("/images/github.png");
-      }
-    </style>
-    {% endif %}
+
   </head>
   <body>
     {% include header.html %}
