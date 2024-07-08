@@ -172,6 +172,7 @@ footer .donate a {
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1024px) {
+  /* For listing.html */
   #thumbnaillist {
     gap: 6vw 5%;
     padding: 4em var(--vocabulary-page-edges-space) 8em;
@@ -191,6 +192,7 @@ footer .donate a {
 }
 
 @media screen and (max-width: 600px) {
+  /* For listing.html */
   #thumbnaillist {
     gap: 12vw 7%;
     padding: 4em var(--vocabulary-page-edges-space) 8em;
@@ -208,12 +210,18 @@ footer .donate a {
     font-size: 2.5vw;
   }
 
+  /* For resource.html */
+  .resource-page > main {
+    width: 80%;
+  }
+
   #resourcenavbar {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 480px) {
+  /* For listing.html */
   #thumbnaillist {
     gap: 35vw 5%;
     padding: 4em var(--vocabulary-page-edges-space) 8em;
