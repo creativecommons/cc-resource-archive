@@ -47,6 +47,10 @@ h1 {
   list-style: none;
 }
 
+#noThumbnailsMessage h1{
+  text-align: center;
+}
+
 .thumbnailbox {
   grid-column: span 3;
   height: fit-content;
