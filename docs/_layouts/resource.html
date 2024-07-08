@@ -44,6 +44,22 @@
       {% endif %}
       {% endif %}
 
+      <article class="downloadlinks">
+        {% if page.downloadurl %}
+
+        {% if page.medium == "website" or page.medium == "course" %}
+        <a href="{{page.downloadurl}}">Visit</a>
+        {% else %}
+
+        <a href="{{page.downloadurl}}">View in detail</a>
+        {% endif %}
+        {% endif %}
+
+        {% if page.repourl %}
+        <a href="{{page.repourl}}">View source</a>
+        {% endif %}
+      </article>
+
     </main>
     
     <!-- The standard CC footer, located at docs/_includes/footer.html -->
