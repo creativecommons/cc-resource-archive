@@ -130,6 +130,19 @@ h1 {
   width: 100%;
 }
 
+.downloadlinks {
+  width: 100%;
+  background-color: var(--vocabulary-brand-color-soft-tomato);
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.downloadlinks a {
+  font-size: 1.2em;
+  --underline-background-color: var(--vocabulary-brand-color-soft-tomato);
+  margin-right: 1em;
+}
+
 /* Styles for submission.html */
 
 /* Styles For footer.html */
