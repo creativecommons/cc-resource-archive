@@ -102,49 +102,56 @@ h1 {
 }
 
 /* Styles For resource.html */
-#preview {
-  width: 500px;
-  height: 375px;
+.resource-page > main {
+  width: 60%;
   margin: 0 auto;
-  background-image: url(/_assets/images/placeholder-500.gif);
-  border-radius: 25px;
 }
 
-#downloadbuttonholder {
-  height: 100px;
+.resource-page main > header::before {
+  left: unset;
+}
+
+.topic-categories {
+  order: -1;
+  display: flex;
+  gap: 10px;
+}
+
+.resource-page main figure {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-}
-
-#longdescription {
-  max-width: 500px;
-  margin: 0 auto;
-  border: 2px solid #c0c0c0;
-  border-radius: 25px;
-  padding: 10px;
-}
-
-.downloadbutton {
-  min-width: 150px;
-  width: max-content;
-  height: 70%;
-  padding: 0 5px;
-  border-radius: 8px;
-  background-color: #40ae49;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.downloadbutton p {
-  height: 100%;
   margin: 0;
-  font-size: 130%;
-  line-height: 75px;
-  color: white;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resource-page iframe {
+  width: 100%;
+}
+
+.downloadlinks {
+  width: 100%;
+  background-color: var(--vocabulary-brand-color-soft-tomato);
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.downloadlinks a {
+  font-size: 1.2em;
+  --underline-background-color: var(--vocabulary-brand-color-soft-tomato);
+  margin-right: 1em;
+}
+
+.resource-license {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.resource-license p {
+  font-size: 1.1em;
 }
 
 /* Styles for submission.html */
@@ -165,6 +172,7 @@ footer .donate a {
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1024px) {
+  /* For listing.html */
   #thumbnaillist {
     gap: 6vw 5%;
     padding: 4em var(--vocabulary-page-edges-space) 8em;
@@ -184,6 +192,7 @@ footer .donate a {
 }
 
 @media screen and (max-width: 600px) {
+  /* For listing.html */
   #thumbnaillist {
     gap: 12vw 7%;
     padding: 4em var(--vocabulary-page-edges-space) 8em;
@@ -201,12 +210,18 @@ footer .donate a {
     font-size: 2.5vw;
   }
 
+  /* For resource.html */
+  .resource-page > main {
+    width: 80%;
+  }
+
   #resourcenavbar {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 480px) {
+  /* For listing.html */
   #thumbnaillist {
     gap: 35vw 5%;
     padding: 4em var(--vocabulary-page-edges-space) 8em;
