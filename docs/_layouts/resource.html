@@ -20,6 +20,16 @@
         <h1>{{page.title}}</h1>
 
         <span class="byline">by {{page.author}}</span>
+
+        <span class="topic-categories">
+          {% for topic in site.data.topics %}
+          {% if page.topic contains topic.string %}
+          <span class="categories">
+            <a href="https://resources.creativecommons.org/all/?&topic={{topic.string}}#thumbnaillist">{{topic.name}}</a>
+          </span>
+          {% endif %}
+          {% endfor %}
+        </span>
       </header>
 
     </main>

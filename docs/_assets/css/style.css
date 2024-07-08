@@ -111,6 +111,12 @@ h1 {
   left: unset;
 }
 
+.topic-categories {
+  order: -1;
+  display: flex;
+  gap: 10px;
+}
+
 /* Styles for submission.html */
 
 /* Styles For footer.html */
