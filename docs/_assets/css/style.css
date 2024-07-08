@@ -102,50 +102,7 @@ h1 {
 }
 
 /* Styles For resource.html */
-#preview {
-  width: 500px;
-  height: 375px;
-  margin: 0 auto;
-  background-image: url(/_assets/images/placeholder-500.gif);
-  border-radius: 25px;
-}
 
-#downloadbuttonholder {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-}
-
-#longdescription {
-  max-width: 500px;
-  margin: 0 auto;
-  border: 2px solid #c0c0c0;
-  border-radius: 25px;
-  padding: 10px;
-}
-
-.downloadbutton {
-  min-width: 150px;
-  width: max-content;
-  height: 70%;
-  padding: 0 5px;
-  border-radius: 8px;
-  background-color: #40ae49;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.downloadbutton p {
-  height: 100%;
-  margin: 0;
-  font-size: 130%;
-  line-height: 75px;
-  color: white;
-}
 
 /* Styles for submission.html */
 
