@@ -15,12 +15,13 @@
     {% include header.html %}
 
     <main>
-
+      <!-- The main heading for the resource page -->
       <header>
         <h1>{{page.title}}</h1>
 
         <span class="byline">by {{page.author}}</span>
 
+        <!-- If the topic of resource is present in the data/ folder, then display the topic name here -->
         <span class="topic-categories">
           {% for topic in site.data.topics %}
           {% if page.topic contains topic.string %}
@@ -32,14 +33,17 @@
         </span>
       </header>
 
+      <!-- If the resource containes embed property, then display the embedded video here -->
       {% if page.embed %}
       <figure>{{page.embed}}</figure>
       {% else %} 
 
+      <!-- else, display the {image-full} image here -->
       {% if page.image-full %}
       <figure><img src="{{page.image-full}}"></figure>
       {% else %}
 
+      <!-- If the resource doesn't contain embed or image-full, display a placeholder here -->
       <figure><img src="/_assets/images/placeholder-500.gif"></figure>
       {% endif %}
       {% endif %}
@@ -92,7 +96,6 @@
         {% endif %}
       </article>
       {% endif %}
-
     </main>
     
     <!-- The standard CC footer, located at docs/_includes/footer.html -->
