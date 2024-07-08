@@ -32,6 +32,18 @@
         </span>
       </header>
 
+      {% if page.embed %}
+      <figure>{{page.embed}}</figure>
+      {% else %} 
+
+      {% if page.image-full %}
+      <figure><img src="{{page.image-full}}"></figure>
+      {% else %}
+
+      <figure><img src="/_assets/images/placeholder-500.gif"></figure>
+      {% endif %}
+      {% endif %}
+
     </main>
     
     <!-- The standard CC footer, located at docs/_includes/footer.html -->

@@ -117,6 +117,19 @@ h1 {
   gap: 10px;
 }
 
+.resource-page main figure {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resource-page iframe {
+  width: 100%;
+}
+
 /* Styles for submission.html */
 
 /* Styles For footer.html */
