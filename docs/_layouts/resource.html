@@ -32,19 +32,6 @@
       <!-- The main heading for the resource page -->
       <header>
         <h1>{{page.title}}</h1>
-
-        <!-- If the topic of resource is present in the data/ folder, then display the topic name here -->
-        <span class="topic-categories">
-          {% for topic in site.data.topics %} {% if page.topic contains
-          topic.string %}
-          <span class="categories">
-            <a
-              href="https://resources.creativecommons.org/all/?&topic={{topic.string}}#thumbnaillist"
-              >{{topic.name}}</a
-            >
-          </span>
-          {% endif %} {% endfor %}
-        </span>
       </header>
 
       <!-- If the resource containes embed property, then display the embedded video here -->
