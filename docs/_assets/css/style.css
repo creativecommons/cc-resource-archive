@@ -102,7 +102,14 @@ h1 {
 }
 
 /* Styles For resource.html */
+.resource-page > main {
+  width: 60%;
+  margin: 0 auto;
+}
 
+.resource-page main > header::before {
+  left: unset;
+}
 
 /* Styles for submission.html */
 
