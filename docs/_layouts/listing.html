@@ -4,50 +4,88 @@
     <title>{{ page.title }} | Creative Commons Resource Archive</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/_assets/vocabulary/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="/_assets/vocabulary/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="manifest" href="/_assets/vocabulary/favicon/manifest.webmanifest">
-    <link rel="apple-touch-icon" sizes="180x180" href="/_assets/vocabulary/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      href="/_assets/vocabulary/favicon/favicon.ico"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      href="/_assets/vocabulary/favicon/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="manifest"
+      href="/_assets/vocabulary/favicon/manifest.webmanifest"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/_assets/vocabulary/favicon/apple-touch-icon.png"
+    />
     <link rel="stylesheet" type="text/css" href="/_assets/css/style.css" />
 
+    <!-- If the page is all.html, apply the following javascript -->
     {% if page.title == "All" %}
     <script src="/_assets/js/listing.js"></script>
     {% endif %}
   </head>
 
   <body>
+    <!-- The standard CC header, located at docs/_includes/header.html -->
     {% include header.html %}
 
     <main>
+      <!-- The main heading for the site -->
+      <header>
+        <h1>Resources</h1>
+        <p>
+          Filter and access the resources below or
+          <a href="/submit/">submit one here</a>
+        </p>
+      </header>
+
+      <!-- All the content inside the pages following this layout will be present here. -->
       {{content}}
 
-      <p style="text-align: center; padding: 1em">
-        <a href="/submit/">Submit a resource</a>
-      </p>
-
+      <!-- This is the section that shows all the resource cards in the site.
+       The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
       <ul id="thumbnaillist">
-        {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout ==
-        'resource' %} {% if page.featured == i %}
-        <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+        {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout
+        =='resource' %} {% if page.featured == i %}
+        <li
+          class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
+        >
           <article>
-
-            <img class="thumbnail" src="{{page.image-thumb}}"></img>
-            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            <img class="thumbnail" src="{{page.image-thumb}}" />
+            <h3 class="thumbnailtitle">
+              <a class="thumbnailLink" href="{{ page.permalink }}"
+                >{{ page.title }}</a
+              >
+            </h3>
             <p class="thumbnailblurb">{{ page.blurb }}</p>
-
           </article>
         </li>
-        {% endif %} {% endif %} {% endfor %} {% endfor %} {% unless page.title
-        == 'Home' %} {% for i in (1..4) %} {% for page in site.pages %} {% if
-        page.layout == 'resource' %} {% if page.weight == i %} {% unless
-        page.featured %} {% if page.paramfilter == page.paramvalue %}
-        <li class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}">
+        {% endif %} {% endif %} {% endfor %} {% endfor %}
+
+        <!-- Apart from the homepage, we want to list all the resources present in the site.
+         So this part lists the other resources apart from the starting 16. This does that on the basis
+         of weight (1 to 4) property. -->
+        {% unless page.title == 'Home' %} {% for i in (1..4) %} {% for page in
+        site.pages %} {% if page.layout == 'resource' %} {% if page.weight == i
+        %} {% unless page.featured %} {% if page.paramfilter == page.paramvalue
+        %}
+        <li
+          class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
+        >
           <article>
-
-            <img class="thumbnail" src="{{page.image-thumb}}"></img>
-            <h3 class="thumbnailtitle"><a class="thumbnailLink" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            <img class="thumbnail" src="{{page.image-thumb}}" />
+            <h3 class="thumbnailtitle">
+              <a class="thumbnailLink" href="{{ page.permalink }}"
+                >{{ page.title }}</a
+              >
+            </h3>
             <p class="thumbnailblurb">{{ page.blurb }}</p>
-
           </article>
         </li>
         {% endif %} {% endunless %} {% endif %} {% endif %} {% endfor %} {%
@@ -55,10 +93,10 @@
       </ul>
     </main>
 
-    <!-- Footer -->
+    <!-- The standard CC footer, located at docs/_includes/footer.html -->
     {% include footer.html %}
-
   </body>
 
+  <!-- Including vocabulary.js from vocabulary directory -->
   <script src="/_assets/vocabulary/js/vocabulary.js"></script>
 </html>
