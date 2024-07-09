@@ -132,6 +132,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Show the message if all thumbnailbox elements are hidden
   if (allHidden) {
-      document.getElementById('noThumbnailsMessage').style.display = 'block';
+      var messageElement = document.getElementById('noThumbnailsMessage');
+      messageElement.classList.remove('hidden');
+      messageElement.classList.add('visible');
   }
 });

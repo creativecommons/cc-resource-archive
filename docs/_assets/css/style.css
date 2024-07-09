@@ -47,6 +47,14 @@ h1 {
   list-style: none;
 }
 
+.hidden{
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
 #noThumbnailsMessage h1{
   text-align: center;
 }
