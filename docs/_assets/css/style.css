@@ -155,6 +155,14 @@ h1 {
 }
 
 /* Styles for submission.html */
+.submit-page > main {
+  width: 60%;
+  margin: 0 auto 8em;
+}
+
+.submit-page main > header::before {
+  left: unset;
+}
 
 /* Styles For footer.html */
 footer {
