@@ -223,6 +223,11 @@ footer .donate a {
     width: 80%;
   }
 
+  /* For submission.html */
+  .submit-page > main {
+    width: 80%;
+  }
+
   #resourcenavbar {
     flex-direction: column;
   }
