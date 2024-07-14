@@ -55,9 +55,10 @@ h1 {
   display: block;
 }
 
-#noThumbnailsMessage h1{
+#noThumbnailsMessage p{
   background: var(--vocabulary-neutral-color-lighter-gray);
   text-align: center;
+  font-weight: bold;
 }
 
 .thumbnailbox {
