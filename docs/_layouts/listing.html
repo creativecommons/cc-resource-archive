@@ -53,7 +53,7 @@
        <div id="noThumbnailsMessage" class="hidden">
         <h1>No resources matched the selected filters.</h1>
         </div> 
-      <ul id="thumbnaillist">
+      <ul id="thumbnaillist" class="hidden">
         {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout
         =='resource' %} {% if page.featured == i %}
         <li
