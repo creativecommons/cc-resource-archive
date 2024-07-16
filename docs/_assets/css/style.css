@@ -13,7 +13,6 @@ header {
   width: 100%;
 }
 
-/* Styles common for all the pages*/
 main {
   width: 100%;
   padding: 0 0;
@@ -30,6 +29,16 @@ main a {
 
 h1 {
   text-align: center;
+}
+
+code {
+  padding: 2px 4px;
+  border: 0.0625rem solid rgb(216, 216, 216);
+  border-radius: 0.25rem;
+  font-family: monospace;
+  color: rgb(51, 51, 51);
+  background-color: #f5f5f5;
+  font-size: 1.3rem;
 }
 
 /* Styles for listing.html resource thumbnail cards */
@@ -155,6 +164,18 @@ h1 {
 }
 
 /* Styles for submission.html */
+.submit-page > main {
+  width: 60%;
+  margin: 0 auto 8em;
+}
+
+.submit-page main > header::before {
+  left: unset;
+}
+
+.submit-page main > ol li {
+  margin: 1em 0;
+}
 
 /* Styles For footer.html */
 footer {
@@ -212,6 +233,11 @@ footer .donate a {
 
   /* For resource.html */
   .resource-page > main {
+    width: 80%;
+  }
+
+  /* For submission.html */
+  .submit-page > main {
     width: 80%;
   }
 

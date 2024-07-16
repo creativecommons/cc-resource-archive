@@ -9,34 +9,145 @@ permalink: /submit/
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title }} | Creative Commons</title>
     <link rel="stylesheet" type="text/css" href="/_assets/css/style.css" />
-    <link rel="icon" href="/_assets/vocabulary/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="/_assets/vocabulary/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="manifest" href="/_assets/vocabulary/favicon/manifest.webmanifest">
-    <link rel="apple-touch-icon" sizes="180x180" href="/_assets/vocabulary/favicon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      href="/_assets/vocabulary/favicon/favicon.ico"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      href="/_assets/vocabulary/favicon/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="manifest"
+      href="/_assets/vocabulary/favicon/manifest.webmanifest"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/_assets/vocabulary/favicon/apple-touch-icon.png"
+    />
   </head>
 
-  <body>
+  <body class="submit-page">
+    <!-- The standard CC header, located at docs/_includes/header.html -->
     {% include header.html %}
 
-    <div class="main-content" style="text-align: center">
-      <h2>Submit a Resource</h2>
-      <h3>Come across an interesting, useful resource about CC?</h3>
+    <main>
+      <!-- The main heading for the submission page -->
+      <header>
+        <h1>Submit A Resource</h1>
+      </header>
+
+      <!-- The content of the page, about submitting of resources -->
+      <h3>
+        Come across an interesting, useful resource About Creative Commons ?
+      </h3>
       <p>
-        We encourage you to fork the project on GitHub, and submit resources by
-        making pull requests on the project.
-      </p>
-      <p>
-        See
-        <a href="https://github.com/creativecommons/cc-resource-archive"
-          >https://github.com/creativecommons/cc-resource-archive</a
+        You can submit your resource to Creative Commons through a Pull Request
+        to the
+        <a href="https://github.com/creativecommons/cc-resource-archive/"
+          >creativecommons/cc-resource-archive</a
         >
-        for more info.
+        repository on GitHub.
       </p>
-    </div>
 
-    <!-- Footer -->
+      <!-- Guide to submit the resources for new github users -->
+      <h3>How to Submit</h3>
+      <p>
+        You can follow the detailed step-by-step guide documented below to have
+        your resources submitted and published at
+        <a href="https://resources.creativecommons.org/"
+          >https://resources.creativecommons.org/</a
+        >
+        :
+      </p>
+
+      <!-- Steps for the guide to submit resources -->
+      <ol>
+        <li>
+          Make sure you have an account on
+          <a href="https://github.com/">github.com</a>.
+        </li>
+        <li>
+          Go to
+          <a href="https://github.com/creativecommons/cc-resource-archive"
+            >creativecommons/cc-resource-archive</a
+          >.
+        </li>
+        <li>
+          Fork the repository on your github account. This creates a copy of the
+          repository for you to edit.
+          <figure>
+            <img
+              src="/_assets/images/guide_fork.png"
+              alt="guiding image for forking"
+            />
+          </figure>
+        </li>
+        <li>
+          You can find the <code>resourcetemplate.md</code> file in the root
+          directory of the codebase.
+          <figure>
+            <img
+              src="/_assets/images/guide_resourcetemplate.png"
+              alt="guiding image for resource template file"
+            />
+          </figure>
+        </li>
+        <li>
+          Now inside the <code>docs/_resources/</code> directory, create a
+          markdown, html or textile file using the extensions <code>.md</code>,
+          <code>.html</code> or <code>.textile</code> respectively.For
+          consistency and understandability use entire resource title as the
+          filename.
+        </li>
+        <li>
+          Copy the contents of <code>resourcetemplate.md</code> file into your
+          newly created resource file.
+        </li>
+        <li>
+          All the fields present in the front matter have been described clearly
+          in the file. Enter suitable values to each field and clear all the
+          descriptive content present in the file.
+          <figure>
+            <img
+              src="/_assets/images/guide_sections.png"
+              alt="guiding image for sections in file"
+            />
+          </figure>
+        </li>
+        <li>
+          Now, at the place of the descriptive content, place the content you
+          want to be present in your resource's page. This can be the
+          description of the resource, some useful links or references. Follow
+          the file's syntax for the content, for example links, etc..
+        </li>
+        <li>
+          Once you have done all the changes, commit them to the repository
+          through the <code>commit changes</code> button.
+        </li>
+        <li>
+          Upload the images to the <code>docs/_assets/images/</code> folder and
+          any downloadable resource content to
+          <code>docs/_assets/downloads</code> folder. Commit these changes too.
+        </li>
+        <li>
+          Now you should be able to see an option
+          <code>comapre and pull request</code> for your changes. Simply open a
+          pull request to merge your repository's changes to the main
+          <a href="https://github.com/creativecommons/cc-resource-archive"
+            >creativecommons/cc-resource-archive</a
+          >
+          repository.
+        </li>
+      </ol>
+    </main>
+
+    <!-- The standard CC footer, located at docs/_includes/footer.html -->
     {% include footer.html %}
-
   </body>
+  <!-- Including vocabulary.js from vocabulary directory -->
   <script src="/_assets/vocabulary/js/vocabulary.js"></script>
 </html>
