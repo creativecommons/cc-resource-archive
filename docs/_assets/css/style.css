@@ -56,6 +56,20 @@ code {
   list-style: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
+.visible{
+  display: block;
+}
+
+#noThumbnailsMessage p{
+  background: var(--vocabulary-neutral-color-lighter-gray);
+  text-align: center;
+  font-weight: bold;
+}
+
 .thumbnailbox {
   grid-column: span 3;
   height: fit-content;

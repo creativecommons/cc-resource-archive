@@ -50,7 +50,10 @@
 
       <!-- This is the section that shows all the resource cards in the site.
        The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
-      <ul id="thumbnaillist">
+       <div id="noThumbnailsMessage" class="hidden">
+        <p>No resources matched the selected filters.</p>
+        </div> 
+      <ul id="thumbnaillist" class="hidden">
         {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout
         =='resource' %} {% if page.featured == i %}
         <li
@@ -91,7 +94,7 @@
         {% endif %} {% endunless %} {% endif %} {% endif %} {% endfor %} {%
         endfor %} {% endunless %}
       </ul>
-    </main>
+    </main>   
 
     <!-- The standard CC footer, located at docs/_includes/footer.html -->
     {% include footer.html %}

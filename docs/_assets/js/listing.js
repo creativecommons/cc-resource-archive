@@ -117,3 +117,24 @@ if (language) {
   isFilterSelected += ", .resourcenavlanguageunknown";
 }
 dynamicStyle.innerHTML += `${isFilterSelected} { display: block; }`;
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Check if all thumbnailbox elements are hidden
+  var thumbnailBoxes = document.querySelectorAll('.thumbnailbox');
+  var allHidden = true;
+  
+  thumbnailBoxes.forEach(function (box) {
+      if (window.getComputedStyle(box).display !== 'none') {
+          allHidden = false;
+      }
+  });
+
+  // Show the message if all thumbnailbox elements are hidden
+  var messageElement = document.getElementById('noThumbnailsMessage');
+  messageElement.className = allHidden ? 'visible' : 'hidden';
+
+  var ThumbNailList = document.getElementById('thumbnaillist');
+  ThumbNailList.className = allHidden ? 'hidden' : 'visible';
+});
+
