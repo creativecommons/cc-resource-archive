@@ -18,10 +18,6 @@ main {
   padding: 0 0;
 }
 
-main > header::before {
-  left: 0;
-}
-
 main a {
   cursor: pointer;
   height: fit-content;
