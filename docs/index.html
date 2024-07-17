@@ -24,7 +24,7 @@ title: Home
     <ul>
       {% for medium in site.data.media %}
       <li>
-        <a href="/all?&topic={{ medium.string }}"><input type="checkbox" aria-checked="false"></a>
+        <a class="filter-link" href="/all?&topic={{ medium.string }}"><input type="checkbox" aria-checked="false"></a>
         <label>{{ medium.name }}</label>
       </li>
       {% endfor %}
@@ -36,7 +36,7 @@ title: Home
     <ul>
       {% for language in site.data.languages %}
       <li>
-        <a href="/all?&topic={{ language.string }}"><input type="checkbox" aria-checked="false"></a>
+        <a class="filter-link" href="/all?&topic={{ language.string }}"><input type="checkbox" aria-checked="false"></a>
         <label>{{ language.name }}</label>
       </li>
       {% endfor %}
