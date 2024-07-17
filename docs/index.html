@@ -11,7 +11,10 @@ title: Home
     <h2>Topic</h2>
     <ul>
       {% for topic in site.data.topics %}
-      <li><a href="/all?&topic={{ topic.string }}">{{ topic.name }}</a></li>
+      <li>
+        <a class="filter-link" href="/all?&topic={{ topic.string }}"><input type="checkbox" aria-checked="false"></a>
+        <label>{{ topic.name }}</label>
+      </li>
       {% endfor %}
     </ul>
   </div>
