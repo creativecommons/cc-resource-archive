@@ -38,6 +38,27 @@ code {
 }
 
 /* Styles for listing.html resource thumbnail cards */
+.listing-page main {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  gap: 0 4.1em;
+  width: 90%;
+  margin: 0 var(--vocabulary-page-edges-space);
+  box-sizing: border-box;
+  grid-template-areas:
+        'header header header'
+        'sidebar content content';
+}
+
+.listing-page > main header {
+  grid-area: header;
+}
+
+.listing-page > main header::before {
+  left: unset;
+}
+
 #thumbnaillist {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
