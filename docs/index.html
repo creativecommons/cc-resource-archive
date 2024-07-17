@@ -36,7 +36,8 @@ title: Home
     <ul style="columns: 2; column-gap: 75px">
       {% for language in site.data.languages %}
       <li>
-        <a href="/all?&language={{ language.string }}">{{ language.name}}</a>
+        <a href="/all?&topic={{ language.string }}"><input type="checkbox" aria-checked="false"></a>
+        <label>{{ language.name }}</label>
       </li>
       {% endfor %}
     </ul>
