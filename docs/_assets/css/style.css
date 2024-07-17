@@ -143,10 +143,6 @@ code {
   margin: 0 auto;
 }
 
-.resource-page main > header::before {
-  left: unset;
-}
-
 .topic-categories {
   order: -1;
   display: flex;
