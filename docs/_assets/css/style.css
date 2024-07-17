@@ -116,13 +116,32 @@ code {
 /* Styles For index.html and all.html */
 #resourcenavbar {
   height: fit-content;
-  margin: 0 auto 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  grid-area: sidebar;
+}
+
+#resourcenavbar h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#resourcenavbar ul {
+  list-style: none;
+  margin: 0;
+}
+
+#resourcenavbar ul li {
+  font-size: 1rem;
+}
+
+#resourcenavbar ul li a {
+  margin-right: 10px;
 }
 
 .resourcenav {
-  width: 200px;
   height: fit-content;
   display: none;
 }
