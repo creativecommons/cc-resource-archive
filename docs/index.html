@@ -23,7 +23,10 @@ title: Home
     <h2>Medium</h2>
     <ul>
       {% for medium in site.data.media %}
-      <li><a href="/all?&medium={{ medium.string }}">{{ medium.name }}</a></li>
+      <li>
+        <a href="/all?&topic={{ medium.string }}"><input type="checkbox" aria-checked="false"></a>
+        <label>{{ medium.name }}</label>
+      </li>
       {% endfor %}
     </ul>
   </div>
