@@ -8,7 +8,11 @@ title: All
   <article class="resourcenav resourcenavtopicknown">
     <h2>Topic</h2>
     <p>
-      <input type="checkbox" onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');" checked>
+      <input
+        type="checkbox"
+        onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');"
+        checked
+      />
       {% for topic in site.data.topics %}
       <script>
         if ("{{topic.string}}" == topic) document.write("{{topic.name}}");
@@ -22,7 +26,10 @@ title: All
     <ul>
       {% for topic in site.data.topics %}
       <li>
-        <input type="checkbox" onclick="window.location.search += '&topic={{ topic.string }}';">
+        <input
+          type="checkbox"
+          onclick="window.location.search += '&topic={{ topic.string }}';"
+        />
         <label>{{ topic.name }}</label>
       </li>
       {% endfor %}
@@ -32,7 +39,11 @@ title: All
   <article class="resourcenav resourcenavmediumknown">
     <h2>Medium</h2>
     <p>
-      <input type="checkbox" onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');" checked>
+      <input
+        type="checkbox"
+        onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');"
+        checked
+      />
       {% for medium in site.data.media %}
       <script>
         if ("{{medium.string}}" == medium) document.write("{{medium.name}}");
@@ -46,7 +57,10 @@ title: All
     <ul>
       {% for medium in site.data.media %}
       <li>
-        <input type="checkbox" onclick="window.location.search += '&medium={{ medium.string }}';">
+        <input
+          type="checkbox"
+          onclick="window.location.search += '&medium={{ medium.string }}';"
+        />
         <label>{{ medium.name }}</label>
       </li>
       {% endfor %}
@@ -56,10 +70,15 @@ title: All
   <article class="resourcenav resourcenavlanguageknown">
     <h2>Language</h2>
     <p>
-      <input type="checkbox" onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');" checked>
+      <input
+        type="checkbox"
+        onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');"
+        checked
+      />
       {% for language in site.data.languages %}
       <script>
-        if ("{{language.string}}" == language) document.write("{{language.name}}");
+        if ("{{language.string}}" == language)
+          document.write("{{language.name}}");
       </script>
       {% endfor %}
     </p>
@@ -70,7 +89,10 @@ title: All
     <ul>
       {% for language in site.data.languages %}
       <li>
-        <input type="checkbox" onclick="window.location.search += '&language={{ language.string }}';">
+        <input
+          type="checkbox"
+          onclick="window.location.search += '&language={{ language.string }}';"
+        />
         <label>{{ language.name }}</label>
       </li>
       {% endfor %}
