@@ -228,7 +228,7 @@ footer .donate a {
 }
 
 /* Media Queries for responsiveness */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   /* For listing.html */
   #thumbnaillist {
     gap: 6vw 5%;
@@ -248,7 +248,7 @@ footer .donate a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   /* For listing.html */
   #thumbnaillist {
     gap: 12vw 7%;
