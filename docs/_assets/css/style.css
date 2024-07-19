@@ -277,6 +277,11 @@ footer .donate a {
     font-size: 2.5vw;
   }
 
+  /* For index.html and all.html */
+  .language-list ul{
+    columns: 2;
+  }
+
   /* For resource.html */
   .resource-page > main {
     width: 80%;
