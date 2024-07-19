@@ -4,8 +4,8 @@ permalink: /all/
 title: All
 ---
 
-<div id="resourcenavbar">
-  <div class="resourcenav resourcenavtopicknown">
+<aside id="resourcenavbar">
+  <article class="resourcenav resourcenavtopicknown">
     <h2>Topic</h2>
     <p>
       {% for topic in site.data.topics %}
@@ -18,9 +18,9 @@ title: All
         >x</a
       >]
     </p>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavtopicunknown">
+  <article class="resourcenav resourcenavtopicunknown">
     <h2>Topic</h2>
     <ul>
       {% for topic in site.data.topics %}
@@ -33,9 +33,9 @@ title: All
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavmediumknown">
+  <article class="resourcenav resourcenavmediumknown">
     <h2>Medium</h2>
     <p>
       {% for medium in site.data.media %}
@@ -49,9 +49,9 @@ title: All
       >]
     </p>
     <p></p>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavmediumunknown">
+  <article class="resourcenav resourcenavmediumunknown">
     <h2>Medium</h2>
     <ul>
       {% for medium in site.data.media %}
@@ -64,9 +64,9 @@ title: All
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavlanguageknown">
+  <article class="resourcenav resourcenavlanguageknown">
     <h2>Language</h2>
     <p>
       {% for language in site.data.languages %}
@@ -80,9 +80,9 @@ title: All
         >x</a
       >]
     </p>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavlanguageunknown">
+  <article class="resourcenav resourcenavlanguageunknown">
     <h2>Language</h2>
     <ul style="columns: 2">
       {% for language in site.data.languages %}
@@ -95,5 +95,5 @@ title: All
       </li>
       {% endfor %}
     </ul>
-  </div>
-</div>
+  </article>
+</aside>
