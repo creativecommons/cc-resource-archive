@@ -4,7 +4,6 @@ title: Home
 ---
 
 <aside id="resourcenavbar">
-
   <h3 id="see-all"><a href="/all">See All Resources</a></h3>
 
   <article class="resourcenav resourcenavstatic topic-list">
@@ -12,7 +11,11 @@ title: Home
     <ul>
       {% for topic in site.data.topics %}
       <li>
-        <input id="filter-check" type="checkbox" onclick="window.location.href += '/all?&topic={{ topic.string }}';">
+        <input
+          id="filter-check"
+          type="checkbox"
+          onclick="window.location.href += '/all?&topic={{ topic.string }}';"
+        />
         <label>{{ topic.name }}</label>
       </li>
       {% endfor %}
@@ -24,7 +27,11 @@ title: Home
     <ul>
       {% for medium in site.data.media %}
       <li>
-        <input id="filter-check" type="checkbox" onclick="window.location.href += '/all?&medium={{ medium.string }}';">
+        <input
+          id="filter-check"
+          type="checkbox"
+          onclick="window.location.href += '/all?&medium={{ medium.string }}';"
+        />
         <label>{{ medium.name }}</label>
       </li>
       {% endfor %}
@@ -36,7 +43,11 @@ title: Home
     <ul>
       {% for language in site.data.languages %}
       <li>
-        <input id="filter-check" type="checkbox" onclick="window.location.href += '/all?&language={{ language.string }}';">
+        <input
+          id="filter-check"
+          type="checkbox"
+          onclick="window.location.href += '/all?&language={{ language.string }}';"
+        />
         <label>{{ language.name }}</label>
       </li>
       {% endfor %}
