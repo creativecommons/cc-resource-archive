@@ -12,7 +12,7 @@ title: Home
     <ul>
       {% for topic in site.data.topics %}
       <li>
-        <a class="filter-link" href="/all?&topic={{ topic.string }}"><input type="checkbox" aria-checked="false"></a>
+        <input id="filter-check" type="checkbox" onclick="window.location.href += '/all?&topic={{ topic.string }}';">
         <label>{{ topic.name }}</label>
       </li>
       {% endfor %}
@@ -24,7 +24,7 @@ title: Home
     <ul>
       {% for medium in site.data.media %}
       <li>
-        <a class="filter-link" href="/all?&topic={{ medium.string }}"><input type="checkbox" aria-checked="false"></a>
+        <input id="filter-check" type="checkbox" onclick="window.location.href += '/all?&medium={{ medium.string }}';">
         <label>{{ medium.name }}</label>
       </li>
       {% endfor %}
@@ -36,7 +36,7 @@ title: Home
     <ul>
       {% for language in site.data.languages %}
       <li>
-        <a class="filter-link" href="/all?&topic={{ language.string }}"><input type="checkbox" aria-checked="false"></a>
+        <input id="filter-check" type="checkbox" onclick="window.location.href += '/all?&language={{ language.string }}';">
         <label>{{ language.name }}</label>
       </li>
       {% endfor %}
