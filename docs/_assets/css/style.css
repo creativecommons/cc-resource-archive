@@ -250,6 +250,16 @@ footer .donate a {
 
 @media screen and (max-width: 768px) {
   /* For listing.html */
+  .listing-page main {
+    grid-template-columns: 1fr;
+    margin: 0 var(--vocabulary-page-edges-space);
+    box-sizing: border-box;
+    grid-template-areas:
+          'header'
+          'sidebar'
+          'content';
+  }
+
   #thumbnaillist {
     gap: 12vw 7%;
     padding: 4em 0 8em;
