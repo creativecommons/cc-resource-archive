@@ -128,8 +128,8 @@ code {
   font-size: 1rem;
 }
 
-#resourcenavbar ul li a {
-  margin-right: 10px;
+#resourcenavbar p {
+  font-size: 1rem;
 }
 
 .resourcenav {
@@ -141,10 +141,13 @@ code {
   display: block;
 }
 
-#bannercc {
-  width: 210px;
-  height: 50px;
-  margin-left: 100px;
+#see-all {
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
 }
 
 /* Styles For resource.html */
