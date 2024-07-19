@@ -3,11 +3,11 @@ layout: listing
 title: Home
 ---
 
-<div id="resourcenavbar">
+<aside id="resourcenavbar">
   
-  <h2 id="see-all"><a href="/all">See All Resources </a></h2>
+  <h3 id="see-all"><a href="/all">See All Resources </a></h3>
 
-  <div class="resourcenav resourcenavstatic">
+  <article class="resourcenav resourcenavstatic">
     <h2>Topic</h2>
     <ul>
       {% for topic in site.data.topics %}
@@ -17,9 +17,9 @@ title: Home
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavstatic">
+  <article class="resourcenav resourcenavstatic">
     <h2>Medium</h2>
     <ul>
       {% for medium in site.data.media %}
@@ -29,9 +29,9 @@ title: Home
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavstatic">
+  <article class="resourcenav resourcenavstatic">
     <h2>Language</h2>
     <ul>
       {% for language in site.data.languages %}
@@ -41,5 +41,5 @@ title: Home
       </li>
       {% endfor %}
     </ul>
-  </div>
-</div>
+  </article>
+</aside>
