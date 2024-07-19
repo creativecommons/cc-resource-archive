@@ -80,7 +80,7 @@ code {
 }
 
 .thumbnailLink {
-  --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
+  --underline-background-color: white;
 }
 
 .thumbnail {
@@ -116,7 +116,7 @@ code {
 #resourcenavbar h2 {
   text-align: center;
   font-size: 1.5em;
-  margin: 0;
+  margin: 1.5em 0 0;
 }
 
 #resourcenavbar ul {
