@@ -47,8 +47,8 @@ code {
   margin: 0 var(--vocabulary-page-edges-space);
   box-sizing: border-box;
   grid-template-areas:
-        'header header header'
-        'sidebar content content';
+    "header header header"
+    "sidebar content content";
 }
 
 .listing-page > main header {
@@ -255,9 +255,9 @@ footer .donate a {
     margin: 0 var(--vocabulary-page-edges-space);
     box-sizing: border-box;
     grid-template-areas:
-          'header'
-          'sidebar'
-          'content';
+      "header"
+      "sidebar"
+      "content";
   }
 
   #thumbnaillist {
@@ -278,7 +278,7 @@ footer .donate a {
   }
 
   /* For index.html and all.html */
-  .language-list ul{
+  .language-list ul {
     columns: 2;
   }
 
