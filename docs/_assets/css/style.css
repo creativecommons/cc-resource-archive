@@ -291,10 +291,6 @@ footer .donate a {
   .submit-page > main {
     width: 80%;
   }
-
-  #resourcenavbar {
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 480px) {
