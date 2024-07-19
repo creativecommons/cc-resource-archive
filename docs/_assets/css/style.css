@@ -74,15 +74,6 @@ code {
   position: relative;
 }
 
-#thumbnaillist::before {
-  content: '';
-  background-color: var(--vocabulary-neutral-color-lighter-gray);
-  position: absolute;
-  left: initial;
-  width: 100vw;
-  height: ;
-}
-
 .thumbnailbox {
   grid-column: span 3;
   height: fit-content;
