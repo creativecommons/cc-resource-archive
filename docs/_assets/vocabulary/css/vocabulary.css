@@ -1786,7 +1786,7 @@ main {
     width: 60%;
     margin: 0 auto;
     /* margin-top: 2em; */
-    margin-bottom: 8em;
+    margin-bottom: 2em;
     padding: 0 2em;
 }
 
@@ -2292,7 +2292,7 @@ body > footer {
     font-weight: 400;
     color: white;
     background: black;
-    margin: 3vw auto 0;
+    /* margin: 3vw auto 0; */
 }
 
 body > footer h2 {

@@ -45,8 +45,8 @@ code {
 #thumbnaillist {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 4em 0 0;
-  padding: 4em var(--vocabulary-page-edges-space) 16em;
+  margin: 3em 0 0;
+  padding: 4em var(--vocabulary-page-edges-space);
   gap: 10% 5%;
   box-sizing: border-box;
   width: 100%;
@@ -89,7 +89,7 @@ code {
 /* Styles For index.html and all.html */
 #resourcenavbar {
   height: fit-content;
-  margin: 0 auto 100px;
+  margin: 0 auto 50px;
   display: flex;
   justify-content: center;
 }
