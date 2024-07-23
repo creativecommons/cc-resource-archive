@@ -39,10 +39,20 @@
       <!-- The main heading for the site -->
       <header>
         <h1>Resources</h1>
+
+        {% if page.title == "All" %}
         <p>
           Filter and access the resources below or
           <a href="/submit/">submit one here</a>
         </p>
+
+        {% else %}
+        <p>
+          The resources related to Creative Commons. You can also
+          <a href="/submit/">submit one here</a>
+        </p>
+        {% endif %}
+
       </header>
 
       <!-- All the content inside the pages following this layout will be present here. -->
