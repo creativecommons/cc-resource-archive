@@ -39,20 +39,10 @@ code {
 
 /* Styles for listing.html resource thumbnail cards */
 .listing-page main {
-  display: grid;
   padding: 0;
-  grid-template-columns: 1fr 3.5fr 1fr;
-  gap: 0 4.1em;
   width: 90%;
   margin: 0 var(--vocabulary-page-edges-space);
   box-sizing: border-box;
-  grid-template-areas:
-    "header header header"
-    "sidebar content content";
-}
-
-.listing-page > main header {
-  grid-area: header;
 }
 
 .listing-page > main header::before {
@@ -105,6 +95,19 @@ code {
 }
 
 /* Styles For index.html and all.html */
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  gap: 0 4.1em;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content";
+}
+
+.filter-grid header {
+  grid-area: header;
+}
+
 #resourcenavbar {
   height: fit-content;
   display: flex;
@@ -250,7 +253,7 @@ footer .donate a {
 
 @media screen and (max-width: 768px) {
   /* For listing.html */
-  .listing-page main {
+  .filter-grid {
     grid-template-columns: 1fr;
     margin: 0 var(--vocabulary-page-edges-space);
     box-sizing: border-box;

@@ -35,7 +35,11 @@
     <!-- The standard CC header, located at docs/_includes/header.html -->
     {% include header.html %}
 
+    {% if page.title == "All" %}
+    <main class="filter-grid">
+    {% else %}
     <main>
+    {% endif %}
       <!-- The main heading for the site -->
       <header>
         <h1>Resources</h1>
@@ -56,7 +60,9 @@
       </header>
 
       <!-- All the content inside the pages following this layout will be present here. -->
-      {{content}}
+      {% if page.title == "All" %}
+        {{content}}
+      {% endif %}
 
       <!-- This is the section that shows all the resource cards in the site.
        The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
@@ -101,6 +107,10 @@
         {% endif %} {% endunless %} {% endif %} {% endif %} {% endfor %} {%
         endfor %} {% endunless %}
       </ul>
+
+      {% if page.title == "Home" %}
+      {{content}}
+      {% endif %}
     </main>
 
     <!-- The standard CC footer, located at docs/_includes/footer.html -->
