@@ -41,7 +41,7 @@ code {
 .listing-page main {
   padding: 0;
   width: 90%;
-  margin: 0 var(--vocabulary-page-edges-space);
+  margin: 0 var(--vocabulary-page-edges-space) 6em;
   box-sizing: border-box;
 }
 
@@ -54,7 +54,7 @@ code {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 0 0;
-  padding: 0 0 16em;
+  padding: 0 0 8em;
   gap: 10% 5%;
   box-sizing: border-box;
   width: 100%;
@@ -265,7 +265,7 @@ footer .donate a {
 
   #thumbnaillist {
     gap: 12vw 7%;
-    padding: 4em 0 8em;
+    padding: 4em 0 6em;
   }
 
   .thumbnailbox {
@@ -300,7 +300,7 @@ footer .donate a {
   /* For listing.html */
   #thumbnaillist {
     gap: 35vw 5%;
-    padding: 4em 0 8em;
+    padding: 4em 0 4em;
   }
 
   .thumbnailbox {
