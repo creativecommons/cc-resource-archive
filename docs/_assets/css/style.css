@@ -146,6 +146,9 @@ code {
 
 #see-all {
   margin: 0 auto;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 1.5em;
   text-align: center;
   font-family: "Roboto Condensed";
