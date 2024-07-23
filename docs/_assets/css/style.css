@@ -142,7 +142,8 @@ code {
 }
 
 #see-all {
-  margin: 0;
+  margin: 0 auto;
+  width: fit-content;
   font-size: 1.5em;
   text-align: center;
   font-family: "Roboto Condensed";
