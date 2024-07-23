@@ -59,7 +59,7 @@
 
       </header>
 
-      <!-- All the content inside the pages following this layout will be present here. -->
+      <!-- If the page following this layout is All (all.html), then display the page content here -->
       {% if page.title == "All" %}
         {{content}}
       {% endif %}
@@ -108,6 +108,7 @@
         endfor %} {% endunless %}
       </ul>
 
+      <!-- If the page following this layout is Homepage (index.html), then display the page content here -->
       {% if page.title == "Home" %}
       {{content}}
       {% endif %}
