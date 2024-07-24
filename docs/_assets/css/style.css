@@ -18,10 +18,6 @@ main {
   padding: 0 0;
 }
 
-main > header::before {
-  left: 0;
-}
-
 main a {
   cursor: pointer;
   height: fit-content;
@@ -42,18 +38,30 @@ code {
 }
 
 /* Styles for listing.html resource thumbnail cards */
+.listing-page main {
+  padding: 0;
+  width: 90%;
+  margin: 0 var(--vocabulary-page-edges-space) 6em;
+  box-sizing: border-box;
+}
+
+.listing-page > main header::before {
+  left: unset;
+}
+
 #thumbnaillist {
+  grid-area: content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 4em 0 0;
-  padding: 4em var(--vocabulary-page-edges-space) 16em;
+  margin: 0 0;
+  padding: 0 0 8em;
   gap: 10% 5%;
   box-sizing: border-box;
   width: 100%;
   height: fit-content;
-  background: var(--vocabulary-neutral-color-lighter-gray);
   grid-auto-rows: minmax(100px, auto);
   list-style: none;
+  position: relative;
 }
 
 .thumbnailbox {
@@ -62,7 +70,7 @@ code {
 }
 
 .thumbnailLink {
-  --underline-background-color: var(--vocabulary-neutral-color-lighter-gray);
+  --underline-background-color: white;
 }
 
 .thumbnail {
@@ -87,15 +95,47 @@ code {
 }
 
 /* Styles For index.html and all.html */
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  gap: 0 4.1em;
+  grid-template-areas:
+    "header header header"
+    "sidebar content content";
+}
+
+.filter-grid header {
+  grid-area: header;
+}
+
 #resourcenavbar {
   height: fit-content;
-  margin: 0 auto 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  grid-area: sidebar;
+}
+
+#resourcenavbar h2 {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1.5em 0 0;
+}
+
+#resourcenavbar ul {
+  list-style: none;
+  margin: 0;
+}
+
+#resourcenavbar ul li {
+  font-size: 1rem;
+}
+
+#resourcenavbar p {
+  font-size: 1rem;
 }
 
 .resourcenav {
-  width: 200px;
   height: fit-content;
   display: none;
 }
@@ -104,20 +144,22 @@ code {
   display: block;
 }
 
-#bannercc {
-  width: 210px;
-  height: 50px;
-  margin-left: 100px;
+#see-all {
+  margin: 0 auto;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: 700;
 }
 
 /* Styles For resource.html */
 .resource-page > main {
   width: 60%;
   margin: 0 auto;
-}
-
-.resource-page main > header::before {
-  left: unset;
 }
 
 .topic-categories {
@@ -192,11 +234,11 @@ footer .donate a {
 }
 
 /* Media Queries for responsiveness */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   /* For listing.html */
   #thumbnaillist {
     gap: 6vw 5%;
-    padding: 4em var(--vocabulary-page-edges-space) 8em;
+    padding: 0 0 8em;
   }
 
   .thumbnailbox {
@@ -212,11 +254,21 @@ footer .donate a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   /* For listing.html */
+  .filter-grid {
+    grid-template-columns: 1fr;
+    margin: 0 var(--vocabulary-page-edges-space);
+    box-sizing: border-box;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content";
+  }
+
   #thumbnaillist {
     gap: 12vw 7%;
-    padding: 4em var(--vocabulary-page-edges-space) 8em;
+    padding: 4em 0 6em;
   }
 
   .thumbnailbox {
@@ -231,6 +283,11 @@ footer .donate a {
     font-size: 2.5vw;
   }
 
+  /* For index.html and all.html */
+  .language-list ul {
+    columns: 2;
+  }
+
   /* For resource.html */
   .resource-page > main {
     width: 80%;
@@ -240,17 +297,13 @@ footer .donate a {
   .submit-page > main {
     width: 80%;
   }
-
-  #resourcenavbar {
-    flex-direction: column;
-  }
 }
 
 @media screen and (max-width: 480px) {
   /* For listing.html */
   #thumbnaillist {
     gap: 35vw 5%;
-    padding: 4em var(--vocabulary-page-edges-space) 8em;
+    padding: 4em 0 4em;
   }
 
   .thumbnailbox {

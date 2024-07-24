@@ -4,96 +4,104 @@ permalink: /all/
 title: All
 ---
 
-<div id="resourcenavbar">
-  <div class="resourcenav resourcenavtopicknown">
+<!-- This page follows the layout of listing.html, located at docs/_layouts/listing.html.
+ Also, The title for this page is All. On the deployed site, this will look like, All | Creative Commons Resource Archive -->
+
+<!-- This is the resourcenavbar, which contains the category filters. The categories are TOPIC, MEDIUM and LANGUAGE. In this there are two different options for displaying a category,
+ For example - resourcenavtopicknown and resourcenavtopicunknown -->
+<!-- If the user has selected a filter, resourcenavtopicknown will be displayed. otherwise resourcenavtopicunknown will be displayed -->
+<aside id="resourcenavbar">
+  <article class="resourcenav resourcenavtopicknown">
     <h2>Topic</h2>
     <p>
+      <input
+        type="checkbox"
+        onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');"
+        checked
+      />
       {% for topic in site.data.topics %}
       <script>
         if ("{{topic.string}}" == topic) document.write("{{topic.name}}");
       </script>
-      {% endfor %} [<a
-        role="button"
-        onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');"
-        >x</a
-      >]
+      {% endfor %}
     </p>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavtopicunknown">
+  <article class="resourcenav resourcenavtopicunknown topic-list">
     <h2>Topic</h2>
     <ul>
       {% for topic in site.data.topics %}
       <li>
-        <a
-          role="button"
+        <input
+          type="checkbox"
           onclick="window.location.search += '&topic={{ topic.string }}';"
-          >{{ topic.name }}</a
-        >
+        />
+        <label>{{ topic.name }}</label>
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavmediumknown">
+  <article class="resourcenav resourcenavmediumknown">
     <h2>Medium</h2>
     <p>
+      <input
+        type="checkbox"
+        onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');"
+        checked
+      />
       {% for medium in site.data.media %}
       <script>
         if ("{{medium.string}}" == medium) document.write("{{medium.name}}");
       </script>
-      {% endfor %} [<a
-        role="button"
-        onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');"
-        >x</a
-      >]
+      {% endfor %}
     </p>
-    <p></p>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavmediumunknown">
+  <article class="resourcenav resourcenavmediumunknown medium-list">
     <h2>Medium</h2>
     <ul>
       {% for medium in site.data.media %}
       <li>
-        <a
-          role="button"
+        <input
+          type="checkbox"
           onclick="window.location.search += '&medium={{ medium.string }}';"
-          >{{ medium.name }}</a
-        >
+        />
+        <label>{{ medium.name }}</label>
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavlanguageknown">
+  <article class="resourcenav resourcenavlanguageknown">
     <h2>Language</h2>
     <p>
+      <input
+        type="checkbox"
+        onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');"
+        checked
+      />
       {% for language in site.data.languages %}
       <script>
         if ("{{language.string}}" == language)
           document.write("{{language.name}}");
       </script>
-      {% endfor %} [<a
-        role="button"
-        onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');"
-        >x</a
-      >]
+      {% endfor %}
     </p>
-  </div>
+  </article>
 
-  <div class="resourcenav resourcenavlanguageunknown">
+  <article class="resourcenav resourcenavlanguageunknown language-list">
     <h2>Language</h2>
-    <ul style="columns: 2">
+    <ul>
       {% for language in site.data.languages %}
       <li>
-        <a
-          role="button"
+        <input
+          type="checkbox"
           onclick="window.location.search += '&language={{ language.string }}';"
-          >{{ language.name }}</a
-        >
+        />
+        <label>{{ language.name }}</label>
       </li>
       {% endfor %}
     </ul>
-  </div>
-</div>
+  </article>
+</aside>
