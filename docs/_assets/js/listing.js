@@ -72,16 +72,21 @@ function getUrlVars() {
 // assigning variable to the filters selected by user (retrieved by getUrlVars)
 const { topic, language, medium } = getUrlVars();
 
-// Setting every thumbnailbox to display:none by creating a new element "dynamicStyle".
-// This "dynamicStyle" element can be used to create all the dynamic styles.
-const dynamicStyle = document.createElement("style");
-dynamicStyle.type = "text/css";
-dynamicStyle.innerHTML = ".thumbnailbox { display: none; }";
-document.head.appendChild(dynamicStyle);
+// Function to update the visibility of elements based on filters
+function updateVisibility() {
 
-// If no filter is selected, display all the resources by "display:block"
+  const thumbnailBoxes = document.querySelectorAll(".thumbnailbox");
+  thumbnailBoxes.forEach(box => {
+    box.classList.add("hidden");
+    box.classList.remove("visible");
+  });
+
+
 if (!topic && !medium && !language) {
-  dynamicStyle.innerHTML += " .thumbnailbox { display: block; }";
+  thumbnailBoxes.forEach(box => {
+    box.classList.remove("hidden");
+    box.classList.add("visible");
+  });
 } else {
   // If filter(s) is/are selected, display all the resources which have all the filters
   let selectedFilters = "";
@@ -94,12 +99,13 @@ if (!topic && !medium && !language) {
   if (language) {
     selectedFilters += `.${language}`;
   }
-  dynamicStyle.innerHTML += `${selectedFilters} { display: block; }`;
+  document.querySelectorAll(selectedFilters).forEach(box => {
+    box.classList.remove("hidden");
+    box.classList.add("visible");
+  });
+
 }
 
-// If user has selected some Topic filter, add class resourcenavtopicknown with "display:block".
-// Otherwise, add class resourcenavtopicunknown with "display:block"
-// This is for displaying the list of available filters to be selected from
 let isFilterSelected = "";
 if (topic) {
   isFilterSelected += " .resourcenavtopicknown";
@@ -116,4 +122,13 @@ if (language) {
 } else {
   isFilterSelected += ", .resourcenavlanguageunknown";
 }
-dynamicStyle.innerHTML += `${isFilterSelected} { display: block; }`;
+
+document.querySelectorAll(isFilterSelected).forEach(nav => {
+  nav.classList.remove("hidden");
+  nav.classList.add("visible");
+});
+
+}
+
+// Initial call to update visibility based on URL parameters
+updateVisibility();
