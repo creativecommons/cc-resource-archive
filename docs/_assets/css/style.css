@@ -232,33 +232,6 @@ footer a {
 footer .donate a {
   color: #000;
 }
-/* Add these new classes for visibility control */
-.hidden {
-  display: none;
-}
-
-.visible {
-  display: block;
-}
-
-/* Add classes for resourcenav elements */
-.resourcenavtopicknown,
-.resourcenavtopicunknown,
-.resourcenavmediumknown,
-.resourcenavmediumunknown,
-.resourcenavlanguageknown,
-.resourcenavlanguageunknown {
-  display: none;
-}
-
-.resourcenavtopicknown.visible,
-.resourcenavtopicunknown.visible,
-.resourcenavmediumknown.visible,
-.resourcenavmediumunknown.visible,
-.resourcenavlanguageknown.visible,
-.resourcenavlanguageunknown.visible {
-  display: block;
-}
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1200px) {
