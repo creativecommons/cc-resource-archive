@@ -282,6 +282,14 @@ footer .donate a {
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1200px) {
   /* For listing.html */
+  #search-div {
+    padding-top: 2em;
+  }
+
+  .search-form form button {
+    width: 15%;
+  }
+
   #thumbnaillist {
     gap: 6vw 5%;
     padding: 0 0 8em;
@@ -309,12 +317,13 @@ footer .donate a {
     grid-template-areas:
       "header"
       "sidebar"
+      "search"
       "content";
   }
 
   #thumbnaillist {
     gap: 12vw 7%;
-    padding: 4em 0 6em;
+    padding: 0 0 6em;
   }
 
   .thumbnailbox {
@@ -330,6 +339,11 @@ footer .donate a {
   }
 
   /* For index.html and all.html */
+  .search-form form {
+    width: 100%;
+    margin-top: 2em;
+  }
+
   .language-list ul {
     columns: 2;
   }
@@ -347,9 +361,13 @@ footer .donate a {
 
 @media screen and (max-width: 480px) {
   /* For listing.html */
+  .search-form form button {
+    width: 20%;
+  }
+
   #thumbnaillist {
     gap: 35vw 5%;
-    padding: 4em 0 4em;
+    padding: 0 0 4em;
   }
 
   .thumbnailbox {
