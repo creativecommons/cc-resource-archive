@@ -21,7 +21,9 @@ title: All
       />
       {% for topic in site.data.topics %}
       <script>
-        if ("{{topic.string}}" == topic) document.write("{{topic.name}}");
+        if ("{{topic.string}}" == topic) {
+          document.write("<label>{{topic.name}}</label>");
+        }
       </script>
       {% endfor %}
     </p>
@@ -52,7 +54,9 @@ title: All
       />
       {% for medium in site.data.media %}
       <script>
-        if ("{{medium.string}}" == medium) document.write("{{medium.name}}");
+        if ("{{topic.string}}" == topic) {
+          document.write("<label>{{medium.name}}</label>");
+        }
       </script>
       {% endfor %}
     </p>
@@ -83,8 +87,9 @@ title: All
       />
       {% for language in site.data.languages %}
       <script>
-        if ("{{language.string}}" == language)
-          document.write("{{language.name}}");
+        if ("{{topic.string}}" == topic) {
+          document.write("<label>{{language.name}}</label>");
+        }
       </script>
       {% endfor %}
     </p>
