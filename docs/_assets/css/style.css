@@ -101,6 +101,7 @@ code {
   gap: 0 4.1em;
   grid-template-areas:
     "header header header"
+    "sidebar search search"
     "sidebar content content";
 }
 
@@ -133,6 +134,16 @@ code {
 
 #resourcenavbar p {
   font-size: 1rem;
+}
+
+#resourcenavbar input {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+#resourcenavbar label {
+  position: relative;
+  top: -1.5px;
 }
 
 .resourcenav {
