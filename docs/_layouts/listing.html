@@ -71,7 +71,7 @@
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
           >
             <article>
-              <img class="thumbnail" src="{{page.image-thumb}}" alt="{% if page.image_alt %}{{ page.image_alt }}{% else %}Default description of image{% endif %}"  />
+              <img class="thumbnail" src="{{page.image-thumb}}" alt='{% if page.image-alt %}{{ page.image-alt }}{% else %} {% endif %}'  />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
                   >{{ page.title }}</a
@@ -93,7 +93,7 @@
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
           >
             <article>
-              <img class="thumbnail" src="{{page.image-thumb}}" alt="{% if page.image_alt %}{{ page.image_alt }}{% else %}Default description of image{% endif %}" />
+              <img class="thumbnail" src="{{page.image-thumb}}" alt='{% if page.image-alt %}{{ page.image-alt }}{% else %} {% endif %}' />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
                   >{{ page.title }}</a
