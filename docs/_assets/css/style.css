@@ -237,10 +237,6 @@ footer .donate a {
   display: none;
 }
 
-.visible {
-  display: block;
-}
-
 /* Add classes for resourcenav elements */
 .resourcenavtopicknown,
 .resourcenavtopicunknown,
@@ -249,15 +245,6 @@ footer .donate a {
 .resourcenavlanguageknown,
 .resourcenavlanguageunknown {
   display: none;
-}
-
-.resourcenavtopicknown.visible,
-.resourcenavtopicunknown.visible,
-.resourcenavmediumknown.visible,
-.resourcenavmediumunknown.visible,
-.resourcenavlanguageknown.visible,
-.resourcenavlanguageunknown.visible {
-  display: block;
 }
 
 /* Media Queries for responsiveness */

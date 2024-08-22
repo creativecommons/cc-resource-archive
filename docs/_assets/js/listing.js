@@ -77,14 +77,12 @@ function updateVisibility() {
 
   const thumbnailBoxes = document.querySelectorAll(".thumbnailbox");
   thumbnailBoxes.forEach(box => {
-    box.classList.add("hidden");
-    box.classList.remove("visible");
+    box.classList.toggle("hidden", true);
   });
 
 if (!topic && !medium && !language) {
   thumbnailBoxes.forEach(box => {
-    box.classList.remove("hidden");
-    box.classList.add("visible");
+    box.classList.toggle("hidden", false);
   });
 } else {
   // If filter(s) is/are selected, display all the resources which have all the filters
@@ -99,8 +97,7 @@ if (!topic && !medium && !language) {
     selectedFilters += `.${language}`;
   }
   document.querySelectorAll(selectedFilters).forEach(box => {
-    box.classList.remove("hidden");
-    box.classList.add("visible");
+    box.classList.toggle("hidden", false);
   });
 }
 
@@ -124,8 +121,7 @@ if (language) {
   isFilterSelected += ", .resourcenavlanguageunknown";
 }
 document.querySelectorAll(isFilterSelected).forEach(nav => {
-  nav.classList.remove("hidden");
-  nav.classList.add("visible");
+  nav.classList.toggle("hidden", false);
 });
 
 }
