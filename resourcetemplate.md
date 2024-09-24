@@ -73,7 +73,7 @@ The two-letter abbreviation for each language, separated by spaces. [Here's the 
 
 **medium**
 
-The string for the medium the work is in. Current options are print, video, website, course, and slides.
+The string for the medium the work is in. Current options are print, video, website, course, slides and infographic.
 
 **permalink**
 
