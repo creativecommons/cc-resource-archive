@@ -116,6 +116,10 @@ sensical.
 Local development can be previewed by installing Jekyll or by using Docker. We
 think the latter experience is easier to setup with more consistent behavior.
 
+For information on learning and installing the prerequisite technologies for this project, please see [Foundational technologies — Creative Commons Open Source][found-tech].
+
+[found-tech]: https://opensource.creativecommons.org/contributing-code/foundational-tech/
+
 
 ### Docker Compose setup
 
