@@ -49,6 +49,12 @@ code {
   left: unset;
 }
 
+.hidden {
+  display: none;
+}
+#no-resources-text {
+  text-align: center;
+}
 #thumbnaillist {
   grid-area: content;
   display: grid;
@@ -316,5 +322,15 @@ footer .donate a {
 
   .thumbnailblurb {
     font-size: 5vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  #no-resources-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
   }
 }

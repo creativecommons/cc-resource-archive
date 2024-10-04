@@ -79,6 +79,23 @@ dynamicStyle.type = "text/css";
 dynamicStyle.innerHTML = ".thumbnailbox { display: none; }";
 document.head.appendChild(dynamicStyle);
 
+// To display a No matching resources text
+function noResourcesText() {
+  //this selects all resources available
+  const availableResources = document.querySelectorAll(".thumbnailbox");
+  // Check if any of the resources are currently available and shown
+  const availableResourceFound = Array.from(availableResources).some(
+    (resource) => window.getComputedStyle(resource).display === "block"
+  );
+  const messageText = document.getElementById("no-resources-text");
+  // If no resources are matching remove hidden to show the text
+  if (!availableResourceFound) {
+    messageText.classList.remove("hidden");
+    //if a resource is available, add hidden class to hide text
+  } else {
+    messageText.classList.add("hidden");
+  }
+}
 // If no filter is selected, display all the resources by "display:block"
 if (!topic && !medium && !language) {
   dynamicStyle.innerHTML += " .thumbnailbox { display: block; }";
@@ -96,6 +113,10 @@ if (!topic && !medium && !language) {
   }
   dynamicStyle.innerHTML += `${selectedFilters} { display: block; }`;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  noResourcesText();
+});
 
 // If user has selected some Topic filter, add class resourcenavtopicknown with "display:block".
 // Otherwise, add class resourcenavtopicunknown with "display:block"
