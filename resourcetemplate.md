@@ -8,6 +8,7 @@ author: Creative Commons
 license: CC0
 image-full: /_assets/images/sixlicenses-500.gif
 image-thumb: /_assets/images/sixlicenses-200.gif
+image-alt: "A poster with the text Six licences for sharing your work on a green background"
 topic: licenses
 language: ar ja ko lg mn ro tl en
 medium: print
@@ -52,6 +53,7 @@ The creator of the work, however he/she/it wants to be credited.
 **license**
 
 The license the work is under. Format as follows:
+
 - CC0
 - CC BY 2.0
 - CC BY-NC 4.0
@@ -61,7 +63,11 @@ The license the work is under. Format as follows:
 
 **image-full and image-thumb**
 
-Image-full should be 500px * 375px. Image-thumb should be 200*150. Put in the "docs/_assets/images" folder. Use the full title as the filename, separated by hyphens.
+Image-full should be 500px * 375px. Image-thumb should be 200*150. Put in the "docs/\_assets/images" folder. Use the full title as the filename, separated by hyphens.
+
+**image-alt**
+
+Image-alt is a brief and descriptive text that explains the content of the image for those who can not see it. Image-alt should be concise and brief and depicit the purpose of the image.
 
 **topic**
 
@@ -95,6 +101,4 @@ The URL where the resource can be accessed or downloaded. Use the most obvious U
 
 If the resource is embeddable (for example, a video or slides), paste in the iframe code, with no returns.
 
-
-
-*Last updated April 25, 2014*
+_Last updated April 25, 2014_

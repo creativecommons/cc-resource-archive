@@ -7,6 +7,7 @@ weight: 2
 layout: resource
 image-full: /_assets/images/how-to-attribute-foter-500.gif
 image-thumb: /_assets/images/how-to-attribute-foter-200.gif
+image-alt: "A picture explaining the various types of CC's licenses in order of most free to least free"
 topic: licenses attribution photography
 language: en
 medium: infographic

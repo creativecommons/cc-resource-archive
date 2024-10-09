@@ -6,6 +6,7 @@ featured: 5
 layout: resource
 image-full: /_assets/images/getccsavvy-500.jpg
 image-thumb: /_assets/images/getccsavvy-200.jpg
+image-alt: "The Creative Commons logo on a orange fruit background"
 topic: licenses
 language: en
 medium: course

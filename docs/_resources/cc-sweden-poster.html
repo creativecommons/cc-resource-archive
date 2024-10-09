@@ -6,6 +6,7 @@ featured: 8
 layout: resource
 image-full: /_assets/images/ccsweden-500.gif
 image-thumb: /_assets/images/ccsweden-200.gif
+image-alt: "A poster explaining CC's license information in swedish"
 topic: licenses
 language: sv
 medium: print

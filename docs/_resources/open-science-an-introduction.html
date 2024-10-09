@@ -5,6 +5,7 @@ weight: 3
 layout: resource
 image-full: /_assets/images/openscience-500.jpg
 image-thumb: /_assets/images/openscience-200.jpg
+image-alt: "A fly on a leaf"
 topic: science
 language: en
 medium: course

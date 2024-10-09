@@ -5,6 +5,7 @@ weight: 4
 layout: resource
 image-full: /_assets/images/copyright4educators-500.jpg
 image-thumb: /_assets/images/copyright4educators-200.jpg
+image-alt: "A classroom setting with a teacher and students. The image is in black and white"
 topic: licenses oer
 language: en
 medium: course

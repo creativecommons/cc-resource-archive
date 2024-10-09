@@ -6,6 +6,7 @@ featured: 9
 layout: resource
 image-full: /_assets/images/ccpoland-500.gif
 image-thumb: /_assets/images/ccpoland-200.gif
+image-alt: "A poster describing CC's Polska license information"
 topic: licenses
 language: pl en
 medium: print
