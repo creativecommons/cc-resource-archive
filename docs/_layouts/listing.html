@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>{{ page.title }} | Creative Commons Resource Archive</title>
@@ -61,7 +61,10 @@
 
         <!-- If the page following this layout is All (all.html), then display the page content here -->
         {% if page.title == "All" %} {{content}} {% endif %}
-
+        <!--The div to display the messsage when no resources are matching-->
+        <div id="no-resources-text" class="hidden">
+          <p>No resources are matching these filters</p>
+        </div>
         <!-- This is the section that shows all the resource cards in the site.
        The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
         <ul id="thumbnaillist">
@@ -71,7 +74,9 @@
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
           >
             <article>
-              <img class="thumbnail" src="{{page.image-thumb}}" />
+              <img class="thumbnail" src="{{page.image-thumb}}" alt="{% if
+              page.image-alt %}{{ page.image-alt }} {% else %} "" {% endif %} "
+              />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
                   >{{ page.title }}</a
@@ -93,7 +98,9 @@
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
           >
             <article>
-              <img class="thumbnail" src="{{page.image-thumb}}" />
+              <img class="thumbnail" src="{{page.image-thumb}}" alt="{% if
+              page.image-alt %}{{ page.image-alt }} {% else %} "" {% endif %} "
+              />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
                   >{{ page.title }}</a
