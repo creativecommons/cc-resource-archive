@@ -16,4 +16,4 @@ author: Open Knowledge Foundation
 license: CC BY 3.0
 ---
 
- A primer on the best practices for open data.
+A primer on the best practices for open data.

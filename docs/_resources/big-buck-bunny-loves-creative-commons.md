@@ -16,5 +16,5 @@ license: CC BY 3.0
 author: Renderfarm.fi and Studio Lumikuu
 ---
 
-A fun video explaining how to use CC ([more information](#))
+A fun video explaining how to use CC ([more information](https://resources.creativecommons.org/big-buck-bunny-loves-creative-commons/))
 
