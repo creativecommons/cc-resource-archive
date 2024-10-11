@@ -31,28 +31,28 @@
     {% endif %}
   </head>
 
-  <body class="listing-page">
+  <body class="listing-page" role="document">
     <!-- The standard CC header, located at docs/_includes/header.html -->
     {% include header.html %}
 
     <!-- If the page is all.html, then add a class "filter-grid" to <main>. Else, do not add the class -->
     {% if page.title == "All" %}
-    <main class="filter-grid">
+    <main class="filter-grid" role="main">
       {% else %}
-      <main>
+      <main role="main">
         {% endif %}
         <!-- The main heading for the site -->
-        <header>
+        <header role="banner">
           <h1>Resources</h1>
 
           {% if page.title == "All" %}
-          <p>
+          <p aria-label="Filter and submit resources">
             Filter and access the resources below or
             <a href="/submit/">submit one here</a>
           </p>
 
           {% else %}
-          <p>
+          <p aria-label="Resources related to Creative Commons">
             The resources related to Creative Commons. You can also
             <a href="/submit/">submit one here</a>
           </p>
@@ -64,16 +64,18 @@
 
         <!-- This is the section that shows all the resource cards in the site.
        The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
-        <ul id="thumbnaillist">
+        <ul id="thumbnaillist" role="list">
           {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout
           =='resource' %} {% if page.featured == i %}
           <li
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
+            role="listitem"
           >
-            <article>
+            <article role="article">
               <img class="thumbnail" src="{{page.image-thumb}}" />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
+                role="link"
                   >{{ page.title }}</a
                 >
               </h3>
@@ -96,6 +98,7 @@
               <img class="thumbnail" src="{{page.image-thumb}}" />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
+                role="link"
                   >{{ page.title }}</a
                 >
               </h3>
