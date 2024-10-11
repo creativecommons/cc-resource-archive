@@ -17,18 +17,7 @@ author: Creative Commons Polska
 license: CC BY 3.0 PL
 ---
 
-Poster outlining what each CC license allows users to do. Available in PDF and
-SVG formats.
+Poster outlining what each CC license allows users to do. Available in PDF and SVG formats.
+- [Polish](http://creativecommons.pl/2012/06/plakat-o-licencjach-cc/)
+- [English](http://creativecommons.pl/2012/06/open-poster-about-cc-licenses/)
 
-<ul>
-  <li>
-    <a href="http://creativecommons.pl/2012/06/plakat-o-licencjach-cc/"
-      >Polish</a
-    >
-  </li>
-  <li>
-    <a href="http://creativecommons.pl/2012/06/open-poster-about-cc-licenses/"
-      >English</a
-    >
-  </li>
-</ul>

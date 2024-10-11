@@ -15,7 +15,6 @@ author: School of Open
 license: CC BY-SA 3.0
 ---
 
-<p>
-  This course is a collaborative learning environment meant to introduce the
-  idea of Open Science to young scientists, academics, and makers of all kinds.
-</p>
+
+  This course is a collaborative learning environment meant to introduce the idea of Open Science to young scientists, academics, and makers of all kinds.
+
