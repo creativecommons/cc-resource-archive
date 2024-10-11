@@ -15,7 +15,4 @@ blurb: An Arabic infographic outlining how the six CC licenses work.
 downloadurl: http://www.aabouzaid.com/2014/02/arabic-infographic-know-about-creative-commons-in-3-minutes.html
 ---
 
-<p>
-  An Arabic infographic outlining how the six CC licenses work. Available in
-  both PDF and SVG formats.
-</p>
+An Arabic infographic outlining how the six CC licenses work. Available in both PDF and SVG formats.

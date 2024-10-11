@@ -15,8 +15,6 @@ blurb: Slides explaining Copyright and Creative Commons
 downloadurl: https://www.canva.com/design/DADm40hSwIU/9yEhtLnl5O1WMKbx8JSSkA/watch?utm_content=DADm40hSwIU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ---
 
-<p>
   These slides explain the basics of copyright and how it applies to creative
   works, as well as the concept of Creative Commons licensing and its different
   types.
-</p>

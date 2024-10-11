@@ -17,7 +17,5 @@ embed: <iframe src="//player.vimeo.com/video/215715129" width="500" height="281"
 downloadurl: https://vimeo.com/215715129
 ---
 
-<p>
-  A video for nonprofits and educators that outlines the basics of open
-  resources.
-</p>
+
+A video for nonprofits and educators that outlines the basics of open resources.

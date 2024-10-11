@@ -15,4 +15,4 @@ license: CC BY 4.0
 author: Creative Commons
 ---
 
-<p>A website for open policy education and advocacy.</p>
+A website for open policy education and advocacy.

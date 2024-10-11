@@ -16,4 +16,4 @@ license: CC BY 3.0
 author: Renderfarm.fi and Studio Lumikuu
 ---
 
-<p>A fun video explaining how to use CC (<a href="">more information</a>).</p>
+A fun video explaining how to use CC [more information](#).

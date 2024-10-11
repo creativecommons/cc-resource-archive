@@ -16,17 +16,13 @@ author: Creative Commons
 license: CC0
 ---
 
-<p>
-  Simple, quick introduction to Creative Commons&#8217; public domain tools.
-  Available either as a
-  <a href="//wiki.creativecommons.org/images/8/88/Publicdomain.pdf"
-    >single page</a
-  >
+Simple, quick introduction to Creative Commons&#8217; public domain tools.
+Available either as a
+[single page](https://wiki.creativecommons.org/images/8/88/Publicdomain.pdf)
   or as a
-  <a href="//wiki.creativecommons.org/images/4/4d/Publicdomain-printer.pdf"
-    >folded brochure</a
-  >.
-</p>
+[folded brochure](https://wiki.creativecommons.org/images/4/4d/Publicdomain-printer.pdf)
+    
+ 
 
 <ul>
   <li>
