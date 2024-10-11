@@ -19,7 +19,6 @@ license: CC BY 4.0
 
 ### Translations
 To view subtitled versions, or to contribute a translation, visit the [dotSub page for this video](https://web.archive.org/web/20220714032003/http://dotsub.com/view/fbdc3bd1-d1c2-4b63-be02-4fcb66aac443).
-
 - [Italian](http://www.youtube.com/watch?v=C3ddrhCtilM) (YouTube)
 - [Russian](http://www.youtube.com/watch?v=PgXnBXr-8PY) (YouTube)
 - [Armenian](http://www.youtube.com/watch?v=4BzzTzbrNGE) (YouTube)

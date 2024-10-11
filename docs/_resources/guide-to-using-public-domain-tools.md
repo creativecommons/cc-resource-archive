@@ -19,7 +19,6 @@ license: CC0
 Simple, quick introduction to Creative Commons' public domain tools.  
 Available either as a [single page](//wiki.creativecommons.org/images/8/88/Publicdomain.pdf)  
 or as a [folded brochure](//wiki.creativecommons.org/images/4/4d/Publicdomain-printer.pdf).
-
 - **Arabic (Egyptian)**: [flat](/_assets/downloads/ccguides/publicdomain-ar-flat.pdf), [folded](/_assets/downloads/ccguides/publicdomain-ar-folded.pdf)
 - **English**: [flat](//wiki.creativecommons.org/images/8/88/Publicdomain.pdf), [folded](//wiki.creativecommons.org/images/4/4d/Publicdomain-printer.pdf)
 - **Japanese**: [flat](/_assets/downloads/ccguides/publicdomain-ja-flat.pdf), [folded](/_assets/downloads/ccguides/publicdomain-ja-folded.pdf)

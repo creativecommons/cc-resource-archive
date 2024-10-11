@@ -16,7 +16,6 @@ license: CC BY-SA 3.0
 ---
 
 This is a course for educators who want to learn about US copyright law in the education context.
-
 - [US version](https://p2pu.org/en/courses/667/copyright-for-educators-us/)
 - [Australian version](https://p2pu.org/en/courses/111/copyright-4-educators-aus/)
 
