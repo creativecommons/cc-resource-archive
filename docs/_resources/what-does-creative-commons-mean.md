@@ -17,6 +17,5 @@ downloadurl: http://www.bildersuche.org/en/creative-commons-infographic.php
 ---
 
 A fun infographic explaining the conditions on CC licenses.
-
 - [German](http://www.bildersuche.org/creative-commons-infografik.php)
 - [English](http://www.bildersuche.org/en/creative-commons-infographic.php)

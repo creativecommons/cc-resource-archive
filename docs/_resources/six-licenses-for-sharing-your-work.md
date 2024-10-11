@@ -18,7 +18,6 @@ downloadurl: http://wiki.creativecommons.org/images/6/6d/6licenses-flat.pdf
 ---
 
 Simple, quick introduction to Creative Commons licenses. Available either as a [single page](http://wiki.creativecommons.org/images/6/6d/6licenses-flat.pdf) or as a [folded brochure](http://wiki.creativecommons.org/images/0/01/6licenses-folded.pdf).
-
 - **Arabic (Egyptian)**: [flat](/_assets/downloads/ccguides/6licenses-ar-flat.pdf), [folded](/_assets/downloads/ccguides/6licenses-ar-folded.pdf)
 - **English**: [flat](//wiki.creativecommons.org/images/8/88/Publicdomain.pdf), [folded](//wiki.creativecommons.org/images/4/4d/Publicdomain-printer.pdf)
 - **Japanese**: [flat](/_assets/downloads/ccguides/6licenses-ja-flat.pdf), [folded](/_assets/downloads/ccguides/6licenses-ja-folded.pdf)
