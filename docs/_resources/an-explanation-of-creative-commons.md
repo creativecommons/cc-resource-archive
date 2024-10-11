@@ -16,7 +16,5 @@ downloadurl: https://www.canva.com/design/DADm40hSwIU/9yEhtLnl5O1WMKbx8JSSkA/wat
 ---
 
 
- These slides explain the basics of copyright and how it applies to creative
- works, as well as the concept of Creative Commons licensing and its different
- types.
+ These slides explain the basics of copyright and how it applies to creative works, as well as the concept of Creative Commons licensing and its different types.
 
