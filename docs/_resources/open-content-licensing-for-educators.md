@@ -16,4 +16,4 @@ author: WikiEducator
 license: CC BY-SA 3.0
 ---
 
-<p>A course designed for educators, outlining the basics of open licensing.</p>
+A course designed for educators, outlining the basics of open licensing.

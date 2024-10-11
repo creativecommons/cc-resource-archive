@@ -17,4 +17,4 @@ downloadurl: http://foter.com/blog/how-to-attribute-creative-commons-photos/
 repourl: https://layervault.com/creative-commons/Foter%20Creative%20Commons%20infographic
 ---
 
-<p>Infographic explaining how to attribute CC-licensed photos.</p>
+ Infographic explaining how to attribute CC-licensed photos.

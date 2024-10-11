@@ -16,4 +16,4 @@ license: CC BY 4.0
 author: CASH Music
 ---
 
-<p>A website explaining how CC works for musicians.</p>
+A website explaining how CC works for musicians.

@@ -17,9 +17,6 @@ author: School of Open
 license: CC BY-SA 3.0
 ---
 
-<p>
-  A perfect place to start.
-  <a href="https://creativecommons.org/get-cc-savvy/"
-    >A course explaining the basics of Creative Commons</a
-  >.
-</p>
+A perfect place to start. 
+[A course explaining the basics of Creative Commons](https://creativecommons.org/get-cc-savvy/).
+

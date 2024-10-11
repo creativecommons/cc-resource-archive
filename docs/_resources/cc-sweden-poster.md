@@ -16,7 +16,6 @@ downloadurl: https://www.iis.se/docs/Creative-Commons-Webb.pdf
 author: Creative Commons Sweden
 ---
 
-<p>
-  This cool poster explaining how to choose a Creative Commons license was
-  created by the CC Sweden team.
-</p>
+
+ This cool poster explaining how to choose a Creative Commons license was created by the CC Sweden team.
+
