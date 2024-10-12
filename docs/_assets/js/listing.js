@@ -72,48 +72,37 @@ function getUrlVars() {
 // assigning variable to the filters selected by user (retrieved by getUrlVars)
 const { topic, language, medium } = getUrlVars();
 
-// Setting every thumbnailbox to display:none by creating a new element "dynamicStyle".
-// This "dynamicStyle" element can be used to create all the dynamic styles.
-const dynamicStyle = document.createElement("style");
-dynamicStyle.type = "text/css";
-dynamicStyle.innerHTML = ".thumbnailbox { display: none; }";
-document.head.appendChild(dynamicStyle);
+// Setting every thumbnailbox to display:none 
+const allThumbnailBoxes = document.querySelector('.thumbnailbox')
 
-// If no filter is selected, display all the resources by "display:block"
-if (!topic && !medium && !language) {
-  dynamicStyle.innerHTML += " .thumbnailbox { display: block; }";
-} else {
-  // If filter(s) is/are selected, display all the resources which have all the filters
-  let selectedFilters = "";
-  if (topic) {
-    selectedFilters += `.${topic}`;
-  }
-  if (medium) {
-    selectedFilters += `.${medium}`;
-  }
-  if (language) {
-    selectedFilters += `.${language}`;
-  }
-  dynamicStyle.innerHTML += `${selectedFilters} { display: block; }`;
-}
+allThumbnailBoxes.forEach((box)=>{
+  box.classList.toggle('hidden', true)
+})
 
+// If no filter is selected, display all the resources 
+allThumbnailBoxes.forEach((box)=>{
+  let matchesFilters = true
+
+  if (topic && !box.classList.contains(topic)){
+    matchesFilters = false
+  }
+  if (medium && !box.classList.contains(medium)) {
+    matchesFilters = false;
+  }
+  if (language && !box.classList.contains(language)) {
+    matchesFilters = false;
+  }
+
+  box.classList.toggle("hidden", !matchesFilters); 
+})
 // If user has selected some Topic filter, add class resourcenavtopicknown with "display:block".
 // Otherwise, add class resourcenavtopicunknown with "display:block"
 // This is for displaying the list of available filters to be selected from
-let isFilterSelected = "";
-if (topic) {
-  isFilterSelected += " .resourcenavtopicknown";
-} else {
-  isFilterSelected += " .resourcenavtopicunknown";
-}
-if (medium) {
-  isFilterSelected += ", .resourcenavmediumknown";
-} else {
-  isFilterSelected += ", .resourcenavmediumunknown";
-}
-if (language) {
-  isFilterSelected += ", .resourcenavlanguageknown";
-} else {
-  isFilterSelected += ", .resourcenavlanguageunknown";
-}
-dynamicStyle.innerHTML += `${isFilterSelected} { display: block; }`;
+topicKnown.classList.toggle("hidden", !topic);
+topicUnknown.classList.toggle("hidden", !!topic);
+
+mediumKnown.classList.toggle("hidden", !medium);
+mediumUnknown.classList.toggle("hidden", !!medium);
+
+languageKnown.classList.toggle("hidden", !language);
+languageUnknown.classList.toggle("hidden", !!language);

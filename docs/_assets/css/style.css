@@ -38,6 +38,17 @@ code {
 }
 
 /* Styles for listing.html resource thumbnail cards */
+.hidden {
+  display: none;
+}
+.resourcenavtopicknown,
+.resourcenavtopicunknown,
+.resourcenavmediumknown,
+.resourcenavmediumunknown,
+.resourcenavlanguageknown,
+.resourcenavlanguageunknown {
+  display: none;
+}
 .listing-page main {
   padding: 0;
   width: 90%;
@@ -135,12 +146,12 @@ code {
   font-size: 1rem;
 }
 
-.resourcenav {
+.resourcenav.hidden {
   height: fit-content;
   display: none;
 }
 
-.resourcenav.resourcenavstatic {
+.resourcenav.resourcenavstatic.hidden {
   display: block;
 }
 
