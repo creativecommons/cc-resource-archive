@@ -7,7 +7,7 @@ author: Ahmed M. AbouZaid
 license: CC BY-SA 4.0
 image-full: /_assets/images/learn-creative-commons-in-3-minutes-500.gif
 image-thumb: /_assets/images/learn-creative-commons-in-3-minutes-200.gif
-image-alt: "An infograhic explaining how the Creative Common licences work in arabic language"
+image-alt: "An infographic explaining how the Creative Commons licences work in arabic language"
 topic: licenses
 language: ar
 medium: infographic

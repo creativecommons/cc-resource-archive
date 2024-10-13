@@ -5,7 +5,7 @@ weight: 4
 layout: resource
 image-full: /_assets/images/openpolicynetwork-500.png
 image-thumb: /_assets/images/openpolicynetwork-200.png
-image-alt: "A picture of the Open Policy Network webiste's homepage"
+image-alt: "A picture of the Open Policy Network website's homepage"
 topic: openpolicy oa
 language: en
 medium: website
