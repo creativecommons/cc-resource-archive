@@ -43,14 +43,14 @@
       {% if page.image-full %}
       <figure>
         <img src="{{page.image-full}}" alt="{% if page.image-alt %}{{
-        page.image-alt }} {% else %} "" {% endif %} "/>
+        page.image-alt }} {% else %} '' {% endif %} "/>
       </figure>
       {% else %}
 
       <!-- If the resource doesn't contain embed or image-full, display a placeholder here -->
       <figure>
         <img src="/_assets/images/placeholder-500.gif"alt="{% if page.image-alt
-        %}{{ page.image-alt }} {% else %} "" {% endif %} " />
+        %}{{ page.image-alt }} {% else %} '' {% endif %} " />
       </figure>
       {% endif %} {% endif %}
 
