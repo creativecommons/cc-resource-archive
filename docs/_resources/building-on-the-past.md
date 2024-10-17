@@ -6,6 +6,7 @@ weight: 1
 featured: 7
 image-full: /_assets/images/buildingonthepast-500.png
 image-thumb: /_assets/images/buildingonthepast-200.png
+image-alt: "A boy wearing a green long-sleeve shirt, with the words Creativity on the image."
 topic: creativity
 language: en
 medium: video

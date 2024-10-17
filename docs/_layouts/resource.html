@@ -41,11 +41,17 @@
 
       <!-- else, display the {image-full} image here -->
       {% if page.image-full %}
-      <figure><img src="{{page.image-full}}" /></figure>
+      <figure>
+        <img src="{{page.image-full}}" alt="{% if page.image-alt %}{{
+        page.image-alt }} {% else %} "" {% endif %} "/>
+      </figure>
       {% else %}
 
       <!-- If the resource doesn't contain embed or image-full, display a placeholder here -->
-      <figure><img src="/_assets/images/placeholder-500.gif" /></figure>
+      <figure>
+        <img src="/_assets/images/placeholder-500.gif"alt="{% if page.image-alt
+        %}{{ page.image-alt }} {% else %} "" {% endif %} " />
+      </figure>
       {% endif %} {% endif %}
 
       <!-- The links to download, view or visit the resource are present here -->
