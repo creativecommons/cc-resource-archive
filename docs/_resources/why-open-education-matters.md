@@ -6,6 +6,7 @@ featured: 10
 layout: resource
 image-full: /_assets/images/why-open-education-matters-500.gif
 image-thumb: /_assets/images/why-open-education-matters-200.gif
+image-alt: "A cartoon illustration of a child studying, with a rocket and scientific equations representing aspirations."
 topic: oer
 language: en
 medium: video

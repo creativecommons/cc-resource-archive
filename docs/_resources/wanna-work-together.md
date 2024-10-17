@@ -6,6 +6,7 @@ featured: 3
 layout: resource
 image-full: /_assets/images/wanna-work-together-500.gif
 image-thumb: /_assets/images/wanna-work-together-200.gif
+image-alt: "A graphic poster with the text wanna work together and CC's logo in the center"
 topic: licenses
 language: en ru hy it
 medium: video

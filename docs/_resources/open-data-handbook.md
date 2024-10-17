@@ -5,6 +5,7 @@ layout: resource
 weight: 3
 image-full: /_assets/images/opendatahandbook-500.gif
 image-thumb: /_assets/images/opendatahandbook-200.gif
+image-alt: "A poster with the text 'The Open Data Handbook' on an orange background"
 topic: opendata publicdomain
 language: en
 medium: print

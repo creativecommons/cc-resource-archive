@@ -8,6 +8,7 @@ author: Creative Commons
 license: CC0
 image-full: /_assets/images/sixlicenses-500.gif
 image-thumb: /_assets/images/sixlicenses-200.gif
+image alt: "A poster with the text six licences for sharing your work on a green background"
 topic: licenses
 language: ar ja ko lg mn ro tl en
 medium: print
