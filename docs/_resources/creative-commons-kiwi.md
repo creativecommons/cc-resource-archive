@@ -6,7 +6,7 @@ featured: 4
 layout: resource
 image-full: /_assets/images/creative-commons-kiwi-500.jpg
 image-thumb: /_assets/images/creative-commons-kiwi-200.jpg
-image-alt: "Creative commons logo, and a blue and green globe with interwoven threads on it "
+image-alt: "Creative Commons logo, and a blue and green globe with interwoven threads on it "
 topic: licenses
 language: en
 medium: video

@@ -5,7 +5,7 @@ published: true
 weight: 3
 image-full: /_assets/images/cc-version-40-for-education-500.png
 image-thumb: /_assets/images/cc-version-40-for-education-200.png
-image-alt: "A black background displaying creative commons logo and the 4.0 version of education"
+image-alt: "A black background displaying Creative Commons logo and the 4.0 version of education"
 topic: oer licenses
 language: en
 medium: slides
