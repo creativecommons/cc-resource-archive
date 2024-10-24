@@ -7,7 +7,7 @@ author: Martin Missfeldt
 license: CC BY-SA 3.0 DE
 image-full: /_assets/images/what-does-creative-commons-mean-500.gif
 image-thumb: /_assets/images/what-does-creative-commons-mean-200.gif
-image-alt: "An illustration of what creative commons mean and how they grant permission for sharing works."
+image-alt: "An illustration of what Creative Commons mean and how they grant permission for sharing works."
 topic: licenses
 language: de en
 medium: infographic

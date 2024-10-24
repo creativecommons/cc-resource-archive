@@ -7,7 +7,7 @@ author: Minist&#232;re de la Culture et des Communications
 license: CC BY-SA 4.0
 image-full: /_assets/images/les-licences-creative-commons-500.png
 image-thumb: /_assets/images/les-licences-creative-commons-200.png
-image-alt: "Visual representation of the various types of creative commons licenses."
+image-alt: "Visual representation of the various types of Creative Commons licenses."
 topic: licenses
 language: fr
 medium: video

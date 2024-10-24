@@ -7,7 +7,7 @@ author: Heath, Victoria
 license: CC BY-NC-ND 4.0.
 image-full: /_assets/images/an-explanation-of-creative-commons-500.jpg
 image-thumb: /_assets/images/an-explanation-of-creative-commons-200.jpg
-image-alt: "A poster with an explanation of creative commons"
+image-alt: "A poster with an explanation of Creative Commons"
 topic: licenses
 language: en
 medium: slides
