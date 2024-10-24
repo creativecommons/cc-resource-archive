@@ -5,6 +5,7 @@ weight: 3
 layout: resource
 image-full: /_assets/images/bigbuckbunny-500.jpg
 image-thumb: /_assets/images/bigbuckbunny-200.jpg
+image-alt: "An open book with a rabbit's picture on the left page and Creative Commons logo on the right"
 topic: licenses
 language: en
 medium: video

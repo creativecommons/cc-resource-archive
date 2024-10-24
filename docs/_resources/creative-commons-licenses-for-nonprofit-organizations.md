@@ -8,6 +8,7 @@ author: BCcampus
 license: CC BY 4.0
 image-full: /_assets/images/creative-commons-for-nonprofit-organizations-500.jpg
 image-thumb: /_assets/images/creative-commons-for-nonprofit-organizations-200.jpg
+image-alt: "A graphic poster comparing how resources are distributed in libraries and a non-profit organization like Creative Commons"
 topic: licenses oer nonprofit
 language: en
 medium: video

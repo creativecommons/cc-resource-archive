@@ -7,6 +7,7 @@ featured: 10
 layout: resource
 image-full: /_assets/images/oer-whats-in-it-for-me-500.png
 image-thumb: /_assets/images/oer-whats-in-it-for-me-200.png
+image-alt: "A graphic illustration explaining the benefits of Open Educational Resources."
 topic: oer
 language: en
 medium: print
@@ -19,4 +20,3 @@ license: CC BY 4.0
 ---
 
 Created during a 2-day workshop meeting of open education enthusiasts in Porto, Portugal ([related blog post](http://web.archive.org/web/20160328190836/http://oerpolicy.eu/postcard-from-the-oer-workshop-in-porto/)).
-
