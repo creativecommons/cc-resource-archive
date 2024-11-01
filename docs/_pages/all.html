@@ -35,8 +35,9 @@ title: All
         <input
           type="checkbox"
           onclick="window.location.search += '&topic={{ topic.string }}';"
+          id="topic_{{ topic.string }}"
         />
-        <label>{{ topic.name }}</label>
+        <label for="topic_{{ topic.string }}">{{ topic.name }}</label>
       </li>
       {% endfor %}
     </ul>
@@ -66,8 +67,9 @@ title: All
         <input
           type="checkbox"
           onclick="window.location.search += '&medium={{ medium.string }}';"
+           id="medium_{{ medium.string }}"
         />
-        <label>{{ medium.name }}</label>
+        <label for="medium_{{ medium.string }}">{{ medium.name }}</label>
       </li>
       {% endfor %}
     </ul>
@@ -98,8 +100,9 @@ title: All
         <input
           type="checkbox"
           onclick="window.location.search += '&language={{ language.string }}';"
+          id="language_{{ language.string }}"
         />
-        <label>{{ language.name }}</label>
+        <label for="language_{{ language.string }}">{{ language.name }}</label>
       </li>
       {% endfor %}
     </ul>
