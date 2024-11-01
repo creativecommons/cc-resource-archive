@@ -33,10 +33,10 @@ title: All
       {% for topic in site.data.topics %}
       <li>
         <input
-          type="checkbox"
+          type="checkbox" id="topic{{ forloop.counter }}"
           onclick="window.location.search += '&topic={{ topic.string }}';"
         />
-        <label>{{ topic.name }}</label>
+        <label for="topic{{ forloop.counter }}" >{{ topic.name }}</label>
       </li>
       {% endfor %}
     </ul>
@@ -46,7 +46,7 @@ title: All
     <h2>Medium</h2>
     <p>
       <input
-        type="checkbox"
+        type="checkbox" 
         onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');"
         checked
       />
@@ -64,10 +64,10 @@ title: All
       {% for medium in site.data.media %}
       <li>
         <input
-          type="checkbox"
+          type="checkbox" id="medium{{ forloop.counter }}"
           onclick="window.location.search += '&medium={{ medium.string }}';"
         />
-        <label>{{ medium.name }}</label>
+        <label for="medium{{ forloop.counter }}">{{ medium.name }}</label>
       </li>
       {% endfor %}
     </ul>
@@ -96,10 +96,10 @@ title: All
       {% for language in site.data.languages %}
       <li>
         <input
-          type="checkbox"
+          type="checkbox" id="language{{ forloop.counter }}"
           onclick="window.location.search += '&language={{ language.string }}';"
         />
-        <label>{{ language.name }}</label>
+        <label for="language{{ forloop.counter }}">{{ language.name }}</label>
       </li>
       {% endfor %}
     </ul>
