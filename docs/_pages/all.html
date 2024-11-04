@@ -34,13 +34,15 @@ title: All
       <li>
         <input
           type="checkbox"
+          id="topic-{{ forloop.index }}"
           onclick="window.location.search += '&topic={{ topic.string }}';"
         />
-        <label>{{ topic.name }}</label>
+        <label for="topic-{{ forloop.index }}">{{ topic.name }}</label>
       </li>
       {% endfor %}
     </ul>
   </article>
+  
 
   <article class="resourcenav resourcenavmediumknown">
     <h2>Medium</h2>
@@ -65,9 +67,10 @@ title: All
       <li>
         <input
           type="checkbox"
+          id="medium-{{ forloop.index }}"
           onclick="window.location.search += '&medium={{ medium.string }}';"
         />
-        <label>{{ medium.name }}</label>
+        <label for="medium-{{ forloop.index }}">{{ medium.name }}</label>
       </li>
       {% endfor %}
     </ul>
@@ -97,9 +100,10 @@ title: All
       <li>
         <input
           type="checkbox"
+          id="language-{{ forloop.index }}"
           onclick="window.location.search += '&language={{ language.string }}';"
         />
-        <label>{{ language.name }}</label>
+        <label for="language-{{ forloop.index }}">{{ language.name }}</label>
       </li>
       {% endfor %}
     </ul>
