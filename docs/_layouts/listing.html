@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>{{ page.title }} | Creative Commons Resource Archive</title>
@@ -31,28 +31,28 @@
     {% endif %}
   </head>
 
-  <body class="listing-page" role="document">
+  <body class="listing-page">
     <!-- The standard CC header, located at docs/_includes/header.html -->
     {% include header.html %}
 
     <!-- If the page is all.html, then add a class "filter-grid" to <main>. Else, do not add the class -->
     {% if page.title == "All" %}
-    <main class="filter-grid" role="main">
+    <main class="filter-grid">
       {% else %}
-      <main role="main">
+      <main>
         {% endif %}
         <!-- The main heading for the site -->
-        <header role="banner">
+        <header>
           <h1>Resources</h1>
 
           {% if page.title == "All" %}
-          <p aria-label="Filter and submit resources">
+          <p>
             Filter and access the resources below or
             <a href="/submit/">submit one here</a>
           </p>
 
           {% else %}
-          <p aria-label="Resources related to Creative Commons">
+          <p>
             The resources related to Creative Commons. You can also
             <a href="/submit/">submit one here</a>
           </p>
@@ -64,18 +64,21 @@
 
         <!-- This is the section that shows all the resource cards in the site.
        The homepage shows upto 16 'featured' items ordered (1) to (16 or lesser) -->
-        <ul id="thumbnaillist" role="list">
+        <ul id="thumbnaillist">
           {% for i in (1..16) %} {% for page in site.pages %} {% if page.layout
           =='resource' %} {% if page.featured == i %}
           <li
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
-            role="listitem"
           >
-            <article role="article">
-              <img class="thumbnail" src="{{page.image-thumb}}" />
+            <article>
+              <img
+                class="thumbnail"
+                src="{{page.image-thumb}}"
+                alt="{% if
+              page.image-alt %}{{ page.image-alt }} {% else %} '' {% endif %} "
+              />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
-                role="link"
                   >{{ page.title }}</a
                 >
               </h3>
@@ -95,10 +98,14 @@
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
           >
             <article>
-              <img class="thumbnail" src="{{page.image-thumb}}" />
+              <img
+                class="thumbnail"
+                src="{{page.image-thumb}}"
+                alt="{% if
+              page.image-alt %}{{ page.image-alt }} {% else %} '' {% endif %} "
+              />
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
-                role="link"
                   >{{ page.title }}</a
                 >
               </h3>

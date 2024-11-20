@@ -24,68 +24,71 @@
     />
     <link rel="stylesheet" type="text/css" href="/_assets/css/style.css" />
   </head>
-  <body class="resource-page" role="document">
+  <body class="resource-page">
     <!-- The standard CC header, located at docs/_includes/header.html -->
     {% include header.html %}
 
-    <main role="main">
+    <main>
       <!-- The main heading for the resource page -->
-      <header role="banner">
+      <header>
         <h1>{{page.title}}</h1>
       </header>
 
       <!-- If the resource containes embed property, then display the embedded video here -->
       {% if page.embed %}
-      <figure role="group">{{page.embed}}</figure>
+      <figure>{{page.embed}}</figure>
       {% else %}
 
       <!-- else, display the {image-full} image here -->
       {% if page.image-full %}
-      <figure aria-label="Resource full image"><img src="{{page.image-full}}" /></figure>
+      <figure>
+        <img src="{{page.image-full}}" alt="{% if page.image-alt %}{{
+        page.image-alt }} {% else %} '' {% endif %} "/>
+      </figure>
       {% else %}
 
       <!-- If the resource doesn't contain embed or image-full, display a placeholder here -->
-      <figure aria-label="Resource full image"><img src="/_assets/images/placeholder-500.gif" /></figure>
+      <figure>
+        <img src="/_assets/images/placeholder-500.gif"alt="{% if page.image-alt
+        %}{{ page.image-alt }} {% else %} '' {% endif %} " />
+      </figure>
       {% endif %} {% endif %}
 
       <!-- The links to download, view or visit the resource are present here -->
-      <article class="downloadlinks" aria-labelledby="download-section">
+      <article class="downloadlinks">
         <!-- for pages containing download url -->
         {% if page.downloadurl %}
 
         <!-- If the page is website or a course, text should be "Visit" -->
         {% if page.medium == "website" or page.medium == "course" %}
-        <a href="{{page.downloadurl}}" aria-label="Visit the resource">Visit</a>
+        <a href="{{page.downloadurl}}">Visit</a>
         {% else %}
 
         <!-- If the page is not a website or a course, text should be "View in detail" -->
-        <a href="{{page.downloadurl}}" aria-label="View the resource in detail">View in detail</a>
+        <a href="{{page.downloadurl}}">View in detail</a>
         {% endif %} {% endif %}
 
         <!-- For pages containing repo url, text should View source -->
         {% if page.repourl %}
-        <a href="{{page.repourl}}" aria-label="View the source code of the resource">View source</a>
+        <a href="{{page.repourl}}">View source</a>
         {% endif %}
       </article>
 
       <!-- All the content inside the pages following this layout will be present inside this <p>. -->
-      <p class="description" aria-label="Resource description">{{content}}</p>
+      <p class="description">{{content}}</p>
 
       <!-- If the page has a license specified -->
       {% if page.license %}
-      <article class="resource-license" role="article">
+      <article class="resource-license">
         <!-- If the page is licensed under CC0 -->
         {% if page.license == 'CC0' %}
         <a
-        role="link"
           rel="license"
           href="http://creativecommons.org/publicdomain/zero/1.0/"
-          aria-label="View the CCo license details"
         >
           <img
             src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
             alt="CC0"
-            aria-label="CC0 image"
           />
         </a>
         <p>
@@ -93,7 +96,6 @@
           <span property="dct:publisher">{{ page.author }}</span> has waived all
           copyright and related or neighboring rights to
           <a href="{{ page.downloadurl}}" property="dct:title"
-          aria-label="Details of {{ page.title }}"
             >{{ page.title }}</a
           >.
         </p>
@@ -103,7 +105,6 @@
         <a
           rel="license"
           href="http://creativecommons.org/licenses/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/"
-          aria-label="View the {{ page.license }} license details"
           >
           <img
             alt="Creative Commons License"
@@ -112,7 +113,7 @@
         </a>
         <p>
           {% if page.downloadurl %}
-          <a href="{{ page.downloadurl }}" rel="cc:attributionURL" aria-label="Access {{ page.title }}">
+          <a href="{{ page.downloadurl }}" rel="cc:attributionURL">
             {% endif %}
             <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"
               >{{ page.title }}</span
@@ -128,7 +129,6 @@
           <a
             rel="license"
             href="http://creativecommons.org/licenses/{{ page.license | remove: 'CC ' | downcase | replace: ' ', '/' }}/"
-            aria-label="Details of the {{ page.license }} license"
             >{{ page.license }}</a
           >.
         </p>

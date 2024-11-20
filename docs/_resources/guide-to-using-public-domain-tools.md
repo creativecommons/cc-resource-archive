@@ -6,6 +6,7 @@ featured: 2
 layout: resource
 image-full: /_assets/images/publicdomaintools-500.gif
 image-thumb: /_assets/images/publicdomaintools-200.gif
+image-alt: "A poster with the text guide to using public domain tools on a blue background"
 topic: publicdomain
 language: ar ja ko lg mn ro tl en
 medium: print

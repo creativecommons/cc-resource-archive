@@ -10,5 +10,8 @@ _site/
 .bundle/
 vendor/
 
+#Track vendor folder in vocabulary directory
+!docs/_assets/vocabulary/css/vendor/
+
 # macOS
 .DS_Store

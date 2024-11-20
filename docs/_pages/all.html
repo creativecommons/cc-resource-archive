@@ -10,15 +10,14 @@ title: All
 <!-- This is the resourcenavbar, which contains the category filters. The categories are TOPIC, MEDIUM and LANGUAGE. In this there are two different options for displaying a category,
  For example - resourcenavtopicknown and resourcenavtopicunknown -->
 <!-- If the user has selected a filter, resourcenavtopicknown will be displayed. otherwise resourcenavtopicunknown will be displayed -->
-<aside id="resourcenavbar" aria-label="Resource Navigation Bar">
-  <article class="resourcenav resourcenavtopicknown" aria-expanded="true">
+<aside id="resourcenavbar" aria-label="Resource Filtering Bar">
+  <article class="resourcenav resourcenavtopicknown">
     <h2>Topic</h2>
     <p>
       <input
         type="checkbox"
         onclick="location.href=location.href.replace(/&?topic=([^&]$|[^&]*)/i, '');"
         checked
-        aria-label="Remove Topic Filter"
       />
       {% for topic in site.data.topics %}
       <script>
@@ -28,7 +27,7 @@ title: All
     </p>
   </article>
 
-  <article class="resourcenav resourcenavtopicunknown topic-list" aria-expanded="false">
+  <article class="resourcenav resourcenavtopicunknown topic-list">
     <h2>Topic</h2>
     <ul>
       {% for topic in site.data.topics %}
@@ -36,7 +35,6 @@ title: All
         <input
           type="checkbox"
           onclick="window.location.search += '&topic={{ topic.string }}';"
-          aria-label="Select {{ topic.name }}"
         />
         <label>{{ topic.name }}</label>
       </li>
@@ -44,14 +42,13 @@ title: All
     </ul>
   </article>
 
-  <article class="resourcenav resourcenavmediumknown" aria-expanded="true">
+  <article class="resourcenav resourcenavmediumknown">
     <h2>Medium</h2>
     <p>
       <input
         type="checkbox"
         onclick="location.href=location.href.replace(/&?medium=([^&]$|[^&]*)/i, '');"
         checked
-        aria-label="Remove Medium Filter"
       />
       {% for medium in site.data.media %}
       <script>
@@ -61,7 +58,7 @@ title: All
     </p>
   </article>
 
-  <article class="resourcenav resourcenavmediumunknown medium-list" aria-expanded="false">
+  <article class="resourcenav resourcenavmediumunknown medium-list">
     <h2>Medium</h2>
     <ul>
       {% for medium in site.data.media %}
@@ -69,7 +66,6 @@ title: All
         <input
           type="checkbox"
           onclick="window.location.search += '&medium={{ medium.string }}';"
-          aria-label="Select {{ medium.name }}"
         />
         <label>{{ medium.name }}</label>
       </li>
@@ -77,14 +73,13 @@ title: All
     </ul>
   </article>
 
-  <article class="resourcenav resourcenavlanguageknown" aria-expanded="true">
+  <article class="resourcenav resourcenavlanguageknown">
     <h2>Language</h2>
     <p>
       <input
         type="checkbox"
         onclick="location.href=location.href.replace(/&?language=([^&]$|[^&]*)/i, '');"
         checked
-        aria-label="Remove Language Filter"
       />
       {% for language in site.data.languages %}
       <script>
@@ -95,7 +90,7 @@ title: All
     </p>
   </article>
 
-  <article class="resourcenav resourcenavlanguageunknown language-list" aria-expanded="false">
+  <article class="resourcenav resourcenavlanguageunknown language-list">
     <h2>Language</h2>
     <ul>
       {% for language in site.data.languages %}
@@ -103,7 +98,6 @@ title: All
         <input
           type="checkbox"
           onclick="window.location.search += '&language={{ language.string }}';"
-          aria-label="Select {{ language.name }}"
         />
         <label>{{ language.name }}</label>
       </li>
