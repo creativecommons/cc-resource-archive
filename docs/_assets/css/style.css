@@ -64,6 +64,7 @@ code {
 .thumbnailbox {
   grid-column: span 3;
   height: fit-content;
+  border: 2px solid #000;
 }
 
 .thumbnailLink {
@@ -74,6 +75,7 @@ code {
   width: 100%;
   aspect-ratio: 200/150;
   margin: 0 auto;
+  border-bottom: 2px solid #ccc;
 }
 
 .thumbnailtitle {
@@ -89,6 +91,10 @@ code {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
+}
+
+.thumbnailtitle, .thumbnailblurb {
+  padding: 0.5rem;
 }
 
 /* Styles For index.html and all.html */
