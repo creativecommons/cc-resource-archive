@@ -63,8 +63,8 @@ code {
 
 .thumbnailbox {
   grid-column: span 3;
-  height: fit-content;
-  border: 2px solid #000;
+  height: 470px;
+  border: 2px solid #ddd;
 }
 
 .thumbnailLink {
@@ -94,7 +94,7 @@ code {
 }
 
 .thumbnailtitle, .thumbnailblurb {
-  padding: 0.5rem;
+  padding: 0.85rem;
 }
 
 /* Styles For index.html and all.html */
