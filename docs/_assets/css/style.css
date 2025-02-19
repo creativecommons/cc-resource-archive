@@ -16,6 +16,7 @@ header {
 main {
   width: 100%;
   padding: 0 0;
+  display: block; /* prevent vocab grid overirding */
 }
 
 main a {
@@ -126,6 +127,7 @@ code {
 
 #resourcenavbar ul li {
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 #resourcenavbar p {
