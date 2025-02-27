@@ -71,9 +71,13 @@
             class="thumbnailbox {{ page.topic }} {{ page.medium }} {{page.language}}"
           >
             <article>
+              <div class="card">
+                <div class="card-content">
               <img class="thumbnail" src="{{page.image-thumb}}" alt="{% if
               page.image-alt %}{{ page.image-alt }} {% else %} '' {% endif %} "
               />
+            </div>
+          </div>
               <h3 class="thumbnailtitle">
                 <a class="thumbnailLink" href="{{ page.permalink }}"
                   >{{ page.title }}</a

@@ -72,11 +72,16 @@ code {
 }
 
 .thumbnail {
+
   width: 100%;
   aspect-ratio: 200/150;
   margin: 0 auto;
-}
+  background-color: var(--card-color);
+  border-radius: 0.75em;
+  cursor: pointer;
 
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
 .thumbnailtitle {
   font-family: "Roboto Condensed";
   font-style: normal;
@@ -91,6 +96,7 @@ code {
   font-style: normal;
   font-weight: 400;
 }
+
 
 /* Styles For index.html and all.html */
 .filter-grid {
@@ -316,4 +322,43 @@ footer .donate a {
   .thumbnailblurb {
     font-size: 5vw;
   }
+  
+
+.card {
+  background-color: var(--card-color);
+  border-radius: 0.75em;
+  cursor: pointer;
+  height: 240px;
+  position: relative;
+}
+
+.card:hover:before {
+  opacity: 1;
+}
+
+.card:before {
+  background: linear-gradient(
+    45deg,
+    transparent 5%,
+    rgb(255, 215, 137) 50%,
+    transparent 99%
+  );
+  border-radius: inherit;
+  content: "";
+  inset: 0px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 400ms;
+  z-index: 0;
+}
+
+.card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: grid;
+  inset: 1px;
+  padding: 1em;
+  position: absolute;
+}
+
 }
