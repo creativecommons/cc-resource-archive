@@ -10,9 +10,16 @@ title: All
 <!-- This is the resourcenavbar, which contains the category filters. The categories are TOPIC, MEDIUM and LANGUAGE. In this there are two different options for displaying a category,
  For example - resourcenavtopicknown and resourcenavtopicunknown -->
 <!-- If the user has selected a filter, resourcenavtopicknown will be displayed. otherwise resourcenavtopicunknown will be displayed -->
-<aside id="resourcenavbar">
+<aside id="resourcenavbar" role="complementary" aria-label="Resource filters">
+  
+  <div class="clear-filters-wrapper hidden">
+    <button id="clear-all-filters" class="clear-filters-btn" aria-label="Clear all active filters">
+      Clear all filters
+    </button>
+  </div>
+  
   <article class="resourcenav resourcenavtopicknown">
-    <h2>Topic</h2>
+    <h2 id="topic-heading-known">Topic</h2>
     <p>
       <input
         type="checkbox"
@@ -28,8 +35,8 @@ title: All
   </article>
 
   <article class="resourcenav resourcenavtopicunknown topic-list">
-    <h2>Topic</h2>
-    <ul>
+    <h2 id="topic-heading-unknown">Topic</h2>
+    <ul role="group" aria-labelledby="topic-heading-unknown">
       {% for topic in site.data.topics %}
       <li>
         <input
@@ -45,7 +52,7 @@ title: All
   
 
   <article class="resourcenav resourcenavmediumknown">
-    <h2>Medium</h2>
+    <h2 id="medium-heading-known">Medium</h2>
     <p>
       <input
         type="checkbox"
@@ -61,8 +68,8 @@ title: All
   </article>
 
   <article class="resourcenav resourcenavmediumunknown medium-list">
-    <h2>Medium</h2>
-    <ul>
+    <h2 id="medium-heading-unknown">Medium</h2>
+    <ul role="group" aria-labelledby="medium-heading-unknown">
       {% for medium in site.data.media %}
       <li>
         <input
@@ -77,7 +84,7 @@ title: All
   </article>
 
   <article class="resourcenav resourcenavlanguageknown">
-    <h2>Language</h2>
+    <h2 id="language-heading-known">Language</h2>
     <p>
       <input
         type="checkbox"
@@ -94,8 +101,8 @@ title: All
   </article>
 
   <article class="resourcenav resourcenavlanguageunknown language-list">
-    <h2>Language</h2>
-    <ul>
+    <h2 id="language-heading-unknown">Language</h2>
+    <ul role="group" aria-labelledby="language-heading-unknown">
       {% for language in site.data.languages %}
       <li>
         <input

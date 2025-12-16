@@ -117,3 +117,20 @@ if (language) {
   isFilterSelected += ", .resourcenavlanguageunknown";
 }
 dynamicStyle.innerHTML += `${isFilterSelected} { display: block; }`;
+
+document.addEventListener('DOMContentLoaded', function() {
+  const clearButton = document.getElementById('clear-all-filters');
+  const clearWrapper = document.querySelector('.clear-filters-wrapper');
+  
+  if (topic || medium || language) {
+    if (clearWrapper) {
+      clearWrapper.style.display = 'block';
+    }
+  }
+  
+  if (clearButton) {
+    clearButton.addEventListener('click', function() {
+      window.location.href = window.location.pathname;
+    });
+  }
+});

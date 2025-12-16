@@ -114,6 +114,33 @@ code {
   grid-area: sidebar;
 }
 
+.clear-filters-wrapper {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.clear-filters-btn {
+  background-color: var(--vocabulary-brand-color-tomato);
+  color: white;
+  border: none;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+  background-color: var(--vocabulary-brand-color-dark-tomato);
+}
+
+.clear-filters-btn:focus {
+  outline: 2px solid var(--vocabulary-brand-color-turquoise);
+  outline-offset: 2px;
+}
+
 #resourcenavbar h2 {
   text-align: center;
   font-size: 1.5em;
@@ -128,6 +155,25 @@ code {
 #resourcenavbar ul li {
   font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+#resourcenavbar input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+#resourcenavbar label {
+  cursor: pointer;
+  display: inline;
+}
+
+#resourcenavbar input[type="checkbox"]:focus {
+  outline: 2px solid var(--vocabulary-brand-color-turquoise);
+  outline-offset: 2px;
+}
+
+#resourcenavbar label:hover {
+  text-decoration: underline;
 }
 
 #resourcenavbar p {
