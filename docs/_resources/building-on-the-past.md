@@ -11,9 +11,11 @@ topic: creativity
 language: en
 medium: video
 permalink: /build-on-the-past/
-blurb: Video explaining how creativity always builds on the past
+blurb: A short video about how creativity builds on what came before.
 downloadurl: https://archive.org/details/Justin_Cone_-_Building_On_The_Past_-_640x480
 embed: <iframe src="https://archive.org/embed/Justin_Cone_-_Building_On_The_Past_-_640x480" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
 author: Justin Cone
 license: CC BY 3.0
 ---
+
+A short video about creativity always building on the past. Downloadable from [Internet Archive](https://archive.org/details/Justin_Cone_-_Building_On_The_Past_-_640x480).

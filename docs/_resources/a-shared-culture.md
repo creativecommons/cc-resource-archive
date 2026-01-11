@@ -18,3 +18,5 @@ repourl:
 downloadurl: http://creativecommons.org/videos/a-shared-culture
 embed: <iframe src="//player.vimeo.com/video/13864570" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ---
+
+Directed by Jesse Dylan, this video introduces the idea behind Creative Commons. [Also available on Vimeo.](https://vimeo.com/13864570)
