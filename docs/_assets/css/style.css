@@ -37,9 +37,9 @@ code {
 
 /* Styles for listing.html resource thumbnail cards */
 .listing-page main {
-  padding: 0;
-  width: 90%;
-  margin: 0 var(--vocabulary-page-edges-space) 6em;
+  padding: 0 var(--vocabulary-page-edges-space);
+  width: 100%;
+  margin: 0 0 6em;
   box-sizing: border-box;
 }
 

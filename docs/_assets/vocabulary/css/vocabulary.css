@@ -1801,18 +1801,6 @@ body > footer .license svg {
 
 /* responsive contexts */
 
-@media (min-width: 1500px) {
-    body {
-        width: 1500px;
-        margin: 0 auto;
-    }
-
-    body > main {
-        overflow-x: hidden;
-    }
-
-}
-
 @media (max-width: 1140px) {
     .blog-index main footer .attribution-list ul.expand {
         grid-template-columns: 1fr 1fr;
